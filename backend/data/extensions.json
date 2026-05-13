@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "name": "GitHub Copilot",
+    "description": "AI-powered code completion that helps you write code faster with intelligent suggestions.",
+    "environment": "vscode",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 10.00,
+    "url": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot",
+    "icon": "🤖"
+  },
+  {
+    "id": 2,
+    "name": "Prettier",
+    "description": "Opinionated code formatter that enforces a consistent style across your entire codebase.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
+    "icon": "✨"
+  },
+  {
+    "id": 3,
+    "name": "ESLint",
+    "description": "Integrates ESLint into VS Code to find and fix problems in your JavaScript code.",
+    "environment": "vscode",
+    "category": "testing",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint",
+    "icon": "✔️"
+  },
+  {
+    "id": 4,
+    "name": "Docker",
+    "description": "Build, manage, and deploy containerized applications right from VS Code.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker",
+    "icon": "🐳"
+  },
+  {
+    "id": 5,
+    "name": "GitLens",
+    "description": "Supercharge Git within VS Code with blame annotations, code lens, and powerful comparison commands.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
+    "icon": "🔀"
+  },
+  {
+    "id": 6,
+    "name": "IntelliJ IDEA Ultimate",
+    "description": "Professional IDE for JVM development with advanced refactoring and code analysis.",
+    "environment": "jetbrains",
+    "category": "productivity",
+    "devtype": "backend",
+    "price": 149.00,
+    "url": "https://www.jetbrains.com/idea/",
+    "icon": "💡"
+  },
+  {
+    "id": 7,
+    "name": "Tabnine AI",
+    "description": "AI assistant that learns your coding patterns to provide personalized completions.",
+    "environment": "jetbrains",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 12.00,
+    "url": "https://plugins.jetbrains.com/plugin/12798-tabnine-ai",
+    "icon": "🧠"
+  },
+  {
+    "id": 8,
+    "name": "Rainbow Brackets",
+    "description": "Colorize matching brackets for better code readability in complex nested structures.",
+    "environment": "jetbrains",
+    "category": "productivity",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/10080-rainbow-brackets",
+    "icon": "🌈"
+  },
+  {
+    "id": 9,
+    "name": "Material Theme UI",
+    "description": "Beautiful Material Design theme with customizable color schemes for your IDE.",
+    "environment": "jetbrains",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/8006-material-theme-ui",
+    "icon": "🎨"
+  },
+  {
+    "id": 10,
+    "name": "Database Tools",
+    "description": "Advanced database management and SQL development tools integrated into your IDE.",
+    "environment": "jetbrains",
+    "category": "productivity",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/1800-database-tools-and-sql",
+    "icon": "🗄️"
+  },
+  {
+    "id": 11,
+    "name": "Unreal Insights",
+    "description": "Performance profiling and analysis tool for Unreal Engine projects.",
+    "environment": "unreal",
+    "category": "testing",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://docs.unrealengine.com/5.0/en-US/unreal-insights-in-unreal-engine/",
+    "icon": "📊"
+  },
+  {
+    "id": 12,
+    "name": "Blutility",
+    "description": "Editor utility blueprints for automating repetitive tasks in Unreal Engine.",
+    "environment": "unreal",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://www.unrealengine.com/marketplace/en-US/product/blutility",
+    "icon": "⚙️"
+  },
+  {
+    "id": 13,
+    "name": "React DevTools",
+    "description": "Inspect React component hierarchies, props, and state directly in your browser.",
+    "environment": "browser",
+    "category": "testing",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://chrome.google.com/webstore/detail/react-developer-tools/",
+    "icon": "⚛️"
+  },
+  {
+    "id": 14,
+    "name": "Redux DevTools",
+    "description": "Time-travel debugging and state inspection for Redux applications.",
+    "environment": "browser",
+    "category": "testing",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://chrome.google.com/webstore/detail/redux-devtools/",
+    "icon": "🔴"
+  },
+  {
+    "id": 15,
+    "name": "Wappalyzer",
+    "description": "Identify technologies used on websites including frameworks, analytics, and CMS.",
+    "environment": "browser",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://chrome.google.com/webstore/detail/wappalyzer/",
+    "icon": "🔍"
+  },
+  {
+    "id": 16,
+    "name": "ColorZilla",
+    "description": "Advanced eyedropper, color picker, gradient generator and color analyzer.",
+    "environment": "browser",
+    "category": "productivity",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://chrome.google.com/webstore/detail/colorzilla/",
+    "icon": "🎯"
+  },
+  {
+    "id": 17,
+    "name": "JSON Viewer",
+    "description": "Beautiful JSON visualization with syntax highlighting and tree navigation.",
+    "environment": "browser",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://chrome.google.com/webstore/detail/json-viewer/",
+    "icon": "📄"
+  },
+  {
+    "id": 18,
+    "name": "Live Server",
+    "description": "Launch a local development server with live reload feature for static and dynamic pages.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer",
+    "icon": "🌐"
+  },
+  {
+    "id": 19,
+    "name": "Thunder Client",
+    "description": "Lightweight REST API client for testing APIs directly inside VS Code.",
+    "environment": "vscode",
+    "category": "testing",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client",
+    "icon": "⚡"
+  },
+  {
+    "id": 20,
+    "name": "Code Runner",
+    "description": "Run code snippets or entire files for multiple languages with a single click.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner",
+    "icon": "▶️"
+  }
+]
