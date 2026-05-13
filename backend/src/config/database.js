@@ -82,7 +82,7 @@ export const initializeDatabase = () => {
 };
 
 const seedExtensions = (database, resolve, reject) => {
-  import('../../../data/extensions.json', { assert: { type: 'json' } })
+  import('../../data/extensions.json', { assert: { type: 'json' } })
     .then(({ default: extensionsData }) => {
       const stmt = database.prepare(`
         INSERT INTO extensions (name, description, environment, category, devtype, price, url, icon)
