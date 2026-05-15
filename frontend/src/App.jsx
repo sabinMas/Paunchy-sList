@@ -19,7 +19,7 @@ function App() {
     variant: 'minimal'
   });
 
-  // Fetch extensions on mount
+  // Fetch extensions and track visitor on mount
   useEffect(() => {
     const fetchExtensions = async () => {
       try {
@@ -32,7 +32,20 @@ function App() {
       }
     };
 
+    const trackVisitor = async () => {
+      try {
+        // Only track once per session to avoid inflating numbers
+        if (!sessionStorage.getItem('visitor_tracked')) {
+          await extensionsAPI.trackVisitor();
+          sessionStorage.setItem('visitor_tracked', 'true');
+        }
+      } catch (error) {
+        console.error('Failed to track visitor:', error);
+      }
+    };
+
     fetchExtensions();
+    trackVisitor();
   }, []);
 
   // Apply tweaks to CSS variables

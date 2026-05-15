@@ -3,7 +3,8 @@ import {
   getExtensions,
   getExtensionById,
   getFilters,
-  getStats
+  getStats,
+  incrementVisitors
 } from '../controllers/extensionsController.js';
 
 const router = express.Router();
@@ -16,6 +17,9 @@ router.get('/filters', getFilters);
 
 // Get marketplace statistics
 router.get('/stats', getStats);
+
+// Increment visitor count
+router.post('/visitors/track', incrementVisitors);
 
 // Get single extension
 router.get('/:id', getExtensionById);

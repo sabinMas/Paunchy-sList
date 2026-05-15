@@ -29,7 +29,8 @@ export const extensionsAPI = {
   getAll: (params = {}) => client.get('/extensions', { params }),
   getById: (id) => client.get(`/extensions/${id}`),
   getFilters: () => client.get('/extensions/filters'),
-  getStats: () => client.get('/extensions/stats')
+  getStats: () => client.get('/extensions/stats'),
+  trackVisitor: () => client.post('/extensions/visitors/track')
 };
 
 // Submissions

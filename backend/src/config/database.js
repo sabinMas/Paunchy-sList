@@ -67,6 +67,25 @@ export const initializeDatabase = () => {
         if (err) reject(err);
       });
 
+      // Create visitors table
+      database.run(`
+        CREATE TABLE IF NOT EXISTS visitors (
+          id INTEGER PRIMARY KEY CHECK (id = 1),
+          total_visits INTEGER DEFAULT 0,
+          updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+      `, (err) => {
+        if (err) reject(err);
+      });
+
+      // Initialize visitors count if not exists
+      database.run(`
+        INSERT OR IGNORE INTO visitors (id, total_visits)
+        VALUES (1, 0)
+      `, (err) => {
+        if (err) reject(err);
+      });
+
       // Check if extensions table is empty and seed with sample data
       database.get('SELECT COUNT(*) as count FROM extensions', (err, row) => {
         if (err) {

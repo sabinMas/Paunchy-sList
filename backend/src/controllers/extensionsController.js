@@ -113,15 +113,49 @@ export const getStats = async (req, res) => {
       FROM extensions
     `);
 
+    const visitors = await getAsync(`
+      SELECT total_visits FROM visitors WHERE id = 1
+    `);
+
     res.json({
       success: true,
-      data: stats
+      data: {
+        ...stats,
+        visitors: visitors?.total_visits || 0
+      }
     });
   } catch (error) {
     console.error('Error fetching stats:', error);
     res.status(500).json({
       success: false,
       error: 'Failed to fetch statistics'
+    });
+  }
+};
+
+// Increment visitor count
+export const incrementVisitors = async (req, res) => {
+  try {
+    await getAsync(`
+      UPDATE visitors SET total_visits = total_visits + 1, updated_at = CURRENT_TIMESTAMP
+      WHERE id = 1
+    `);
+
+    const visitors = await getAsync(`
+      SELECT total_visits FROM visitors WHERE id = 1
+    `);
+
+    res.json({
+      success: true,
+      data: {
+        visitors: visitors?.total_visits || 0
+      }
+    });
+  } catch (error) {
+    console.error('Error incrementing visitors:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to update visitor count'
     });
   }
 };
