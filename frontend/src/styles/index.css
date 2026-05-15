@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Light Theme - Professional Dev Tool Palette */
-  --bg-default: #F4F4F4;
+  /* Light Theme - Professional Dev Tool Palette with Mauve */
+  --bg-default: #EAE4F0;
   --bg-surface: #FFFFFF;
-  --bg-glass: rgba(255, 255, 255, 0.7);
+  --bg-glass: rgba(188, 165, 199, 0.15);
   --text-primary: #2E2E2E;
   --text-secondary: #64748B;
   --text-tertiary: #94A3B8;
-  --border-subtle: #E5DAF8;
+  --border-subtle: #D9CDE5;
 
   /* Primary - Purple (brand, interactive) */
   --primary-base: #8952E0;
@@ -104,7 +104,7 @@
   --radius-xl: 24px;
 
   /* Legacy compatibility */
-  --bg-primary: #F4F4F4;
+  --bg-primary: #EAE4F0;
   --bg-secondary: #FFFFFF;
   --bg-elevated: #FFFFFF;
   --accent-primary: #8952E0;
@@ -1245,7 +1245,7 @@ a {
 
 /* Footer */
 .footer {
-  background: #ede5de;
+  background: #D9CDE5;
   border-top: 1px solid var(--border-subtle);
   padding: var(--space-2xl) 0;
   margin-top: var(--space-3xl);
