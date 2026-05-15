@@ -1,0 +1,594 @@
+﻿{
+    "extensions":  [
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg",
+                           "platform":  "vscode",
+                           "name":  "GitHub Copilot",
+                           "source":  "Simple Icons",
+                           "fallbackEmoji":  "🤖"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/git-branch.svg",
+                           "platform":  "vscode",
+                           "name":  "GitLens",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🔍"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/sparkles.svg",
+                           "platform":  "vscode",
+                           "name":  "Prettier",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "✨"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/rocket.svg",
+                           "platform":  "vscode",
+                           "name":  "Live Server",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🚀"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/file-code.svg",
+                           "platform":  "vscode",
+                           "name":  "Auto Close Tag",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "📝"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/alert-triangle.svg",
+                           "platform":  "vscode",
+                           "name":  "Error Lens",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "⚠️"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/check.svg",
+                           "platform":  "vscode",
+                           "name":  "Code Spell Checker",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "✅"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/users.svg",
+                           "platform":  "vscode",
+                           "name":  "Live Share",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "👥"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/chart-bar.svg",
+                           "platform":  "vscode",
+                           "name":  "Git History",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "📊"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/zap.svg",
+                           "platform":  "vscode",
+                           "name":  "Codeium",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "⚡"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/brain.svg",
+                           "platform":  "vscode",
+                           "name":  "Tabnine",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🧠"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/eslint.svg",
+                           "platform":  "vscode",
+                           "name":  "ESLint",
+                           "source":  "Simple Icons",
+                           "fallbackEmoji":  "🔧"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/python.svg",
+                           "platform":  "vscode",
+                           "name":  "Python",
+                           "source":  "Simple Icons",
+                           "fallbackEmoji":  "🐍"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/zap.svg",
+                           "platform":  "vscode",
+                           "name":  "Thunder Client",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "⚡"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/send.svg",
+                           "platform":  "vscode",
+                           "name":  "REST Client",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "📡"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/docker.svg",
+                           "platform":  "vscode",
+                           "name":  "Docker",
+                           "source":  "Simple Icons",
+                           "fallbackEmoji":  "🐳"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/box.svg",
+                           "platform":  "vscode",
+                           "name":  "Dev Containers",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "📦"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/kubernetes.svg",
+                           "platform":  "vscode",
+                           "name":  "Kubernetes",
+                           "source":  "Simple Icons",
+                           "fallbackEmoji":  "☸️"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/list-check.svg",
+                           "platform":  "vscode",
+                           "name":  "Todo Tree",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "📋"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/palette.svg",
+                           "platform":  "vscode",
+                           "name":  "Peacock",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🦚"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/rainbow.svg",
+                           "platform":  "vscode",
+                           "name":  "Indent Rainbow",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🌈"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/folder.svg",
+                           "platform":  "vscode",
+                           "name":  "Path Intellisense",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "📂"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/message-circle.svg",
+                           "platform":  "vscode",
+                           "name":  "Better Comments",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "💬"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/clock.svg",
+                           "platform":  "vscode",
+                           "name":  "WakaTime",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "⏱️"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/camera.svg",
+                           "platform":  "vscode",
+                           "name":  "CodeSnap",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "📸"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/files.svg",
+                           "platform":  "vscode",
+                           "name":  "Project Manager",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "📁"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/bookmark.svg",
+                           "platform":  "vscode",
+                           "name":  "Bookmarks",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🔖"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/keyboard.svg",
+                           "platform":  "jetbrains",
+                           "name":  "IdeaVim",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "⌨️"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/palette.svg",
+                           "platform":  "jetbrains",
+                           "name":  "Material Theme UI",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🎨"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/rainbow.svg",
+                           "platform":  "jetbrains",
+                           "name":  "Rainbow Brackets",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🌈"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/keyboard.svg",
+                           "platform":  "jetbrains",
+                           "name":  "Key Promoter X",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "⌨️"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/tool.svg",
+                           "platform":  "jetbrains",
+                           "name":  "GitToolBox",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🔧"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/sparkles.svg",
+                           "platform":  "jetbrains",
+                           "name":  "JetBrains AI Assistant",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "✨"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/map.svg",
+                           "platform":  "jetbrains",
+                           "name":  "CodeGlance",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🗺️"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/sonarqube.svg",
+                           "platform":  "jetbrains",
+                           "name":  "SonarQube for IDE",
+                           "source":  "Simple Icons",
+                           "fallbackEmoji":  "🔍"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/plug.svg",
+                           "platform":  "jetbrains",
+                           "name":  "Lombok",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🔌"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/check.svg",
+                           "platform":  "jetbrains",
+                           "name":  "CheckStyle-IDEA",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "✅"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/rocket.svg",
+                           "platform":  "jetbrains",
+                           "name":  "Apidog Fast Request",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🚀"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/scissors.svg",
+                           "platform":  "jetbrains",
+                           "name":  "String Manipulation",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "✂️"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/database.svg",
+                           "platform":  "jetbrains",
+                           "name":  "Database Navigator",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "💾"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gnubash.svg",
+                           "platform":  "jetbrains",
+                           "name":  "BashSupport Pro",
+                           "source":  "Simple Icons",
+                           "fallbackEmoji":  "🐚"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/prettier.svg",
+                           "platform":  "jetbrains",
+                           "name":  "Prettier for JetBrains",
+                           "source":  "Simple Icons",
+                           "fallbackEmoji":  "💅"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/tool.svg",
+                           "platform":  "unreal",
+                           "name":  "Blueprint Assist",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🔧"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/box.svg",
+                           "platform":  "unreal",
+                           "name":  "Quixel Bridge (Megascans)",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "📦"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/folder-open.svg",
+                           "platform":  "unreal",
+                           "name":  "Cargo by KitBash3D",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "📁"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/waves.svg",
+                           "platform":  "unreal",
+                           "name":  "Oceanology",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🌊"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/cloud.svg",
+                           "platform":  "unreal",
+                           "name":  "Ultra Dynamic Sky",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "☁️"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/building-castle.svg",
+                           "platform":  "unreal",
+                           "name":  "Dungeon Architect",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🏰"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/palette.svg",
+                           "platform":  "unreal",
+                           "name":  "Substance 3D Plugin",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🎨"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/ruler.svg",
+                           "platform":  "unreal",
+                           "name":  "Datasmith",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "📐"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/sparkles.svg",
+                           "platform":  "unreal",
+                           "name":  "Niagara Particle System",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "✨"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/layout.svg",
+                           "platform":  "unreal",
+                           "name":  "Common UI Plugin",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🖥️"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/broadcast.svg",
+                           "platform":  "unreal",
+                           "name":  "Pixel Streaming Plugin",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "📡"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/film.svg",
+                           "platform":  "unreal",
+                           "name":  "Sequencer Cinematic Editor",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🎬"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/react.svg",
+                           "platform":  "browser",
+                           "name":  "React Developer Tools",
+                           "source":  "Simple Icons",
+                           "fallbackEmoji":  "⚛️"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/redux.svg",
+                           "platform":  "browser",
+                           "name":  "Redux DevTools",
+                           "source":  "Simple Icons",
+                           "fallbackEmoji":  "🔴"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/vuedotjs.svg",
+                           "platform":  "browser",
+                           "name":  "Vue.js DevTools",
+                           "source":  "Simple Icons",
+                           "fallbackEmoji":  "🟢"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/palette.svg",
+                           "platform":  "browser",
+                           "name":  "CSS Peeper",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🎨"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/search.svg",
+                           "platform":  "browser",
+                           "name":  "Wappalyzer",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🔍"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/bulb.svg",
+                           "platform":  "browser",
+                           "name":  "Lighthouse",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "💡"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/chart-bar.svg",
+                           "platform":  "browser",
+                           "name":  "JSON Crack Formatter",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "📊"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/moon.svg",
+                           "platform":  "browser",
+                           "name":  "Dark Reader",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🌙"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/letters.svg",
+                           "platform":  "browser",
+                           "name":  "WhatFont",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🔤"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/bug.svg",
+                           "platform":  "browser",
+                           "name":  "VisBug",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🐛"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/reload.svg",
+                           "platform":  "browser",
+                           "name":  "Requestly",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🔄"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg",
+                           "platform":  "browser",
+                           "name":  "Octotree",
+                           "source":  "Simple Icons",
+                           "fallbackEmoji":  "🐙"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/mask.svg",
+                           "platform":  "browser",
+                           "name":  "ColorZilla",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🎭"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/shield.svg",
+                           "platform":  "browser",
+                           "name":  "uBlock Origin Lite",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🛡️"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/forms.svg",
+                           "platform":  "browser",
+                           "name":  "Fake Filler",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "📝"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/settings.svg",
+                           "platform":  "browser",
+                           "name":  "Web Developer",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "⚙️"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/accessibility.svg",
+                           "platform":  "browser",
+                           "name":  "WAVE Evaluation Tool",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "♿"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg",
+                           "platform":  "ai",
+                           "name":  "GitHub Copilot (AI)",
+                           "source":  "Simple Icons",
+                           "fallbackEmoji":  "🤖"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/zap.svg",
+                           "platform":  "ai",
+                           "name":  "Cursor",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "⚡"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/waves.svg",
+                           "platform":  "ai",
+                           "name":  "Windsurf",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🌊"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/brain.svg",
+                           "platform":  "ai",
+                           "name":  "Claude Code",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🧠"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/lock.svg",
+                           "platform":  "ai",
+                           "name":  "Tabnine AI",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🔒"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/sparkles.svg",
+                           "platform":  "ai",
+                           "name":  "Codeium AI",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "✨"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/amazonaws.svg",
+                           "platform":  "ai",
+                           "name":  "Amazon Q Developer",
+                           "source":  "Simple Icons",
+                           "fallbackEmoji":  "☁️"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/search.svg",
+                           "platform":  "ai",
+                           "name":  "Sourcegraph Cody",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "🔍"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/google.svg",
+                           "platform":  "ai",
+                           "name":  "Gemini Code Assist",
+                           "source":  "Simple Icons",
+                           "fallbackEmoji":  "🌟"
+                       },
+                       {
+                           "svgUrl":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/ghost.svg",
+                           "platform":  "ai",
+                           "name":  "Replit Ghostwriter",
+                           "source":  "Tabler Icons",
+                           "fallbackEmoji":  "👻"
+                       }
+                   ],
+    "iconSources":  {
+                        "tablerIcons":  {
+                                            "license":  "MIT",
+                                            "url":  "https://tabler.io/icons",
+                                            "name":  "Tabler Icons",
+                                            "cdnPattern":  "https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons/{name}.svg"
+                                        },
+                        "simpleIcons":  {
+                                            "license":  "CC0 1.0 Universal (Public Domain)",
+                                            "url":  "https://simpleicons.org",
+                                            "name":  "Simple Icons",
+                                            "cdnPattern":  "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/{slug}.svg"
+                                        }
+                    },
+    "metadata":  {
+                     "sources":  [
+                                     "Simple Icons",
+                                     "Tabler Icons"
+                                 ],
+                     "notes":  "All SVG icons from free, open-source icon libraries with fallback emojis",
+                     "cdnProvider":  "jsDelivr",
+                     "totalExtensions":  86
+                 }
+}
