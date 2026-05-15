@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 const environmentLabels = {
   vscode: 'VS Code',
   jetbrains: 'JetBrains',
@@ -10,12 +12,34 @@ const categoryLabels = {
   productivity: 'Productivity',
   testing: 'Testing',
   ai: 'AI',
+  'agentic dev tools': 'Agentic Dev Tools',
   themes: 'Themes',
   debugging: 'Debugging',
   languages: 'Languages'
 };
 
 export default function ProductDetail({ product, onNavigate }) {
+  // Handle browser back button and ESC key
+  useEffect(() => {
+    const handleBackButton = (event) => {
+      onNavigate('marketplace');
+    };
+
+    const handleKeyPress = (event) => {
+      if (event.key === 'Escape') {
+        onNavigate('marketplace');
+      }
+    };
+
+    window.addEventListener('popstate', handleBackButton);
+    window.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      window.removeEventListener('popstate', handleBackButton);
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [onNavigate]);
+
   if (!product) {
     return (
       <div className="container" style={{ padding: '2rem 0', textAlign: 'center' }}>
