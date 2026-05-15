@@ -58,7 +58,8 @@ app.get('/health', (req, res) => {
   res.json({
     status: 'ok',
     timestamp: new Date().toISOString(),
-    uptime: process.uptime()
+    uptime: process.uptime(),
+    databaseInitialized: global.databaseInitialized || false
   });
 });
 
@@ -79,6 +80,17 @@ app.get('/health/db', async (req, res) => {
       error: error.message
     });
   }
+});
+
+// Diagnostic endpoint
+app.get('/debug/status', (req, res) => {
+  res.json({
+    environment: process.env.NODE_ENV || 'development',
+    databaseInitialized: global.databaseInitialized || false,
+    uptime: process.uptime(),
+    memory: process.memoryUsage(),
+    timestamp: new Date().toISOString()
+  });
 });
 
 // Middleware to ensure database is initialized before API routes
@@ -139,16 +151,20 @@ const startServer = async () => {
 
     // Initialize database in background (non-blocking)
     databaseInitializing = true;
+    global.databaseInitialized = false;
     initializationPromise = initializeDatabase();
 
     initializationPromise
       .then(() => {
         console.log('✓ Database initialization complete');
         databaseInitialized = true;
+        global.databaseInitialized = true;
         databaseInitializing = false;
       })
       .catch((error) => {
         console.error('❌ Database initialization error:', error);
+        databaseInitialized = true;
+        global.databaseInitialized = false;
         databaseInitializing = false;
         // Don't exit - API endpoints will handle DB errors gracefully
       });

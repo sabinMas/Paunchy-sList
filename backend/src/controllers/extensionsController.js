@@ -2,16 +2,18 @@ import { allAsync, getAsync, runAsync } from '../config/database.js';
 
 // Get all extensions with optional filtering
 export const getExtensions = async (req, res) => {
+  console.log('[getExtensions] Request received', { query: req.query });
+
   // Set a timeout for this request
   const timeout = setTimeout(() => {
     if (!res.headersSent) {
-      console.error('getExtensions request timeout after 25 seconds');
+      console.error('[getExtensions] Request timeout after 20 seconds');
       res.status(504).json({
         success: false,
-        error: 'Request timeout - database taking too long'
+        error: 'Request timeout - database query taking too long'
       });
     }
-  }, 25000); // 25 second timeout (Vercel function timeout is 30s)
+  }, 20000); // 20 second timeout
 
   try {
     const { environment, devtype, category } = req.query;
@@ -37,7 +39,9 @@ export const getExtensions = async (req, res) => {
       sql = `SELECT * FROM extensions WHERE ${conditions.join(' AND ')} ORDER BY created_at DESC`;
     }
 
+    console.log('[getExtensions] Querying database with:', { sql: sql.substring(0, 100), paramCount: params.length });
     const extensions = await allAsync(sql, params);
+    console.log('[getExtensions] Query successful, found', extensions?.length || 0, 'extensions');
 
     clearTimeout(timeout);
 
@@ -48,10 +52,11 @@ export const getExtensions = async (req, res) => {
     });
   } catch (error) {
     clearTimeout(timeout);
-    console.error('Error fetching extensions:', error);
+    console.error('[getExtensions] Error:', error.message);
     res.status(500).json({
       success: false,
-      error: 'Failed to fetch extensions'
+      error: 'Failed to fetch extensions',
+      details: error.message
     });
   }
 };
