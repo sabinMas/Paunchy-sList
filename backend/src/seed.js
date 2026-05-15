@@ -70,6 +70,33 @@ db.serialize(() => {
     console.log('✓ Created submissions table');
   });
 
+  // Create visitors table
+  db.run(`
+    CREATE TABLE IF NOT EXISTS visitors (
+      id INTEGER PRIMARY KEY CHECK (id = 1),
+      total_visits INTEGER DEFAULT 0,
+      updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    )
+  `, (err) => {
+    if (err) {
+      console.error('❌ Error creating visitors table:', err);
+      process.exit(1);
+    }
+    console.log('✓ Created visitors table');
+  });
+
+  // Initialize visitors count if not exists
+  db.run(`
+    INSERT OR IGNORE INTO visitors (id, total_visits)
+    VALUES (1, 0)
+  `, (err) => {
+    if (err) {
+      console.error('❌ Error initializing visitors:', err);
+      process.exit(1);
+    }
+    console.log('✓ Initialized visitors count');
+  });
+
   // Check if extensions table is empty and seed with sample data
   db.get('SELECT COUNT(*) as count FROM extensions', (err, row) => {
     if (err) {
