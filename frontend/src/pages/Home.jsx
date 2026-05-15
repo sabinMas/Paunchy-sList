@@ -48,12 +48,6 @@ export default function Home({ onNavigate }) {
                 <div className="stat-number">{stats.environments}</div>
                 <div className="stat-label">Platforms</div>
               </div>
-              {stats.visitors !== undefined && (
-                <div className="stat">
-                  <div className="stat-number">{stats.visitors.toLocaleString()}</div>
-                  <div className="stat-label">Visitors</div>
-                </div>
-              )}
             </div>
           )}
         </div>

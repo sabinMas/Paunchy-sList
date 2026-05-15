@@ -3,21 +3,41 @@
     "name": "GitHub Copilot",
     "description": "AI-powered pair programmer providing real-time code suggestions powered by OpenAI.",
     "environment": "vscode",
-    "category": "productivity",
+    "category": "ai",
     "devtype": "fullstack",
     "price": 10,
     "url": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot",
     "icon": "🤖"
   },
   {
-    "name": "GitLens",
-    "description": "Supercharges Git within VS Code with Git blame annotations and interactive rebasing.",
+    "name": "Tabnine",
+    "description": "Free AI assistant providing context-aware code completion suggestions for JavaScript, Python, TypeScript, and more.",
     "environment": "vscode",
-    "category": "productivity",
+    "category": "ai",
     "devtype": "fullstack",
     "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
-    "icon": "🔍"
+    "url": "https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-visual-studio",
+    "icon": "🧠"
+  },
+  {
+    "name": "Codeium",
+    "description": "Free AI code assistant providing context-aware code completion and chat across 70+ programming languages.",
+    "environment": "vscode",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=Codeium.codeium",
+    "icon": "⚡"
+  },
+  {
+    "name": "Amazon Q",
+    "description": "AWS's AI coding assistant with agentic capabilities. Can read files, generate diffs, and run commands while providing AWS integration for infrastructure code.",
+    "environment": "vscode",
+    "category": "ai",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.amazon-q-vscode",
+    "icon": "☁️"
   },
   {
     "name": "Prettier",
@@ -30,44 +50,34 @@
     "icon": "✨"
   },
   {
-    "name": "Live Server",
-    "description": "Launch a development local server with live reload feature for static & dynamic pages.",
+    "name": "ESLint",
+    "description": "Integrates ESLint into VS Code to identify unused variables, incorrect patterns, and potential bugs.",
     "environment": "vscode",
-    "category": "productivity",
+    "category": "security",
     "devtype": "frontend",
     "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer",
-    "icon": "🚀"
+    "url": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint",
+    "icon": "🔒"
   },
   {
-    "name": "Auto Close Tag",
-    "description": "Automatically adds HTML/XML closing tags when you type in the closing bracket of the opening tag.",
-    "environment": "vscode",
-    "category": "productivity",
-    "devtype": "frontend",
-    "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag",
-    "icon": "📝"
-  },
-  {
-    "name": "Error Lens",
-    "description": "Highlights errors, warnings, and other language diagnostics prominently with inline messages.",
-    "environment": "vscode",
-    "category": "debugging",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens",
-    "icon": "⚠️"
-  },
-  {
-    "name": "Code Spell Checker",
-    "description": "Detects and corrects spelling errors in your codebase with misspelled words highlighted with squiggly underlines.",
+    "name": "GitLens",
+    "description": "Supercharges Git within VS Code with Git blame annotations and interactive rebasing.",
     "environment": "vscode",
     "category": "productivity",
     "devtype": "fullstack",
     "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker",
-    "icon": "✅"
+    "url": "https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
+    "icon": "🌿"
+  },
+  {
+    "name": "Remote - SSH",
+    "description": "Edit files on remote servers directly in VS Code. Enables autocomplete, IntelliSense, debugging against remote filesystems without local copies.",
+    "environment": "vscode",
+    "category": "devops",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh",
+    "icon": "🔌"
   },
   {
     "name": "Live Share",
@@ -80,80 +90,30 @@
     "icon": "👥"
   },
   {
-    "name": "Git History",
-    "description": "Explore detailed Git repository history with visual commit logs, file history, and comparisons directly in VS Code.",
-    "environment": "vscode",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory",
-    "icon": "📊"
-  },
-  {
-    "name": "Codeium",
-    "description": "Free AI code assistant providing context-aware code completion and chat across 70+ programming languages.",
-    "environment": "vscode",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=Codeium.codeium",
-    "icon": "⚡"
-  },
-  {
-    "name": "Tabnine",
-    "description": "Free AI assistant providing context-aware code completion suggestions for JavaScript, Python, TypeScript, and more.",
-    "environment": "vscode",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-visual-studio",
-    "icon": "🧠"
-  },
-  {
-    "name": "ESLint",
-    "description": "Integrates ESLint into VS Code to identify unused variables, incorrect patterns, and potential bugs.",
-    "environment": "vscode",
-    "category": "testing",
-    "devtype": "frontend",
-    "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint",
-    "icon": "🔧"
-  },
-  {
-    "name": "Python",
-    "description": "Provides language support for Python including IntelliSense, debugging, linting, formatting, and unit testing.",
-    "environment": "vscode",
-    "category": "languages",
-    "devtype": "backend",
-    "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=ms-python.python",
-    "icon": "🐍"
-  },
-  {
     "name": "Thunder Client",
-    "description": "Lightweight REST API client for testing APIs with collections, environment variables, and GraphQL support.",
+    "description": "Lightweight REST API client for testing APIs without leaving the editor. Supports collections, environment variables, GraphQL, and test scripts.",
     "environment": "vscode",
-    "category": "debugging",
-    "devtype": "backend",
+    "category": "api",
+    "devtype": "fullstack",
     "price": 0,
     "url": "https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client",
     "icon": "⚡"
   },
   {
     "name": "REST Client",
-    "description": "Send HTTP requests from plain text files and view formatted responses inline with environment support.",
+    "description": "Send HTTP requests directly from editor with full GraphQL support. View responses without switching applications or using external tools.",
     "environment": "vscode",
-    "category": "debugging",
-    "devtype": "backend",
+    "category": "api",
+    "devtype": "fullstack",
     "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=MadsKristensen.RestClient",
-    "icon": "📡"
+    "url": "https://marketplace.visualstudio.com/items?itemName=humao.rest-client",
+    "icon": "📮"
   },
   {
     "name": "Docker",
     "description": "Build, manage, and debug containerized applications directly from VS Code with Docker support.",
     "environment": "vscode",
-    "category": "productivity",
+    "category": "devops",
     "devtype": "devops",
     "price": 0,
     "url": "https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker",
@@ -163,41 +123,61 @@
     "name": "Dev Containers",
     "description": "Open any folder or repository inside a Docker container and use VS Code with full feature set.",
     "environment": "vscode",
-    "category": "productivity",
-    "devtype": "devops",
+    "category": "devops",
+    "devtype": "fullstack",
     "price": 0,
     "url": "https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers",
     "icon": "📦"
   },
   {
-    "name": "Kubernetes",
-    "description": "Comprehensive Kubernetes tools for viewing clusters, deploying applications, and debugging pods.",
+    "name": "Jest Runner",
+    "description": "Run and debug Jest, Vitest, and other test frameworks with ease. Execute tests directly from the editor with inline results.",
     "environment": "vscode",
-    "category": "productivity",
-    "devtype": "devops",
-    "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools",
-    "icon": "☸️"
-  },
-  {
-    "name": "Todo Tree",
-    "description": "Displays TODO, FIXME, and other comment tags in a searchable tree view for better organization.",
-    "environment": "vscode",
-    "category": "productivity",
+    "category": "testing",
     "devtype": "fullstack",
     "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree",
-    "icon": "📋"
+    "url": "https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner",
+    "icon": "✅"
+  },
+  {
+    "name": "Test Explorer UI",
+    "description": "Unified test runner interface for multiple test frameworks. Run tests in the sidebar with support for Jest, Mocha, pytest and more.",
+    "environment": "vscode",
+    "category": "testing",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer",
+    "icon": "🧪"
+  },
+  {
+    "name": "Error Lens",
+    "description": "Highlights errors, warnings, and other language diagnostics prominently with inline messages.",
+    "environment": "vscode",
+    "category": "debugging",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens",
+    "icon": "❌"
   },
   {
     "name": "Peacock",
-    "description": "Subtly changes your workspace color to quickly identify which VS Code instance you're working on.",
+    "description": "Workspace color theming for visual differentiation. Tint VS Code windows with specific colors to instantly identify different instances.",
     "environment": "vscode",
     "category": "themes",
     "devtype": "fullstack",
     "price": 0,
     "url": "https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock",
     "icon": "🦚"
+  },
+  {
+    "name": "Todo Tree",
+    "description": "Display TODO, FIXME, and other comment tags in a searchable tree view for organization and tracking.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree",
+    "icon": "📋"
   },
   {
     "name": "Indent Rainbow",
@@ -210,16 +190,6 @@
     "icon": "🌈"
   },
   {
-    "name": "Path Intellisense",
-    "description": "Autocompletes file paths and directory names intelligently as you type.",
-    "environment": "vscode",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense",
-    "icon": "📂"
-  },
-  {
     "name": "Better Comments",
     "description": "Categorizes and styles code annotations (alerts, queries, highlights) for improved readability.",
     "environment": "vscode",
@@ -230,44 +200,324 @@
     "icon": "💬"
   },
   {
-    "name": "WakaTime",
-    "description": "Tracks time spent coding with metrics, insights, and programming activity analytics displayed in status bar.",
+    "name": "Import Cost",
+    "description": "Displays import/require package size in editor. Shows estimated size of dependencies to prevent unnecessary bloat.",
     "environment": "vscode",
-    "category": "productivity",
-    "devtype": "fullstack",
+    "category": "performance",
+    "devtype": "frontend",
     "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime",
-    "icon": "⏱️"
+    "url": "https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost",
+    "icon": "⚖️"
   },
   {
-    "name": "CodeSnap",
-    "description": "Captures styled screenshots of code snippets for easy sharing and presentations.",
+    "name": "Live Server",
+    "description": "Launch development server with live reload for static and dynamic pages. Auto-refresh browser on file changes.",
     "environment": "vscode",
     "category": "productivity",
-    "devtype": "fullstack",
+    "devtype": "frontend",
     "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap",
-    "icon": "📸"
+    "url": "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer",
+    "icon": "🌐"
   },
   {
-    "name": "Project Manager",
-    "description": "Organize and manage multiple projects with tagging and quick switching capabilities.",
+    "name": "Regex Previewer",
+    "description": "Real-time preview of regex matches. Takes guesswork out of regular expressions with visual matching feedback.",
     "environment": "vscode",
-    "category": "productivity",
+    "category": "debugging",
     "devtype": "fullstack",
     "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager",
-    "icon": "📁"
+    "url": "https://marketplace.visualstudio.com/items?itemName=chrmarti.regex",
+    "icon": "🔍"
   },
   {
-    "name": "Bookmarks",
-    "description": "Marks important code locations with blue bookmark icons for quick navigation and code organization.",
+    "name": "Coverage Gutters",
+    "description": "Displays test coverage generated by lcov or xml. Works with multiple languages for comprehensive coverage visualization.",
+    "environment": "vscode",
+    "category": "testing",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters",
+    "icon": "📊"
+  },
+  {
+    "name": "Vetur",
+    "description": "Vue support with syntax highlighting, formatting, and error checking. Comprehensive Vue 2 development environment.",
+    "environment": "vscode",
+    "category": "languages",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=octref.vetur",
+    "icon": "💚"
+  },
+  {
+    "name": "Pylance",
+    "description": "Fast, feature-rich Python language server. Provides static type checking, IntelliSense, and debugging for Python.",
+    "environment": "vscode",
+    "category": "languages",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance",
+    "icon": "🐍"
+  },
+  {
+    "name": "PlantUML",
+    "description": "Render diagrams from text descriptions. Create UML, flowcharts, and other diagrams without visual tools.",
     "environment": "vscode",
     "category": "productivity",
     "devtype": "fullstack",
     "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=alefragnani.bookmarks",
-    "icon": "🔖"
+    "url": "https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml",
+    "icon": "📐"
+  },
+  {
+    "name": "Markdown Preview Enhanced",
+    "description": "Advanced markdown preview with diagram support. Renders PlantUML, Mermaid, and other diagram formats.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced",
+    "icon": "📝"
+  },
+  {
+    "name": "Code Runner",
+    "description": "Execute code snippets or files directly in editor. Quick testing and experimentation without setup.",
+    "environment": "vscode",
+    "category": "debugging",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner",
+    "icon": "▶️"
+  },
+  {
+    "name": "SonarLint",
+    "description": "Real-time code quality analysis detecting bugs and vulnerabilities. Integrates with SonarQube for enterprise scanning.",
+    "environment": "vscode",
+    "category": "security",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode",
+    "icon": "🔐"
+  },
+  {
+    "name": "OWASP Dependency Check",
+    "description": "Scans third-party dependencies for known security vulnerabilities. Analyzes project dependencies against public databases.",
+    "environment": "vscode",
+    "category": "security",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=dependencycheck.dependencycheck_vscode",
+    "icon": "🛡️"
+  },
+  {
+    "name": "Snyk Security",
+    "description": "Real-time vulnerability scanning for code, dependencies, and infrastructure as code. Integrated across VSCode, JetBrains IDEs with automatic fix PRs.",
+    "environment": "vscode",
+    "category": "security",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://snyk.io/platform/ide-plugins/",
+    "icon": "🛡️"
+  },
+  {
+    "name": "Semgrep",
+    "description": "Fast SAST with readable YAML rules for multi-language coverage. VSCode extension scans on file save with custom rules and ML-powered security detection.",
+    "environment": "vscode",
+    "category": "security",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://semgrep.dev/",
+    "icon": "🔒"
+  },
+  {
+    "name": "Trivy VSCode Extension",
+    "description": "Container, filesystem, and IaC security scanner from Aqua. Detects CVEs, misconfigurations, secrets, and SBOM analysis.",
+    "environment": "vscode",
+    "category": "security",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://trivy.dev/",
+    "icon": "🔒"
+  },
+  {
+    "name": "CodeQL for VS Code",
+    "description": "GitHub's CodeQL queries enable vulnerability detection through data flow analysis. Write custom queries and track potential security issues.",
+    "environment": "vscode",
+    "category": "security",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://docs.github.com/en/code-security/codeql-for-vs-code/",
+    "icon": "🔒"
+  },
+  {
+    "name": "Grype VSCode Extension",
+    "description": "Vulnerability scanner with proactive file watching. Displays vulnerability count in status bar with sortable vulnerability tables.",
+    "environment": "vscode",
+    "category": "security",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/anchore/grype-vscode",
+    "icon": "🔒"
+  },
+  {
+    "name": "OWASP ZAP Scanner VSCode Extension",
+    "description": "Dynamic application security testing (DAST) for web apps and APIs. Detects SQL injection, XSS, broken auth with community-driven rules.",
+    "environment": "vscode",
+    "category": "security",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=CSE-DevOps.zap-scanner",
+    "icon": "🔒"
+  },
+  {
+    "name": "Scalene - AI Python Profiler",
+    "description": "AI-powered CPU+GPU+memory profiler for Python in VSCode. Detects performance bottlenecks with automated analysis and optimization suggestions.",
+    "environment": "vscode",
+    "category": "performance",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=EmeryBerger.scalene",
+    "icon": "⚡"
+  },
+  {
+    "name": "Python Resource Monitor",
+    "description": "Real-time resource usage tracking for Python debugging including CPU, memory, and thread monitoring.",
+    "environment": "vscode",
+    "category": "performance",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=kaih2o.python-resource-monitor",
+    "icon": "⚡"
+  },
+  {
+    "name": "WebPageTest VSCode Extension",
+    "description": "Web performance testing directly in VSCode. Displays metrics, waterfall, screenshots with Lighthouse integration.",
+    "environment": "vscode",
+    "category": "performance",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=WebPageTest.wpt-vscode-extension",
+    "icon": "⚡"
+  },
+  {
+    "name": "Container Tools for VS Code",
+    "description": "Improved container management with debugging, image vulnerability remediation, live Docker build debugging, and GitHub Copilot integration.",
+    "environment": "vscode",
+    "category": "devops",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://github.com/microsoft/vscode-containers",
+    "icon": "🐳"
+  },
+  {
+    "name": "Postman VS Code Extension",
+    "description": "Develop and test APIs directly in VSCode. Send requests, manage collections, add scripts, and collaborate with shared workspaces.",
+    "environment": "vscode",
+    "category": "api",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=Postman.postman-for-vscode",
+    "icon": "📮"
+  },
+  {
+    "name": "DBCode - SQL Database Client",
+    "description": "Multi-database support (PostgreSQL, MySQL, MongoDB, SQLite, MSSQL) with visual editing, AI queries, ERDs for VSCode and Cursor.",
+    "environment": "vscode",
+    "category": "debugging",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://dbcode.io/",
+    "icon": "🗄"
+  },
+  {
+    "name": "MongoDB for VS Code",
+    "description": "Create, manage, and query MongoDB databases with DocumentDB Scrapbook for prototyping queries.",
+    "environment": "vscode",
+    "category": "debugging",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://www.mongodb.com/products/tools/vs-code",
+    "icon": "🗄"
+  },
+  {
+    "name": "Playwright Test for VSCode",
+    "description": "Run, debug, and generate Playwright tests with CodeGen recording, breakpoints, and AI-powered failure suggestions.",
+    "environment": "vscode",
+    "category": "agentic dev tools",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright",
+    "icon": "🎭"
+  },
+  {
+    "name": "Accessibility Tester AI",
+    "description": "AI-powered WCAG 2.1 compliance auditing with automated checks, manual guides, and context-aware fix suggestions.",
+    "environment": "vscode",
+    "category": "testing",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=TestersAI.accessibility-tester-ai",
+    "icon": "♿"
+  },
+  {
+    "name": "A11yInspect",
+    "description": "530+ accessibility checks mapped to 30 WCAG Success Criteria. Supports HTML, JSX/TSX, Vue, Angular with minimal false positives.",
+    "environment": "vscode",
+    "category": "testing",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=BarrierBreak.a11yinspect",
+    "icon": "♿"
+  },
+  {
+    "name": "Perplexity AI Search Extension",
+    "description": "Real-time AI search integration with MCP support for VSCode. Provides web-backed reasoning and code-specific assistance.",
+    "environment": "vscode",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=ghutu.perplexity-ext",
+    "icon": "🔍"
+  },
+  {
+    "name": "JetBrains AI Assistant",
+    "description": "Context-aware AI chat for code questions. Explains code, finds problems, suggests refactorings, and generates tests.",
+    "environment": "jetbrains",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/18854-jetbrains-ai-assistant",
+    "icon": "🤖"
+  },
+  {
+    "name": "GitHub Copilot (JetBrains)",
+    "description": "AI code completion for JetBrains IDEs. Offers autocomplete-style suggestions for intelligent pair programming.",
+    "environment": "jetbrains",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 10,
+    "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot",
+    "icon": "🚀"
+  },
+  {
+    "name": "Tabnine (JetBrains)",
+    "description": "Enterprise-grade AI code completion with privacy focus. Supports offline local models for maximum security.",
+    "environment": "jetbrains",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/12798-tabnine-ai-code-completion",
+    "icon": "🎯"
+  },
+  {
+    "name": "Bito AI Code Assistant",
+    "description": "AI code review agent powered by Claude Sonnet 3.5. Delivers code reviews, identifies security vulnerabilities, and performance bottlenecks.",
+    "environment": "jetbrains",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://www.bito.ai/",
+    "icon": "🤖"
   },
   {
     "name": "IdeaVim",
@@ -280,28 +530,28 @@
     "icon": "⌨️"
   },
   {
-    "name": "Material Theme UI",
-    "description": "A comprehensive theme plugin with professional UI designs and customization options for JetBrains IDEs.",
-    "environment": "jetbrains",
-    "category": "themes",
-    "devtype": "fullstack",
-    "price": 1.5,
-    "url": "https://plugins.jetbrains.com/plugin/8006-material-theme-ui",
-    "icon": "🎨"
-  },
-  {
-    "name": "Rainbow Brackets",
-    "description": "Enhances code readability by assigning different colors to brackets at varying levels.",
+    "name": "String Manipulation",
+    "description": "Advanced string operations including case switching, sorting, filtering, escaping, and encoding.",
     "environment": "jetbrains",
     "category": "productivity",
     "devtype": "fullstack",
     "price": 0,
-    "url": "https://plugins.jetbrains.com/plugin/10080-rainbow-brackets",
-    "icon": "🌈"
+    "url": "https://plugins.jetbrains.com/plugin/2162-stringmanipulation",
+    "icon": "🔤"
+  },
+  {
+    "name": "Lombok",
+    "description": "Automatic boilerplate code generation for Java. Reduces verbosity with @Getter, @Setter, @FieldNameConstants annotations.",
+    "environment": "jetbrains",
+    "category": "productivity",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/6317-lombok",
+    "icon": "✨"
   },
   {
     "name": "Key Promoter X",
-    "description": "Helps you learn IDE keyboard shortcuts by displaying the corresponding shortcut whenever you use the mouse.",
+    "description": "Learn keyboard shortcuts by displaying them when using mouse. Shows shortcuts for actions you perform.",
     "environment": "jetbrains",
     "category": "productivity",
     "devtype": "fullstack",
@@ -310,28 +560,8 @@
     "icon": "⌨️"
   },
   {
-    "name": "GitToolBox",
-    "description": "A productivity and collaboration tool that expands built-in Git integration with inline blame annotations.",
-    "environment": "jetbrains",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://plugins.jetbrains.com/plugin/7499-gittoolbox",
-    "icon": "🔧"
-  },
-  {
-    "name": "JetBrains AI Assistant",
-    "description": "An official JetBrains intelligent coding assistant offering context-aware AI chat and code suggestions.",
-    "environment": "jetbrains",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://plugins.jetbrains.com/plugin/22282-jetbrains-ai-assistant",
-    "icon": "✨"
-  },
-  {
     "name": "CodeGlance",
-    "description": "Adds a code minimap to the editor pane similar to Sublime Text for quick navigation of code.",
+    "description": "Adds mini-map to code editor for quick code browsing. Navigate large files with visual overview.",
     "environment": "jetbrains",
     "category": "productivity",
     "devtype": "fullstack",
@@ -340,64 +570,154 @@
     "icon": "🗺️"
   },
   {
-    "name": "SonarQube for IDE",
-    "description": "A sophisticated static analysis tool that detects coding issues and security vulnerabilities in real-time.",
+    "name": "Rainbow Brackets",
+    "description": "Color-codes brackets at different nesting levels. Improves readability of complex nested structures.",
     "environment": "jetbrains",
-    "category": "testing",
+    "category": "productivity",
     "devtype": "fullstack",
     "price": 0,
-    "url": "https://plugins.jetbrains.com/plugin/7973-sonarqube-for-ide",
+    "url": "https://plugins.jetbrains.com/plugin/10080-rainbow-brackets",
+    "icon": "🌈"
+  },
+  {
+    "name": "GitLink",
+    "description": "Quick shortcuts to open files and commits in GitHub, Bitbucket, GitLab. Perfect for code reviews.",
+    "environment": "jetbrains",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/8183-gitlink",
+    "icon": "🔗"
+  },
+  {
+    "name": "GitToolBox",
+    "description": "Enhanced Git support with visualization of commit numbers and inline blame. Status display and auto-fetch.",
+    "environment": "jetbrains",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/7499-gittoolbox",
+    "icon": "🌿"
+  },
+  {
+    "name": "JetClient",
+    "description": "Ultimate REST client for API testing and debugging. Git sync and offline-first design for collaboration.",
+    "environment": "jetbrains",
+    "category": "api",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/21173-jetclient--the-ultimate-rest-client",
+    "icon": "📡"
+  },
+  {
+    "name": "Maven Helper",
+    "description": "Easy Maven dependency analysis and conflict resolution. Run and debug Maven goals directly from IDE.",
+    "environment": "jetbrains",
+    "category": "devops",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/7179-maven-helper",
+    "icon": "📦"
+  },
+  {
+    "name": "Gradle Helper",
+    "description": "Gradle dependency analysis and conflict resolution. Facilitates viewing final dependency versions.",
+    "environment": "jetbrains",
+    "category": "devops",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/25929-gradle-helper",
+    "icon": "🔨"
+  },
+  {
+    "name": "Mongo Plugin",
+    "description": "Access MongoDB databases with CRUD operations on collections. Query runner and integrated shell console.",
+    "environment": "jetbrains",
+    "category": "api",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/7141-mongo-plugin",
+    "icon": "🍃"
+  },
+  {
+    "name": "Redis",
+    "description": "Redis database management with cluster support and key-value operations. Query and data visualization tools.",
+    "environment": "jetbrains",
+    "category": "api",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/12820-redis",
+    "icon": "⚡"
+  },
+  {
+    "name": "GrepConsole",
+    "description": "Console filtering with grep, tail, and highlight functionality. Color-coded output for better visibility.",
+    "environment": "jetbrains",
+    "category": "debugging",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/7125-grep-console",
     "icon": "🔍"
   },
   {
-    "name": "Lombok",
-    "description": "Adds first-class support for Project Lombok, reducing boilerplate code by auto-generating getters and setters.",
-    "environment": "jetbrains",
-    "category": "productivity",
-    "devtype": "backend",
-    "price": 0,
-    "url": "https://plugins.jetbrains.com/plugin/6317-lombok",
-    "icon": "🔌"
-  },
-  {
-    "name": "CheckStyle-IDEA",
-    "description": "Provides real-time and on-demand scanning of Java files with CheckStyle to enforce coding standards.",
-    "environment": "jetbrains",
-    "category": "testing",
-    "devtype": "backend",
-    "price": 0,
-    "url": "https://plugins.jetbrains.com/plugin/12065-checkstyle-idea-flint-distribution-",
-    "icon": "✅"
-  },
-  {
-    "name": "Apidog Fast Request",
-    "description": "A free API debugging plugin that automatically detects endpoints and allows sending HTTP requests within IntelliJ IDEA.",
-    "environment": "jetbrains",
-    "category": "debugging",
-    "devtype": "backend",
-    "price": 0,
-    "url": "https://plugins.jetbrains.com/plugin/25925-apidog-fast-request--auto-detect-endpoints-http-rest-client",
-    "icon": "🚀"
-  },
-  {
-    "name": "String Manipulation",
-    "description": "Offers comprehensive string manipulation features including case switching, sorting, and filtering.",
+    "name": "Presentation Assistant",
+    "description": "Shows keyboard shortcuts of actions during presentations. Helps demonstrate IDE capabilities effectively.",
     "environment": "jetbrains",
     "category": "productivity",
     "devtype": "fullstack",
     "price": 0,
-    "url": "https://plugins.jetbrains.com/plugin/2162-stringmanipulation",
-    "icon": "✂️"
+    "url": "https://plugins.jetbrains.com/plugin/7345-presentation-assistant",
+    "icon": "🎤"
   },
   {
-    "name": "Database Navigator",
-    "description": "A database development and management tool that extends IDE capabilities with practical database operations.",
+    "name": "Qodana Security Analysis",
+    "description": "Real-time security vulnerability detection covering OWASP Top 10. Identifies SQL injection, XSS, and path traversal issues.",
     "environment": "jetbrains",
-    "category": "debugging",
-    "devtype": "backend",
+    "category": "security",
+    "devtype": "fullstack",
     "price": 0,
-    "url": "https://plugins.jetbrains.com/plugin/1800-database-navigator",
-    "icon": "💾"
+    "url": "https://plugins.jetbrains.com/plugin/25537-code-sight-security-",
+    "icon": "🔐"
+  },
+  {
+    "name": "Snyk Vulnerability Scanner (JetBrains)",
+    "description": "Scans code and dependencies for security vulnerabilities. Shows issues for Java, Kotlin, and other languages.",
+    "environment": "jetbrains",
+    "category": "security",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/18916-snyk-vulnerability-scanner",
+    "icon": "🛡️"
+  },
+  {
+    "name": "SonarLint (JetBrains)",
+    "description": "Real-time IDE inspection for bugs, vulnerabilities, and code smells. Rich contextual guidance for fixes.",
+    "environment": "jetbrains",
+    "category": "security",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/7973-sonarlint",
+    "icon": "🔍"
+  },
+  {
+    "name": "ReSharper 2026.1",
+    "description": "JetBrains IDE extension with built-in performance monitoring, CPU usage tracking, memory insights, and automatic issue detection.",
+    "environment": "jetbrains",
+    "category": "performance",
+    "devtype": "fullstack",
+    "price": 89,
+    "url": "https://www.jetbrains.com/resharper/",
+    "icon": "⚡"
+  },
+  {
+    "name": "Material Theme UI",
+    "description": "A comprehensive theme plugin with professional UI designs and customization options for JetBrains IDEs.",
+    "environment": "jetbrains",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 1.5,
+    "url": "https://plugins.jetbrains.com/plugin/8006-material-theme-ui",
+    "icon": "🎨"
   },
   {
     "name": "BashSupport Pro",
@@ -420,124 +740,1414 @@
     "icon": "💅"
   },
   {
-    "name": "Blueprint Assist",
-    "description": "Enhances Blueprint creation with automatic formatting and mouse-free node editing in Unreal Engine.",
-    "environment": "unreal",
+    "name": "Package Control",
+    "description": "Essential plugin manager for Sublime Text. Install, update, and manage 2500+ packages seamlessly.",
+    "environment": "sublime",
     "category": "productivity",
-    "devtype": "gamedev",
-    "price": 19.99,
-    "url": "https://www.unrealengine.com/marketplace/en-US/slug/blueprint-assist",
-    "icon": "🔧"
-  },
-  {
-    "name": "Quixel Bridge (Megascans)",
-    "description": "Free access to millions of photorealistic 3D scans and textures optimized for UE5.",
-    "environment": "unreal",
-    "category": "productivity",
-    "devtype": "gamedev",
+    "devtype": "fullstack",
     "price": 0,
-    "url": "https://www.unrealengine.com/en-US/bridge",
+    "url": "https://packagecontrol.io/",
     "icon": "📦"
   },
   {
-    "name": "Cargo by KitBash3D",
-    "description": "Free 3D asset manager providing access to 480+ models and materials with one-click import into UE5.",
-    "environment": "unreal",
+    "name": "Emmet",
+    "description": "Streamline HTML and CSS coding with abbreviations. Expand snippets for faster markup and style writing.",
+    "environment": "sublime",
     "category": "productivity",
-    "devtype": "gamedev",
+    "devtype": "frontend",
     "price": 0,
-    "url": "https://www.unrealengine.com/marketplace/en-US/product/cargo-kitbash3d",
-    "icon": "📁"
-  },
-  {
-    "name": "Oceanology",
-    "description": "Professional ocean simulation plugin with water effects, caustics, and realistic fluid dynamics.",
-    "environment": "unreal",
-    "category": "themes",
-    "devtype": "gamedev",
-    "price": 129.99,
-    "url": "https://www.unrealengine.com/marketplace/en-US/product/oceanology",
-    "icon": "🌊"
-  },
-  {
-    "name": "Ultra Dynamic Sky",
-    "description": "Comprehensive sky and weather system with dynamic day-night cycles and atmospheric effects.",
-    "environment": "unreal",
-    "category": "themes",
-    "devtype": "gamedev",
-    "price": 49.99,
-    "url": "https://www.unrealengine.com/marketplace/en-US/product/ultra-dynamic-sky/",
-    "icon": "☁️"
-  },
-  {
-    "name": "Dungeon Architect",
-    "description": "Procedural level generation plugin with node-based systems for designing dungeons and complex spaces.",
-    "environment": "unreal",
-    "category": "productivity",
-    "devtype": "gamedev",
-    "price": 99.99,
-    "url": "https://www.unrealengine.com/marketplace/en-US/product/dungeon-architect",
-    "icon": "🏰"
-  },
-  {
-    "name": "Substance 3D Plugin",
-    "description": "Adobe's material creation plugin enabling use of parametric Substance materials in UE5.",
-    "environment": "unreal",
-    "category": "productivity",
-    "devtype": "gamedev",
-    "price": 0,
-    "url": "https://www.unrealengine.com/marketplace/en-US/product/substance-plugin",
-    "icon": "🎨"
-  },
-  {
-    "name": "Datasmith",
-    "description": "Workflow tool for importing CAD and design data from 20+ sources into UE5.",
-    "environment": "unreal",
-    "category": "productivity",
-    "devtype": "gamedev",
-    "price": 0,
-    "url": "https://www.unrealengine.com/en-US/datasmith/plugins",
-    "icon": "📐"
-  },
-  {
-    "name": "Niagara Particle System",
-    "description": "Visual effects engine for creating real-time particle simulations and environmental effects.",
-    "environment": "unreal",
-    "category": "themes",
-    "devtype": "gamedev",
-    "price": 0,
-    "url": "https://docs.unrealengine.com/en-US/RenderingAndGraphics/Niagara/Overview/",
+    "url": "https://packagecontrol.io/packages/Emmet",
     "icon": "✨"
   },
   {
-    "name": "Common UI Plugin",
-    "description": "Epic's built-in UI framework providing advanced multiplatform user interface components.",
-    "environment": "unreal",
-    "category": "productivity",
-    "devtype": "gamedev",
+    "name": "SublimeLinter",
+    "description": "Code linting framework for Sublime Text. Integrates with ESLint, Flake8, ShellCheck and more.",
+    "environment": "sublime",
+    "category": "security",
+    "devtype": "fullstack",
     "price": 0,
-    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/common-ui-plugin-for-advanced-user-interfaces-in-unreal-engine",
-    "icon": "🖥️"
+    "url": "https://packagecontrol.io/packages/SublimeLinter",
+    "icon": "🔍"
   },
   {
-    "name": "Pixel Streaming Plugin",
-    "description": "Built-in plugin for streaming UE5 applications to browsers and mobile devices over WebRTC.",
+    "name": "Babel",
+    "description": "ES6/2015 and React JSX syntax highlighting. Essential for modern JavaScript development in Sublime.",
+    "environment": "sublime",
+    "category": "languages",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/Babel",
+    "icon": "💛"
+  },
+  {
+    "name": "AutoFileName",
+    "description": "Automatic file path completion in code. Reduces typing and prevents path errors.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/AutoFileName",
+    "icon": "📁"
+  },
+  {
+    "name": "EditorConfig",
+    "description": "Maintain consistent coding styles across editors. Configuration file for indent, charset, and line endings.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/EditorConfig",
+    "icon": "⚙️"
+  },
+  {
+    "name": "GitGutter",
+    "description": "Visual git status indicators next to line numbers. Shows modified, inserted, and deleted lines.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/GitGutter",
+    "icon": "🌿"
+  },
+  {
+    "name": "Terminus",
+    "description": "Full-featured terminal integrated into Sublime Text. Run shell commands directly in the editor.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/Terminus",
+    "icon": "💻"
+  },
+  {
+    "name": "Color Highlighter",
+    "description": "Visualize color codes in CSS and markup. Shows colors inline for faster color-based development.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/Color%20Highlighter",
+    "icon": "🎨"
+  },
+  {
+    "name": "Seti UI",
+    "description": "Modern UI theme for Sublime Text. Improves editor appearance with modern design and icon set.",
+    "environment": "sublime",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/Seti_UI",
+    "icon": "🎭"
+  },
+  {
+    "name": "TypeScript Syntax",
+    "description": "TypeScript syntax highlighting for Sublime Text. Essential for TypeScript development.",
+    "environment": "sublime",
+    "category": "languages",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/TypeScript%20Syntax",
+    "icon": "📘"
+  },
+  {
+    "name": "JSHint",
+    "description": "JavaScript linter for error checking. Highlights syntax errors and bad practices in JavaScript.",
+    "environment": "sublime",
+    "category": "security",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/SublimeLinter-jshint",
+    "icon": "✓"
+  },
+  {
+    "name": "JsPrettier",
+    "description": "JavaScript/TypeScript code formatter integration. Auto-formats code on save.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/JsPrettier",
+    "icon": "💅"
+  },
+  {
+    "name": "LSP Client",
+    "description": "Language Server Protocol support for Sublime Text providing IntelliSense, linting, and code actions.",
+    "environment": "sublime",
+    "category": "languages",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/LSP",
+    "icon": "🔌"
+  },
+  {
+    "name": "DocBlockr",
+    "description": "Simplifies writing code documentation by auto-generating comment blocks with proper formatting.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/DocBlockr",
+    "icon": "📚"
+  },
+  {
+    "name": "Pretty JSON",
+    "description": "Formats and validates JSON files with proper indentation and color syntax highlighting.",
+    "environment": "sublime",
+    "category": "debugging",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/Pretty%20JSON",
+    "icon": "📊"
+  },
+  {
+    "name": "Markdown Preview",
+    "description": "Real-time markdown preview in browser with syntax highlighting and live refresh.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/Markdown%20Preview",
+    "icon": "📄"
+  },
+  {
+    "name": "Anaconda",
+    "description": "Python IDE-like features including linting, debugging, completion, and unit testing in Sublime Text.",
+    "environment": "sublime",
+    "category": "languages",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/Anaconda",
+    "icon": "🐍"
+  },
+  {
+    "name": "SideBarEnhancements",
+    "description": "Extends file management capabilities in sidebar with advanced operations and file actions.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/SideBarEnhancements",
+    "icon": "📁"
+  },
+  {
+    "name": "Rust",
+    "description": "Rust language support with syntax highlighting and basic features. Essential for Rust development.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://zed.dev/extensions/rust",
+    "icon": "🦀"
+  },
+  {
+    "name": "Python",
+    "description": "Native Python support with language server and formatting. Includes Ruff for linting and formatting.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://zed.dev/extensions/python",
+    "icon": "🐍"
+  },
+  {
+    "name": "Go",
+    "description": "Native Go language support with gopls language server. Full IDE features for Go development.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://zed.dev/languages/go",
+    "icon": "🐹"
+  },
+  {
+    "name": "Ruby",
+    "description": "Ruby language support with configurable language servers. Supports solargraph, ruby-lsp, and others.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://zed.dev/extensions/ruby",
+    "icon": "💎"
+  },
+  {
+    "name": "PHP",
+    "description": "PHP language support with configurable language servers. Integrates intelephense and phpactor.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://zed.dev/extensions/php",
+    "icon": "🐘"
+  },
+  {
+    "name": "Modern Icons Theme",
+    "description": "Modern icon theme for Zed editor with comprehensive file type coverage. Visually consistent icon set.",
+    "environment": "zed",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/extensions/modern-icons",
+    "icon": "🎨"
+  },
+  {
+    "name": "Material Icon Theme (Zed)",
+    "description": "Material Design icons for Zed editor. Familiar icon set based on Material Design principles.",
+    "environment": "zed",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/extensions/material-icon-theme",
+    "icon": "🎭"
+  },
+  {
+    "name": "One Black Theme",
+    "description": "Dark theme for Zed editor inspired by One Dark Pro. Modern dark color scheme.",
+    "environment": "zed",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/extensions/one-black-theme",
+    "icon": "🌙"
+  },
+  {
+    "name": "Phosphor Icons",
+    "description": "Phosphor icon theme for Zed with 6000+ icons. Customizable icon theme with light and dark variants.",
+    "environment": "zed",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/extensions/phosphor-icons-theme",
+    "icon": "✨"
+  },
+  {
+    "name": "Taiga Theme",
+    "description": "Taiga theme with light and dark modes for Zed. Nature-inspired color scheme.",
+    "environment": "zed",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/extensions/taiga-theme",
+    "icon": "🌲"
+  },
+  {
+    "name": "Vue (Zed)",
+    "description": "Vue language support for Zed with syntax highlighting and language server integration.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://zed.dev/extensions/vue",
+    "icon": "💚"
+  },
+  {
+    "name": "SQL",
+    "description": "SQL language support with syntax highlighting for multiple SQL variants.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://zed.dev/extensions/sql",
+    "icon": "🗄️"
+  },
+  {
+    "name": "Terraform",
+    "description": "Terraform language support with syntax highlighting and language server integration.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://zed.dev/extensions/terraform",
+    "icon": "☁️"
+  },
+  {
+    "name": "Docker (Zed)",
+    "description": "Dockerfile and docker-compose syntax highlighting for Zed editor.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://zed.dev/extensions/docker",
+    "icon": "🐳"
+  },
+  {
+    "name": "Elixir",
+    "description": "Elixir language support with syntax highlighting and language server integration.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://zed.dev/extensions/elixir",
+    "icon": "💧"
+  },
+  {
+    "name": "Dart",
+    "description": "Dart language support with syntax highlighting for Flutter and Dart development.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://zed.dev/extensions/dart",
+    "icon": "🎯"
+  },
+  {
+    "name": "Kotlin",
+    "description": "Kotlin language support with syntax highlighting and language server integration.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://zed.dev/extensions/kotlin",
+    "icon": "🟣"
+  },
+  {
+    "name": "Zig",
+    "description": "Zig language support with syntax highlighting and language server integration.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://zed.dev/extensions/zig",
+    "icon": "⚡"
+  },
+  {
+    "name": "Astro",
+    "description": "Astro framework support with syntax highlighting and language features.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://zed.dev/extensions/astro",
+    "icon": "🚀"
+  },
+  {
+    "name": "Zed - GitHub Copilot",
+    "description": "Native GitHub Copilot integration in Zed with real-time AI code suggestions.",
+    "environment": "zed",
+    "category": "agentic dev tools",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/",
+    "icon": "🤖"
+  },
+  {
+    "name": "Zed - Vim Mode",
+    "description": "Full Vim keybinding support in Zed for modal editing with comprehensive Vim commands.",
+    "environment": "zed",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/docs/configuring-zed",
+    "icon": "⌨️"
+  },
+  {
+    "name": "Zed - Git Integration",
+    "description": "Built-in git support with diff markers, status display, and inline blame annotations.",
+    "environment": "zed",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/",
+    "icon": "🔍"
+  },
+  {
+    "name": "Zed - LSP Support",
+    "description": "Language Server Protocol support enabling intelligent code completion and diagnostics.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/",
+    "icon": "🔌"
+  },
+  {
+    "name": "Zed - Multi-Cursor",
+    "description": "Advanced multi-cursor editing enabling simultaneous changes across multiple code locations.",
+    "environment": "zed",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/",
+    "icon": "✨"
+  },
+  {
+    "name": "Zed - Terminal Integration",
+    "description": "Integrated terminal panel for command execution without leaving the editor.",
+    "environment": "zed",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/",
+    "icon": "💻"
+  },
+  {
+    "name": "Zed - Markdown Preview",
+    "description": "Real-time markdown preview alongside editor for instant visual feedback.",
+    "environment": "zed",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/",
+    "icon": "📄"
+  },
+  {
+    "name": "Cursor - Cmd K",
+    "description": "Command palette for code-aware operations, refactoring, and AI-assisted edits.",
+    "environment": "cursor",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/",
+    "icon": "🎯"
+  },
+  {
+    "name": "Cursor - Codebase Chat",
+    "description": "AI chat that understands your entire codebase for context-aware answers and suggestions.",
+    "environment": "cursor",
+    "category": "agentic dev tools",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/",
+    "icon": "💬"
+  },
+  {
+    "name": "Cursor - MCP Integrations",
+    "description": "Model Context Protocol integrations with Slack, Figma, AWS, Databricks, and more.",
+    "environment": "cursor",
+    "category": "agentic dev tools",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/",
+    "icon": "🔗"
+  },
+  {
+    "name": "Cursor - Multi-File Edit",
+    "description": "Edit multiple files simultaneously with AI-assisted batch refactoring across codebase.",
+    "environment": "cursor",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/",
+    "icon": "📝"
+  },
+  {
+    "name": "Cursor - VS Code Extensions",
+    "description": "Full compatibility with VS Code extensions enabling use of existing extension ecosystem.",
+    "environment": "cursor",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/",
+    "icon": "🔧"
+  },
+  {
+    "name": "Cursor - Terminal Integration",
+    "description": "Integrated terminal with AI assistance for command suggestions and debugging.",
+    "environment": "cursor",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/",
+    "icon": "💻"
+  },
+  {
+    "name": "Cursor - Git Integration",
+    "description": "Git-aware AI suggestions and automatic commit message generation.",
+    "environment": "cursor",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/",
+    "icon": "📦"
+  },
+  {
+    "name": "Linear Plugin (Cursor)",
+    "description": "Cursor marketplace plugin enabling access to Linear issues, projects, and documents directly in the IDE.",
+    "environment": "cursor",
+    "category": "api",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/marketplace",
+    "icon": "📋"
+  },
+  {
+    "name": "Figma Plugin (Cursor)",
+    "description": "Cursor marketplace plugin translating Figma designs directly into code. Bridges design-to-implementation gap.",
+    "environment": "cursor",
+    "category": "ai",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://cursor.com/marketplace",
+    "icon": "🎨"
+  },
+  {
+    "name": "Stripe Plugin (Cursor)",
+    "description": "Cursor marketplace plugin providing Stripe API reference, best practices, and SDK upgrade guidance.",
+    "environment": "cursor",
+    "category": "api",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/marketplace/stripe",
+    "icon": "💳"
+  },
+  {
+    "name": "AWS Plugin (Cursor)",
+    "description": "Cursor marketplace plugin offering expert database guidance for AWS portfolio including schema design and migrations.",
+    "environment": "cursor",
+    "category": "api",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://cursor.com/marketplace",
+    "icon": "☁️"
+  },
+  {
+    "name": "Databricks Plugin (Cursor)",
+    "description": "Cursor marketplace plugin enabling querying of Databricks data and Unity Catalog from IDE.",
+    "environment": "cursor",
+    "category": "api",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://cursor.com/marketplace",
+    "icon": "🔗"
+  },
+  {
+    "name": "Snowflake Plugin (Cursor)",
+    "description": "Cursor marketplace plugin for querying Snowflake data and auto-generating semantic models.",
+    "environment": "cursor",
+    "category": "api",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://cursor.com/marketplace",
+    "icon": "❄️"
+  },
+  {
+    "name": "Amplitude Plugin (Cursor)",
+    "description": "Cursor marketplace plugin for querying production analytics and surfacing insights from Amplitude.",
+    "environment": "cursor",
+    "category": "api",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/marketplace",
+    "icon": "📊"
+  },
+  {
+    "name": "Hex Plugin (Cursor)",
+    "description": "Cursor marketplace plugin for querying production data and surfacing analytics insights from Hex notebooks.",
+    "environment": "cursor",
+    "category": "api",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://cursor.com/marketplace",
+    "icon": "📈"
+  },
+  {
+    "name": "Twilio MCP Server (Cursor)",
+    "description": "Model Context Protocol server providing Twilio SMS, Voice, Verify, and 30+ product integrations for AI agents.",
+    "environment": "cursor",
+    "category": "api",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/marketplace",
+    "icon": "📱"
+  },
+  {
+    "name": "EchoAPI for Cursor",
+    "description": "REST API development plugin enabling direct API testing and management within Cursor.",
+    "environment": "cursor",
+    "category": "api",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.directory/",
+    "icon": "🔌"
+  },
+  {
+    "name": "Pieces Extension (Cursor)",
+    "description": "Code snippet management integration adding AI-powered Code Lens and Live Context for Cursor.",
+    "environment": "cursor",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://pieces.app/blog/using-pieces-for-vs-code-as-a-cursor-extension",
+    "icon": "💾"
+  },
+  {
+    "name": "Chrome DevTools MCP (Cursor)",
+    "description": "MCP server giving Cursor agents control over live Chrome browser for reliable automation and debugging.",
+    "environment": "cursor",
+    "category": "debugging",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "icon": "🔧"
+  },
+  {
+    "name": "DebugMCP (Cursor)",
+    "description": "Debug Adapter Protocol MCP server enabling AI agents to set breakpoints, step through code, and inspect variables.",
+    "environment": "cursor",
+    "category": "debugging",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/microsoft/DebugMCP",
+    "icon": "🐛"
+  },
+  {
+    "name": "Phantom Camera",
+    "description": "A camera control plugin inspired by Unity's Cinemachine that simplifies common Camera2D and Camera3D behaviors in Godot 4.",
+    "environment": "godot",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://github.com/ramokz/phantom-camera",
+    "icon": "📷"
+  },
+  {
+    "name": "Terrain3D",
+    "description": "High-performance editable terrain system for Godot 4, written in C++ as a GDExtension.",
+    "environment": "godot",
+    "category": "performance",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://github.com/outofsync/Terrain3D",
+    "icon": "🏔️"
+  },
+  {
+    "name": "Godot Jolt",
+    "description": "Native extension integrating the Jolt physics engine as a drop-in replacement for Godot Physics.",
+    "environment": "godot",
+    "category": "performance",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://github.com/godot-jolt/godot-jolt",
+    "icon": "⚙️"
+  },
+  {
+    "name": "GodotSteam",
+    "description": "Ecosystem of tools that integrates Valve's Steam platform with Godot Engine for Windows, Linux, and Mac.",
+    "environment": "godot",
+    "category": "api",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://github.com/GodotSteam/godotsteam",
+    "icon": "🎮"
+  },
+  {
+    "name": "LimboAI",
+    "description": "Open-source C++ plugin providing Behavior Trees and State Machines for Godot 4 with visual editor.",
+    "environment": "godot",
+    "category": "ai",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://github.com/limbonaut/limboai",
+    "icon": "🤖"
+  },
+  {
+    "name": "Beehave",
+    "description": "Visual behavior tree editor addon that transforms Godot's scene tree into an editable behavior tree system.",
+    "environment": "godot",
+    "category": "ai",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://github.com/bitbrain/beehave",
+    "icon": "🐝"
+  },
+  {
+    "name": "Dialogic",
+    "description": "Powerful dialogue system addon with visual story blocks editor for RPGs and visual novels.",
+    "environment": "godot",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://github.com/dialogic-godot/dialogic",
+    "icon": "💬"
+  },
+  {
+    "name": "ProtonScatter",
+    "description": "Automates asset positioning in Godot 4 scenes, spreading props across terrain with natural variation.",
+    "environment": "godot",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://godotengine.org/asset-library/asset/1866",
+    "icon": "🌳"
+  },
+  {
+    "name": "GUT (Godot Unit Test)",
+    "description": "Unit testing framework for Godot Engine allowing you to write tests for GDScript in GDScript.",
+    "environment": "godot",
+    "category": "testing",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://github.com/bitwes/Gut",
+    "icon": "✅"
+  },
+  {
+    "name": "BehaviourToolkit",
+    "description": "Addon providing Finite State Machines and Behaviour Trees for Godot 4.x for complex NPC behaviors.",
+    "environment": "godot",
+    "category": "ai",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://godotengine.org/asset-library/asset/2333",
+    "icon": "🎯"
+  },
+  {
+    "name": "GD-Sync",
+    "description": "Fully managed multiplayer networking solution for Godot 4 with global lobbies and matchmaking.",
+    "environment": "godot",
+    "category": "api",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://www.gd-sync.com/",
+    "icon": "🌐"
+  },
+  {
+    "name": "Visual Shader Editor",
+    "description": "Godot's built-in node-based shader graph editor supporting custom post-process effects and compute shaders.",
+    "environment": "godot",
+    "category": "themes",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://docs.godotengine.org/en/latest/tutorials/shaders/visual_shaders.html",
+    "icon": "🎨"
+  },
+  {
+    "name": "FastNoiseLite Terrain Generator",
+    "description": "Procedural terrain generation addon using Simplex/Perlin noise for creating natural-looking heightmap terrain.",
+    "environment": "godot",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://github.com/alpapaydin/Godot4-3D-Procedural-World-Generation",
+    "icon": "🗺️"
+  },
+  {
+    "name": "Procedural Voxel Terrain",
+    "description": "Godot 4 addon for Minecraft-style voxel terrain generation and destruction with 3D noise-based chunks.",
+    "environment": "godot",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://godotengine.org/asset-library/asset/4443",
+    "icon": "⛏️"
+  },
+  {
+    "name": "3D Destructible Procedural Terrain",
+    "description": "Advanced procedural smooth terrain system for Godot 4 using simplex noise and heightmaps with ArrayMesh.",
+    "environment": "godot",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://godotengine.org/asset-library/asset/2813",
+    "icon": "💥"
+  },
+  {
+    "name": "Block-based 3D Procedural Map Generation",
+    "description": "Tilemap-based procedural map generation demo with customizable chunks and noise parameters.",
+    "environment": "godot",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://godotengine.org/asset-library/asset/2698",
+    "icon": "🧱"
+  },
+  {
+    "name": "Twinmotion Bridge",
+    "description": "Plugin enabling seamless sync between CAD/BIM tools and Unreal Engine for architectural visualization.",
+    "environment": "unreal",
+    "category": "api",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://www.twinmotion.com/en-US/news/real-time-and-bim-tools-building-a-seamless-archviz-workflow",
+    "icon": "🏗️"
+  },
+  {
+    "name": "Substance Plugin",
+    "description": "Adobe's parametric material system for Unreal enabling real-time tweaking of Substance materials.",
+    "environment": "unreal",
+    "category": "themes",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://www.adobe.com/products/substance/plugins/unreal.html",
+    "icon": "🎨"
+  },
+  {
+    "name": "Control Rig",
+    "description": "Unreal's advanced skeletal animation rigging system with unprecedented control over character animation.",
     "environment": "unreal",
     "category": "productivity",
     "devtype": "gamedev",
     "price": 0,
-    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/pixel-streaming-in-unreal-engine",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/animating-objects-in-unreal-engine",
+    "icon": "🎬"
+  },
+  {
+    "name": "MetaHuman Animator",
+    "description": "Captures high-fidelity facial performances using video and depth data for dialogue and cutscenes.",
+    "environment": "unreal",
+    "category": "ai",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://www.metahuman.com/animate",
+    "icon": "🎭"
+  },
+  {
+    "name": "MetaHuman Animation Tool (MAT)",
+    "description": "Editor utility widget making MetaHuman in-engine animation easier with Control Rig integration.",
+    "environment": "unreal",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 30,
+    "url": "https://www.fab.com/listings/843baea2-8298-4b07-8db2-7ca18b026b7c",
+    "icon": "🤖"
+  },
+  {
+    "name": "Live Link Plugin",
+    "description": "Motion capture streaming system allowing real-time animation data from mocap systems to stream into Unreal.",
+    "environment": "unreal",
+    "category": "api",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/live-link-in-unreal-engine",
     "icon": "📡"
   },
   {
-    "name": "Sequencer Cinematic Editor",
-    "description": "Non-linear editor for creating cinematic sequences with camera control and animation.",
+    "name": "KitBash3D Integration",
+    "description": "Free plugin for fast importing and customizing KitBash asset kits directly in Unreal.",
+    "environment": "unreal",
+    "category": "api",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://www.kitbash3d.com/",
+    "icon": "🎯"
+  },
+  {
+    "name": "Worldscape",
+    "description": "Tool for creating vast landscapes with procedural generation ensuring every landscape is distinct.",
     "environment": "unreal",
     "category": "productivity",
     "devtype": "gamedev",
     "price": 0,
-    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-sequencer-movie-tool-overview",
-    "icon": "🎬"
+    "url": "https://www.fab.com/",
+    "icon": "🌍"
+  },
+  {
+    "name": "Oceanology & Riverology",
+    "description": "Suite for creating stunning oceans and rivers with procedural generation and realistic water physics.",
+    "environment": "unreal",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://www.fab.com/",
+    "icon": "🌊"
+  },
+  {
+    "name": "Character Creator UE Control Rig",
+    "description": "Free Reallusion plugin enabling posing and animation of Character Creator characters in Unreal.",
+    "environment": "unreal",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://www.reallusion.com/metahuman/",
+    "icon": "👤"
+  },
+  {
+    "name": "CC Auto Setup",
+    "description": "Plugin converting CC5 HD characters into UE5-ready avatars fully compatible with MetaHuman animations.",
+    "environment": "unreal",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://www.fab.com/",
+    "icon": "🎭"
+  },
+  {
+    "name": "Nanite Virtualized Geometry",
+    "description": "Unreal 5's built-in micropolygon system eliminating manual LOD management with dynamic detail adjustment.",
+    "environment": "unreal",
+    "category": "performance",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/nanite-virtualized-geometry-in-unreal-engine",
+    "icon": "✨"
+  },
+  {
+    "name": "Lumen Global Illumination",
+    "description": "Real-time global illumination and reflection system for dynamic lighting without baking.",
+    "environment": "unreal",
+    "category": "performance",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/lumen-global-illumination-and-reflections-in-unreal-engine",
+    "icon": "💡"
+  },
+  {
+    "name": "Telescope (Neovim)",
+    "description": "Highly extensible fuzzy finder for Neovim with modular pickers, sorters, and previewers.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/nvim-telescope/telescope.nvim",
+    "icon": "🔍"
+  },
+  {
+    "name": "nvim-cmp",
+    "description": "De-facto completion framework for Neovim written in Lua. Feeds on LSP, path, buffer, and snippet sources.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/hrsh7th/nvim-cmp",
+    "icon": "📝"
+  },
+  {
+    "name": "nvim-treesitter",
+    "description": "Syntax highlighting, code folding, and text objects using tree-sitter for accurate code highlighting.",
+    "environment": "neovim",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/nvim-treesitter/nvim-treesitter",
+    "icon": "🌳"
+  },
+  {
+    "name": "mason.nvim",
+    "description": "Portable package manager for Neovim that easily installs and manages LSP servers and linters.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/williamboman/mason.nvim",
+    "icon": "🔨"
+  },
+  {
+    "name": "nvim-lspconfig",
+    "description": "Official Neovim plugin providing quickstart configs for 100+ language servers.",
+    "environment": "neovim",
+    "category": "languages",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/neovim/nvim-lspconfig",
+    "icon": "🔌"
+  },
+  {
+    "name": "nvim-dap",
+    "description": "Debug Adapter Protocol client implementation for Neovim enabling breakpoints and step debugging.",
+    "environment": "neovim",
+    "category": "debugging",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/mfussenegger/nvim-dap",
+    "icon": "🐛"
+  },
+  {
+    "name": "LuaSnip",
+    "description": "Snippet engine for Neovim written in Lua with support for custom snippet definitions.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/L3MON4D3/LuaSnip",
+    "icon": "✂️"
+  },
+  {
+    "name": "which-key.nvim",
+    "description": "Keybinding discovery plugin showing available shortcuts in a popup as you type.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/folke/which-key.nvim",
+    "icon": "⌨️"
+  },
+  {
+    "name": "nvim-tree",
+    "description": "File system explorer sidebar for easy navigation and file operations.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/nvim-tree/nvim-tree.lua",
+    "icon": "📁"
+  },
+  {
+    "name": "bufferline.nvim",
+    "description": "Snazzy buffer line plugin with tabpage integration for managing multiple open files.",
+    "environment": "neovim",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/akinsho/bufferline.nvim",
+    "icon": "📑"
+  },
+  {
+    "name": "lualine.nvim",
+    "description": "Blazing fast and customizable statusline plugin written in pure Lua.",
+    "environment": "neovim",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/nvim-lualine/lualine.nvim",
+    "icon": "📊"
+  },
+  {
+    "name": "catppuccin.nvim",
+    "description": "Soothing pastel theme for Neovim with four flavors and extensive plugin integrations.",
+    "environment": "neovim",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/catppuccin/nvim",
+    "icon": "🍨"
+  },
+  {
+    "name": "gruvbox.nvim",
+    "description": "Lua port of the most famous Vim colorscheme with warm retro colors.",
+    "environment": "neovim",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/morhetz/gruvbox",
+    "icon": "🌅"
+  },
+  {
+    "name": "nordic.nvim",
+    "description": "Nord-inspired theme for Neovim but warmer and darker with tree sitter support.",
+    "environment": "neovim",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/AlexvZyl/nordic.nvim",
+    "icon": "❄️"
+  },
+  {
+    "name": "gitsigns.nvim",
+    "description": "Git integration showing added/changed/deleted line indicators with hunk staging.",
+    "environment": "neovim",
+    "category": "api",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/lewis6991/gitsigns.nvim",
+    "icon": "📝"
+  },
+  {
+    "name": "vim-fugitive",
+    "description": "Premier Git wrapper for Vim/Neovim providing shortcuts and helpers.",
+    "environment": "neovim",
+    "category": "api",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/tpope/vim-fugitive",
+    "icon": "🔗"
+  },
+  {
+    "name": "lazygit.nvim",
+    "description": "Neovim plugin wrapping lazygit providing a fancy UI for git operations.",
+    "environment": "neovim",
+    "category": "api",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/kdheepak/lazygit.nvim",
+    "icon": "🚀"
+  },
+  {
+    "name": "neogit",
+    "description": "Work-in-progress Magit clone for Neovim providing full buffer-based git interface.",
+    "environment": "neovim",
+    "category": "api",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/NeogitOrg/neogit",
+    "icon": "🌿"
+  },
+  {
+    "name": "diffview.nvim",
+    "description": "Unified interface for cycling through file diffs and merge conflict resolution.",
+    "environment": "neovim",
+    "category": "api",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/sindrets/diffview.nvim",
+    "icon": "🔀"
+  },
+  {
+    "name": "conform.nvim",
+    "description": "Lightweight yet powerful formatter plugin for Neovim with LSP formatting support.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/stevearc/conform.nvim",
+    "icon": "📐"
+  },
+  {
+    "name": "nvim-lint",
+    "description": "Asynchronous linter plugin for Neovim complementing built-in LSP.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/mfussenegger/nvim-lint",
+    "icon": "✔️"
+  },
+  {
+    "name": "indent-blankline.nvim",
+    "description": "Indentation guides using Neovim's virtual text feature for improved readability.",
+    "environment": "neovim",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/lukas-reineke/indent-blankline.nvim",
+    "icon": "📏"
+  },
+  {
+    "name": "bqf.nvim",
+    "description": "Better quickfix window plugin transforming quickfix navigation with error previews.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/kevinhwang91/nvim-bqf",
+    "icon": "🚨"
+  },
+  {
+    "name": "snacks.nvim",
+    "description": "Game-changing plugin rewriting parts of Neovim ecosystem cleaner and faster.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/folke/snacks.nvim",
+    "icon": "⚡"
+  },
+  {
+    "name": "Copilot.lua",
+    "description": "GitHub Copilot integration for Neovim with autocomplete and command support.",
+    "environment": "neovim",
+    "category": "agentic dev tools",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/zbirenbaum/copilot.lua",
+    "icon": "🤖"
+  },
+  {
+    "name": "Undotree",
+    "description": "Visualizes and navigates the undo history tree for non-linear undo/redo.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/mbbill/undotree",
+    "icon": "↶"
+  },
+  {
+    "name": "Portainer",
+    "description": "Lightweight container management UI for Docker with visual interface for all operations.",
+    "environment": "docker",
+    "category": "devops",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://www.portainer.io/",
+    "icon": "🐳"
+  },
+  {
+    "name": "Docker Scout",
+    "description": "Vulnerability scanning and supply chain security tool for container images.",
+    "environment": "docker",
+    "category": "security",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://docker.com/scout",
+    "icon": "🛡️"
+  },
+  {
+    "name": "Watchtower",
+    "description": "Automated container image update tool that monitors and upgrades running containers.",
+    "environment": "docker",
+    "category": "devops",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://github.com/containrrr/watchtower",
+    "icon": "🔄"
+  },
+  {
+    "name": "LazyDocker",
+    "description": "Terminal UI for Docker with container, image, and network management.",
+    "environment": "docker",
+    "category": "devops",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://github.com/jesseduffield/lazydocker",
+    "icon": "💻"
+  },
+  {
+    "name": "Colima",
+    "description": "Container runtime for macOS and Linux providing Docker and Kubernetes support.",
+    "environment": "docker",
+    "category": "devops",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://github.com/abiosoft/colima",
+    "icon": "🚀"
+  },
+  {
+    "name": "Docker Compose",
+    "description": "Multi-container orchestration tool for defining and running complex applications.",
+    "environment": "docker",
+    "category": "devops",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://docs.docker.com/compose/",
+    "icon": "🎼"
+  },
+  {
+    "name": "Docker Slim",
+    "description": "Reduces container image size and improves security through intelligent analysis.",
+    "environment": "docker",
+    "category": "performance",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://github.com/slimtoolkit/slim",
+    "icon": "📦"
+  },
+  {
+    "name": "ctop",
+    "description": "Top-like interface for monitoring container metrics and resource usage.",
+    "environment": "docker",
+    "category": "devops",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://github.com/bcicen/ctop",
+    "icon": "📊"
+  },
+  {
+    "name": "Trivy",
+    "description": "Container, filesystem, and IaC security scanner detecting CVEs and misconfigurations.",
+    "environment": "docker",
+    "category": "security",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://trivy.dev/",
+    "icon": "🔒"
+  },
+  {
+    "name": "Snyk (Docker)",
+    "description": "Real-time vulnerability scanning for Docker images and dependencies.",
+    "environment": "docker",
+    "category": "security",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://snyk.io/",
+    "icon": "🔒"
+  },
+  {
+    "name": "Grype",
+    "description": "Vulnerability scanner for Docker containers with proactive file watching.",
+    "environment": "docker",
+    "category": "security",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://github.com/anchore/grype",
+    "icon": "🔒"
+  },
+  {
+    "name": "Lens",
+    "description": "Kubernetes IDE with visual cluster management and container orchestration.",
+    "environment": "docker",
+    "category": "devops",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://k8slens.dev/",
+    "icon": "⚙️"
+  },
+  {
+    "name": "Newman",
+    "description": "Command-line collection runner for executing Postman collections in CI/CD pipelines.",
+    "environment": "postman",
+    "category": "api",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://github.com/postmanlabs/newman",
+    "icon": "🚀"
+  },
+  {
+    "name": "Postman CLI",
+    "description": "Command-line interface for Postman enabling API testing and collection execution.",
+    "environment": "postman",
+    "category": "api",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://www.postman.com/product/integrations/",
+    "icon": "⌨️"
+  },
+  {
+    "name": "Jira Sync (Postman)",
+    "description": "Synchronize Postman collections with Jira issues for integrated API testing and tracking.",
+    "environment": "postman",
+    "category": "api",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://www.postman.com/product/integrations/",
+    "icon": "🔗"
+  },
+  {
+    "name": "Slack Integration (Postman)",
+    "description": "Send API test results and notifications directly to Slack channels.",
+    "environment": "postman",
+    "category": "api",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://www.postman.com/product/integrations/",
+    "icon": "💬"
+  },
+  {
+    "name": "GitHub Actions (Postman)",
+    "description": "CI/CD integration for running Postman collections as part of GitHub Actions workflows.",
+    "environment": "postman",
+    "category": "api",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://www.postman.com/product/integrations/",
+    "icon": "⚙️"
+  },
+  {
+    "name": "Postman Mock Server",
+    "description": "Create mock APIs for testing client code against endpoints before backend development.",
+    "environment": "postman",
+    "category": "testing",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://learning.postman.com/docs/designing-and-developing-your-api/mocking-data/setting-up-mock/",
+    "icon": "🎭"
+  },
+  {
+    "name": "Postman API Documentation",
+    "description": "Auto-generate and host API documentation from Postman collections with interactive examples.",
+    "environment": "postman",
+    "category": "api",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://learning.postman.com/docs/publishing-your-api/publishing-your-docs/",
+    "icon": "📚"
+  },
+  {
+    "name": "GraphQL Support (Postman)",
+    "description": "Native GraphQL support with schema introspection and query building in Postman.",
+    "environment": "postman",
+    "category": "api",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://www.postman.com/product/api-client/",
+    "icon": "⚡"
+  },
+  {
+    "name": "Jenkins Plugin (Postman)",
+    "description": "Jenkins integration for running Postman collections as part of automated build pipelines.",
+    "environment": "postman",
+    "category": "api",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://github.com/postmanlabs/postman-app-support",
+    "icon": "🔧"
   },
   {
     "name": "React Developer Tools",
@@ -710,6 +2320,26 @@
     "icon": "♿"
   },
   {
+    "name": "Angular DevTools",
+    "description": "Browser devtools extension for debugging and inspecting Angular applications.",
+    "environment": "browser",
+    "category": "debugging",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/angular-devtools/ienfalelppikajagpapbmjvbcbpddkma",
+    "icon": "🔴"
+  },
+  {
+    "name": "Axe DevTools",
+    "description": "Accessibility testing tool detecting WCAG violations and accessibility issues.",
+    "environment": "browser",
+    "category": "testing",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnkpklempisson",
+    "icon": "♿"
+  },
+  {
     "name": "Cursor CLI Integration",
     "description": "Command-line tool to manage Cursor AI editor from terminal with workspace and extension control.",
     "environment": "ai",
@@ -798,645 +2428,5 @@
     "price": 0,
     "url": "https://github.com/vercel/ai",
     "icon": "🚀"
-  },
-  {
-    "name": "Package Control",
-    "description": "The Sublime Text package manager enabling easy installation and management of thousands of packages and themes.",
-    "environment": "sublime",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://packagecontrol.io/",
-    "icon": "📦"
-  },
-  {
-    "name": "LSP Client",
-    "description": "Language Server Protocol support for Sublime Text providing IntelliSense, linting, and code actions.",
-    "environment": "sublime",
-    "category": "languages",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://packagecontrol.io/packages/LSP",
-    "icon": "🔌"
-  },
-  {
-    "name": "GitGutter",
-    "description": "Shows git diff information in the gutter of the editor for line-by-line change tracking.",
-    "environment": "sublime",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://packagecontrol.io/packages/GitGutter",
-    "icon": "📝"
-  },
-  {
-    "name": "SublimeLinter",
-    "description": "Code linting framework supporting multiple linters for identifying errors and code quality issues.",
-    "environment": "sublime",
-    "category": "testing",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://packagecontrol.io/packages/SublimeLinter",
-    "icon": "✅"
-  },
-  {
-    "name": "Emmet",
-    "description": "High-speed HTML/CSS coding expansion tool for fast markup creation and editing.",
-    "environment": "sublime",
-    "category": "productivity",
-    "devtype": "frontend",
-    "price": 0,
-    "url": "https://packagecontrol.io/packages/Emmet",
-    "icon": "⚡"
-  },
-  {
-    "name": "Material Theme",
-    "description": "Beautiful Material Design-inspired theme and color scheme for Sublime Text.",
-    "environment": "sublime",
-    "category": "themes",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://packagecontrol.io/packages/Material%20Theme",
-    "icon": "🎨"
-  },
-  {
-    "name": "BracketHighlighter",
-    "description": "Highlights matching brackets and quotes for improved code readability and navigation.",
-    "environment": "sublime",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://packagecontrol.io/packages/BracketHighlighter",
-    "icon": "🌈"
-  },
-  {
-    "name": "DocBlockr",
-    "description": "Simplifies writing code documentation by auto-generating comment blocks with proper formatting.",
-    "environment": "sublime",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://packagecontrol.io/packages/DocBlockr",
-    "icon": "📚"
-  },
-  {
-    "name": "Color Highlight",
-    "description": "Highlights colors in code with background color matching the actual color value.",
-    "environment": "sublime",
-    "category": "themes",
-    "devtype": "frontend",
-    "price": 0,
-    "url": "https://packagecontrol.io/packages/Color%20Highlight",
-    "icon": "🎭"
-  },
-  {
-    "name": "Terminus",
-    "description": "Powerful terminal emulator integrated directly into Sublime Text for command execution.",
-    "environment": "sublime",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://packagecontrol.io/packages/Terminus",
-    "icon": "💻"
-  },
-  {
-    "name": "Pretty JSON",
-    "description": "Formats and validates JSON files with proper indentation and color syntax highlighting.",
-    "environment": "sublime",
-    "category": "debugging",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://packagecontrol.io/packages/Pretty%20JSON",
-    "icon": "📊"
-  },
-  {
-    "name": "Markdown Preview",
-    "description": "Real-time markdown preview in browser with syntax highlighting and live refresh.",
-    "environment": "sublime",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://packagecontrol.io/packages/Markdown%20Preview",
-    "icon": "📄"
-  },
-  {
-    "name": "Anaconda",
-    "description": "Python IDE-like features including linting, debugging, completion, and unit testing in Sublime Text.",
-    "environment": "sublime",
-    "category": "languages",
-    "devtype": "backend",
-    "price": 0,
-    "url": "https://packagecontrol.io/packages/Anaconda",
-    "icon": "🐍"
-  },
-  {
-    "name": "SideBarEnhancements",
-    "description": "Extends file management capabilities in sidebar with advanced operations and file actions.",
-    "environment": "sublime",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://packagecontrol.io/packages/SideBarEnhancements",
-    "icon": "📁"
-  },
-  {
-    "name": "Zed Editor - GitHub Copilot",
-    "description": "Native GitHub Copilot integration in Zed with real-time AI code suggestions.",
-    "environment": "zed",
-    "category": "agentic dev tools",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://zed.dev/",
-    "icon": "🤖"
-  },
-  {
-    "name": "Zed Extensions Marketplace",
-    "description": "Ecosystem of extensions for Zed including themes, language servers, and UI customizations.",
-    "environment": "zed",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://github.com/zed-industries/extensions",
-    "icon": "⚙️"
-  },
-  {
-    "name": "Zed - Vim Mode",
-    "description": "Full Vim keybinding support in Zed for modal editing with comprehensive Vim commands.",
-    "environment": "zed",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://zed.dev/docs/configuring-zed",
-    "icon": "⌨️"
-  },
-  {
-    "name": "Zed - Git Integration",
-    "description": "Built-in git support with diff markers, status display, and inline blame annotations.",
-    "environment": "zed",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://zed.dev/",
-    "icon": "🔍"
-  },
-  {
-    "name": "Zed - LSP Support",
-    "description": "Language Server Protocol support enabling intelligent code completion and diagnostics.",
-    "environment": "zed",
-    "category": "languages",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://zed.dev/",
-    "icon": "🔌"
-  },
-  {
-    "name": "Zed - Multi-Cursor",
-    "description": "Advanced multi-cursor editing enabling simultaneous changes across multiple code locations.",
-    "environment": "zed",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://zed.dev/",
-    "icon": "✨"
-  },
-  {
-    "name": "Zed - Terminal Integration",
-    "description": "Integrated terminal panel for command execution without leaving the editor.",
-    "environment": "zed",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://zed.dev/",
-    "icon": "💻"
-  },
-  {
-    "name": "Zed - Markdown Preview",
-    "description": "Real-time markdown preview alongside editor for instant visual feedback.",
-    "environment": "zed",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://zed.dev/",
-    "icon": "📄"
-  },
-  {
-    "name": "Cursor - Cmd K",
-    "description": "Command palette for code-aware operations, refactoring, and AI-assisted edits.",
-    "environment": "cursor",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://cursor.com/",
-    "icon": "🎯"
-  },
-  {
-    "name": "Cursor - Codebase Chat",
-    "description": "AI chat that understands your entire codebase for context-aware answers and suggestions.",
-    "environment": "cursor",
-    "category": "agentic dev tools",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://cursor.com/",
-    "icon": "💬"
-  },
-  {
-    "name": "Cursor - MCP Integrations",
-    "description": "Model Context Protocol integrations with Slack, Figma, AWS, Databricks, and more.",
-    "environment": "cursor",
-    "category": "agentic dev tools",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://cursor.com/",
-    "icon": "🔗"
-  },
-  {
-    "name": "Cursor - Multi-File Edit",
-    "description": "Edit multiple files simultaneously with AI-assisted batch refactoring across codebase.",
-    "environment": "cursor",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://cursor.com/",
-    "icon": "📝"
-  },
-  {
-    "name": "Cursor - VS Code Extensions",
-    "description": "Full compatibility with VS Code extensions enabling use of existing extension ecosystem.",
-    "environment": "cursor",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://cursor.com/",
-    "icon": "🔧"
-  },
-  {
-    "name": "Cursor - Terminal Integration",
-    "description": "Integrated terminal with AI assistance for command suggestions and debugging.",
-    "environment": "cursor",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://cursor.com/",
-    "icon": "💻"
-  },
-  {
-    "name": "Cursor - Git Integration",
-    "description": "Git-aware AI suggestions and automatic commit message generation.",
-    "environment": "cursor",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://cursor.com/",
-    "icon": "📦"
-  },
-  {
-    "name": "Godot - Terrain3D",
-    "description": "GPU-accelerated terrain generation and sculpting system with LOD support.",
-    "environment": "godot",
-    "category": "productivity",
-    "devtype": "gamedev",
-    "price": 0,
-    "url": "https://godotengine.org/asset-library/asset/1990",
-    "icon": "⛰️"
-  },
-  {
-    "name": "Godot - Beehave",
-    "description": "Behavior tree framework for AI systems enabling complex NPC behavior and decision-making.",
-    "environment": "godot",
-    "category": "productivity",
-    "devtype": "gamedev",
-    "price": 0,
-    "url": "https://github.com/heiafallheiaf/Beehave",
-    "icon": "🤖"
-  },
-  {
-    "name": "Godot - Dialogic",
-    "description": "Comprehensive dialogue system framework with visual editor for conversations and branching narrative.",
-    "environment": "godot",
-    "category": "productivity",
-    "devtype": "gamedev",
-    "price": 0,
-    "url": "https://github.com/coppolaemilio/dialogic",
-    "icon": "💬"
-  },
-  {
-    "name": "Godot - GodotSteam",
-    "description": "Steam API integration enabling Steam achievements, cloud saves, and multiplayer features.",
-    "environment": "godot",
-    "category": "productivity",
-    "devtype": "gamedev",
-    "price": 0,
-    "url": "https://github.com/GodotSteam/GodotSteam",
-    "icon": "🎮"
-  },
-  {
-    "name": "Godot - AStar3D",
-    "description": "3D pathfinding system using A* algorithm for intelligent NPC movement and navigation.",
-    "environment": "godot",
-    "category": "productivity",
-    "devtype": "gamedev",
-    "price": 0,
-    "url": "https://docs.godotengine.org/en/stable/classes/class_astar3d.html",
-    "icon": "🗺️"
-  },
-  {
-    "name": "Godot - VRM Importer",
-    "description": "Import VRM 3D humanoid character models for use in games and animations.",
-    "environment": "godot",
-    "category": "productivity",
-    "devtype": "gamedev",
-    "price": 0,
-    "url": "https://github.com/V-Sekai/godot_vrm",
-    "icon": "🧑"
-  },
-  {
-    "name": "Godot - LDtk Importer",
-    "description": "Import LDtk level design files with full tile, entity, and layer support.",
-    "environment": "godot",
-    "category": "productivity",
-    "devtype": "gamedev",
-    "price": 0,
-    "url": "https://github.com/Tricky-Trickster/LDtkImporter",
-    "icon": "🎨"
-  },
-  {
-    "name": "Godot - Volumetric Fog",
-    "description": "Advanced fog and volumetric effects for atmospheric environmental rendering.",
-    "environment": "godot",
-    "category": "themes",
-    "devtype": "gamedev",
-    "price": 0,
-    "url": "https://godotengine.org/asset-library/asset",
-    "icon": "☁️"
-  },
-  {
-    "name": "Neovim - nvim-cmp",
-    "description": "Completion engine providing autocompletion with LSP, snippet, and buffer sources.",
-    "environment": "neovim",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://github.com/hrsh7th/nvim-cmp",
-    "icon": "✨"
-  },
-  {
-    "name": "Neovim - Telescope",
-    "description": "Fuzzy finder for files, buffers, lines, and more with previews and customizable actions.",
-    "environment": "neovim",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://github.com/nvim-telescope/telescope.nvim",
-    "icon": "🔍"
-  },
-  {
-    "name": "Neovim - Treesitter",
-    "description": "Syntax parsing and highlighting using incremental parsing trees for accurate code highlighting.",
-    "environment": "neovim",
-    "category": "themes",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://github.com/nvim-treesitter/nvim-treesitter",
-    "icon": "🌳"
-  },
-  {
-    "name": "Neovim - Fugitive",
-    "description": "Git integration providing git blame, status, log, and diff viewing within Neovim.",
-    "environment": "neovim",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://github.com/tpope/vim-fugitive",
-    "icon": "🔧"
-  },
-  {
-    "name": "Neovim - LSP Config",
-    "description": "Language Server Protocol configuration and management for IntelliSense and diagnostics.",
-    "environment": "neovim",
-    "category": "languages",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://github.com/neovim/nvim-lspconfig",
-    "icon": "🔌"
-  },
-  {
-    "name": "Neovim - Mason",
-    "description": "Package manager for Neovim LSPs, DAPs, and linters with easy installation and updates.",
-    "environment": "neovim",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://github.com/williamboman/mason.nvim",
-    "icon": "📦"
-  },
-  {
-    "name": "Neovim - Lualine",
-    "description": "Fast and customizable statusline and tabline with component support and themes.",
-    "environment": "neovim",
-    "category": "themes",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://github.com/nvim-lualine/lualine.nvim",
-    "icon": "📊"
-  },
-  {
-    "name": "Neovim - NvimTree",
-    "description": "File explorer tree view for easy navigation and file operations.",
-    "environment": "neovim",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://github.com/nvim-tree/nvim-tree.lua",
-    "icon": "📁"
-  },
-  {
-    "name": "Neovim - Packer",
-    "description": "Lua-based plugin manager for Neovim with profiling and dependency management.",
-    "environment": "neovim",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://github.com/wbthomason/packer.nvim",
-    "icon": "⚙️"
-  },
-  {
-    "name": "Neovim - Copilot.lua",
-    "description": "GitHub Copilot integration for Neovim with autocomplete and command support.",
-    "environment": "neovim",
-    "category": "agentic dev tools",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://github.com/zbirenbaum/copilot.lua",
-    "icon": "🤖"
-  },
-  {
-    "name": "Neovim - Undotree",
-    "description": "Visualizes and navigates the undo history tree for non-linear undo/redo.",
-    "environment": "neovim",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://github.com/mbbill/undotree",
-    "icon": "↶"
-  },
-  {
-    "name": "Docker - Portainer",
-    "description": "Lightweight container management UI for Docker with visual interface for all operations.",
-    "environment": "docker",
-    "category": "devops",
-    "devtype": "devops",
-    "price": 0,
-    "url": "https://www.portainer.io/",
-    "icon": "🐳"
-  },
-  {
-    "name": "Docker - Docker Scout",
-    "description": "Vulnerability scanning and supply chain security tool for container images.",
-    "environment": "docker",
-    "category": "security",
-    "devtype": "devops",
-    "price": 0,
-    "url": "https://docker.com/scout",
-    "icon": "🛡️"
-  },
-  {
-    "name": "Docker - Watchtower",
-    "description": "Automated container image update tool that monitors and upgrades running containers.",
-    "environment": "docker",
-    "category": "devops",
-    "devtype": "devops",
-    "price": 0,
-    "url": "https://github.com/containrrr/watchtower",
-    "icon": "🔄"
-  },
-  {
-    "name": "Docker - LazyDocker",
-    "description": "Terminal UI for Docker with container, image, and network management.",
-    "environment": "docker",
-    "category": "devops",
-    "devtype": "devops",
-    "price": 0,
-    "url": "https://github.com/jesseduffield/lazydocker",
-    "icon": "💻"
-  },
-  {
-    "name": "Docker - Colima",
-    "description": "Container runtime for macOS and Linux providing Docker and Kubernetes support.",
-    "environment": "docker",
-    "category": "devops",
-    "devtype": "devops",
-    "price": 0,
-    "url": "https://github.com/abiosoft/colima",
-    "icon": "🚀"
-  },
-  {
-    "name": "Docker - Docker Compose",
-    "description": "Multi-container orchestration tool for defining and running complex applications.",
-    "environment": "docker",
-    "category": "devops",
-    "devtype": "devops",
-    "price": 0,
-    "url": "https://docs.docker.com/compose/",
-    "icon": "🎼"
-  },
-  {
-    "name": "Docker - Docker Slim",
-    "description": "Reduces container image size and improves security through intelligent analysis.",
-    "environment": "docker",
-    "category": "performance",
-    "devtype": "devops",
-    "price": 0,
-    "url": "https://github.com/slimtoolkit/slim",
-    "icon": "📦"
-  },
-  {
-    "name": "Docker - ctop",
-    "description": "Top-like interface for monitoring container metrics and resource usage.",
-    "environment": "docker",
-    "category": "devops",
-    "devtype": "devops",
-    "price": 0,
-    "url": "https://github.com/bcicen/ctop",
-    "icon": "📊"
-  },
-  {
-    "name": "Postman - Newman",
-    "description": "Command-line collection runner for executing Postman collections in CI/CD pipelines.",
-    "environment": "postman",
-    "category": "api",
-    "devtype": "api",
-    "price": 0,
-    "url": "https://github.com/postmanlabs/newman",
-    "icon": "🚀"
-  },
-  {
-    "name": "Postman - Jira Sync",
-    "description": "Synchronize Postman collections with Jira issues for integrated API testing and tracking.",
-    "environment": "postman",
-    "category": "api",
-    "devtype": "api",
-    "price": 0,
-    "url": "https://www.postman.com/product/integrations/",
-    "icon": "🔗"
-  },
-  {
-    "name": "Postman - Slack Integration",
-    "description": "Send API test results and notifications directly to Slack channels.",
-    "environment": "postman",
-    "category": "api",
-    "devtype": "api",
-    "price": 0,
-    "url": "https://www.postman.com/product/integrations/",
-    "icon": "💬"
-  },
-  {
-    "name": "Postman - GitHub Actions",
-    "description": "CI/CD integration for running Postman collections as part of GitHub Actions workflows.",
-    "environment": "postman",
-    "category": "api",
-    "devtype": "api",
-    "price": 0,
-    "url": "https://www.postman.com/product/integrations/",
-    "icon": "⚙️"
-  },
-  {
-    "name": "Postman - Mock Server",
-    "description": "Create mock APIs for testing client code against endpoints before backend development.",
-    "environment": "postman",
-    "category": "testing",
-    "devtype": "api",
-    "price": 0,
-    "url": "https://learning.postman.com/docs/designing-and-developing-your-api/mocking-data/setting-up-mock/",
-    "icon": "🎭"
-  },
-  {
-    "name": "Postman - API Documentation",
-    "description": "Auto-generate and host API documentation from Postman collections with interactive examples.",
-    "environment": "postman",
-    "category": "api",
-    "devtype": "api",
-    "price": 0,
-    "url": "https://learning.postman.com/docs/publishing-your-api/publishing-your-docs/",
-    "icon": "📚"
-  },
-  {
-    "name": "Postman - GraphQL Support",
-    "description": "Native GraphQL support with schema introspection and query building in Postman.",
-    "environment": "postman",
-    "category": "api",
-    "devtype": "api",
-    "price": 0,
-    "url": "https://www.postman.com/product/api-client/",
-    "icon": "⚡"
-  },
-  {
-    "name": "Postman - Jenkins Plugin",
-    "description": "Jenkins integration for running Postman collections as part of automated build pipelines.",
-    "environment": "postman",
-    "category": "api",
-    "devtype": "api",
-    "price": 0,
-    "url": "https://github.com/postmanlabs/postman-app-support",
-    "icon": "🔧"
   }
 ]
