@@ -84,12 +84,23 @@ app.get('/health/db', async (req, res) => {
 
 // Diagnostic endpoint
 app.get('/debug/status', (req, res) => {
+  console.log('[DEBUG] Status check - DB initialized:', global.databaseInitialized);
   res.json({
     environment: process.env.NODE_ENV || 'development',
     databaseInitialized: global.databaseInitialized || false,
+    vercelEnv: !!process.env.VERCEL,
     uptime: process.uptime(),
     memory: process.memoryUsage(),
     timestamp: new Date().toISOString()
+  });
+});
+
+// Quick test endpoint
+app.get('/api/extensions/test', (req, res) => {
+  console.log('[DEBUG] Test endpoint hit');
+  res.json({
+    status: 'ok',
+    message: 'Backend is responding'
   });
 });
 

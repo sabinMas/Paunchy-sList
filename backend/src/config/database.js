@@ -4,10 +4,28 @@ import { fileURLToPath } from 'url';
 import { readFileSync } from 'fs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const dbPath = path.join(__dirname, '../../data/marketplace.db');
+// On Vercel (and most serverless/PaaS), the deployed bundle is read-only.
+// Only /tmp is writable at runtime, so use it when not running locally.
+const isProduction = process.env.NODE_ENV === 'production' || process.env.VERCEL;
+const dbPath = isProduction
+  ? '/tmp/marketplace.db'
+  : path.join(__dirname, '../../data/marketplace.db');
 
 let db = null;
 let dbInitialized = false;
+let dbError = null;
+let _initPromise = null;
+
+// Call this at the top of any route handler that needs the DB.
+// Returns immediately if already initialized, otherwise waits up to 20s.
+export const waitForDb = () => {
+  if (dbError) return Promise.reject(new Error(`Database initialization failed: ${dbError}`));
+  if (dbInitialized) return Promise.resolve();
+  if (_initPromise) return _initPromise;
+  // DB hasn't been kicked off yet — initialize now
+  _initPromise = initializeDatabase();
+  return _initPromise;
+};
 
 export const getDb = () => {
   if (!db) {
@@ -24,19 +42,17 @@ export const getDb = () => {
 };
 
 export const initializeDatabase = () => {
-  // If already initialized, resolve immediately
-  if (dbInitialized) {
-    console.log('Database already initialized, skipping');
-    return Promise.resolve();
-  }
+  if (dbInitialized) return Promise.resolve();
+  if (_initPromise) return _initPromise;
 
-  return new Promise((resolve, reject) => {
-    // Hard timeout: if initialization takes > 15 seconds, give up
+  _initPromise = new Promise((resolve, reject) => {
+    // Hard timeout: if initialization takes > 10 seconds, give up
     const hardTimeout = setTimeout(() => {
-      console.error('❌ Database initialization timeout (15s) - marking as done anyway');
-      dbInitialized = true; // Mark as initialized anyway to prevent retries
-      resolve(); // Resolve instead of reject to allow server to continue
-    }, 15000);
+      console.error('❌ Database initialization timeout (10s)');
+      dbError = 'Database initialization timed out';
+      dbInitialized = true;
+      reject(new Error(dbError));
+    }, 10000);
 
     try {
       const database = getDb();
@@ -60,8 +76,9 @@ export const initializeDatabase = () => {
               if (err) {
                 console.error('Error checking extensions count:', err);
                 clearTimeout(hardTimeout);
+                dbError = err.message;
                 dbInitialized = true;
-                resolve();
+                reject(err);
                 return;
               }
 
@@ -153,10 +170,12 @@ export const initializeDatabase = () => {
     } catch (error) {
       clearTimeout(hardTimeout);
       console.error('Database initialization error:', error);
+      dbError = error.message;
       dbInitialized = true;
-      resolve(); // Don't reject - allow server to continue
+      reject(error);
     }
   });
+  return _initPromise;
 };
 
 const seedExtensionsSequential = (database, callback) => {
@@ -170,47 +189,46 @@ const seedExtensionsSequential = (database, callback) => {
       return;
     }
 
-    console.log(`Seeding ${extensionsData.length} extensions...`);
-    let index = 0;
-    let inserted = 0;
+    console.log(`Seeding ${extensionsData.length} extensions in a single transaction...`);
 
-    const insertNext = () => {
-      if (index >= extensionsData.length) {
-        console.log(`✓ Seeded ${inserted}/${extensionsData.length} extensions`);
-        // Ensure visitors row exists
-        database.run(
-          'INSERT OR IGNORE INTO visitors (id, total_visits) VALUES (1, 0)',
-          (err) => {
-            if (err) console.error('Error initializing visitors:', err);
-            callback();
-          }
-        );
+    // Wrap all inserts in one transaction — orders of magnitude faster than one-by-one callbacks
+    database.run('BEGIN TRANSACTION', (beginErr) => {
+      if (beginErr) {
+        console.error('Error starting transaction:', beginErr);
+        callback();
         return;
       }
 
-      const ext = extensionsData[index];
-      index++;
-
-      database.run(
-        `INSERT INTO extensions (name, description, environment, category, devtype, price, url, icon)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
-        [ext.name, ext.description, ext.environment, ext.category, ext.devtype, ext.price, ext.url, ext.icon],
-        (err) => {
-          if (!err) {
-            inserted++;
-            if (inserted % 10 === 0) {
-              console.log(`  Seeded ${inserted}/${extensionsData.length}...`);
-            }
-          } else if (!err.message.includes('UNIQUE constraint')) {
-            console.error(`Error inserting ${ext.name}:`, err.message);
-          }
-          // Continue with next
-          insertNext();
-        }
+      const stmt = database.prepare(
+        `INSERT OR IGNORE INTO extensions (name, description, environment, category, devtype, price, url, icon)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
       );
-    };
 
-    insertNext();
+      for (const ext of extensionsData) {
+        stmt.run([ext.name, ext.description, ext.environment, ext.category, ext.devtype, ext.price || 0, ext.url, ext.icon]);
+      }
+
+      stmt.finalize((finalizeErr) => {
+        if (finalizeErr) console.error('Error finalizing statement:', finalizeErr);
+
+        database.run('COMMIT', (commitErr) => {
+          if (commitErr) {
+            console.error('Error committing transaction:', commitErr);
+            database.run('ROLLBACK');
+          } else {
+            console.log(`✓ Seeded ${extensionsData.length} extensions`);
+          }
+
+          database.run(
+            'INSERT OR IGNORE INTO visitors (id, total_visits) VALUES (1, 0)',
+            (err) => {
+              if (err) console.error('Error initializing visitors:', err);
+              callback();
+            }
+          );
+        });
+      });
+    });
   } catch (error) {
     console.error('Error reading extensions.json:', error);
     callback();

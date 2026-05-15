@@ -1,10 +1,9 @@
-import { allAsync, getAsync, runAsync } from '../config/database.js';
+import { allAsync, getAsync, runAsync, waitForDb } from '../config/database.js';
 
 // Get all extensions with optional filtering
 export const getExtensions = async (req, res) => {
   console.log('[getExtensions] Request received', { query: req.query });
 
-  // Set a timeout for this request
   const timeout = setTimeout(() => {
     if (!res.headersSent) {
       console.error('[getExtensions] Request timeout after 20 seconds');
@@ -13,9 +12,10 @@ export const getExtensions = async (req, res) => {
         error: 'Request timeout - database query taking too long'
       });
     }
-  }, 20000); // 20 second timeout
+  }, 20000);
 
   try {
+    await waitForDb();
     const { environment, devtype, category } = req.query;
 
     let sql = 'SELECT * FROM extensions ORDER BY created_at DESC';
@@ -64,6 +64,7 @@ export const getExtensions = async (req, res) => {
 // Get single extension by ID
 export const getExtensionById = async (req, res) => {
   try {
+    await waitForDb();
     const { id } = req.params;
     const extension = await getAsync(
       'SELECT * FROM extensions WHERE id = ?',
@@ -93,6 +94,7 @@ export const getExtensionById = async (req, res) => {
 // Get available filters for UI
 export const getFilters = async (req, res) => {
   try {
+    await waitForDb();
     const environments = await allAsync(
       'SELECT DISTINCT environment FROM extensions ORDER BY environment'
     );
@@ -133,6 +135,7 @@ export const getStats = async (req, res) => {
   }, 25000);
 
   try {
+    await waitForDb();
     const stats = await getAsync(`
       SELECT
         COUNT(*) as totalExtensions,
@@ -168,6 +171,7 @@ export const getStats = async (req, res) => {
 // Increment visitor count
 export const incrementVisitors = async (req, res) => {
   try {
+    await waitForDb();
     await runAsync(`
       UPDATE visitors SET total_visits = total_visits + 1, updated_at = CURRENT_TIMESTAMP
       WHERE id = 1

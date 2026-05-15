@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import { runAsync, getAsync, allAsync } from '../config/database.js';
+import { runAsync, getAsync, allAsync, waitForDb } from '../config/database.js';
 import { sendSubmissionNotification } from '../config/email.js';
 
 // Validate submission data
@@ -51,6 +51,7 @@ const isValidEmail = (email) => {
 // Submit new extension
 export const submitExtension = async (req, res) => {
   try {
+    await waitForDb();
     const { name, description, environment, category, devtype, price, url, email } = req.body;
 
     // Validate submission
@@ -113,6 +114,7 @@ export const submitExtension = async (req, res) => {
 // Get submission status
 export const getSubmissionStatus = async (req, res) => {
   try {
+    await waitForDb();
     const { id } = req.params;
 
     const submission = await getAsync(
@@ -143,6 +145,7 @@ export const getSubmissionStatus = async (req, res) => {
 // Get recent submissions (public - shows only count and status)
 export const getRecentSubmissions = async (req, res) => {
   try {
+    await waitForDb();
     const submissions = await allAsync(
       'SELECT id, name, status, created_at FROM submissions ORDER BY created_at DESC LIMIT 10'
     );
