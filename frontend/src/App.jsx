@@ -10,7 +10,12 @@ import { TweaksPanel, TweakSection, TweakColor, TweakRadio } from './components/
 import { extensionsAPI } from './utils/api';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  // Restore page from localStorage on mount, default to 'home'
+  const [currentPage, setCurrentPageState] = useState(() => {
+    const saved = localStorage.getItem('currentPage');
+    return saved || 'home';
+  });
+
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [extensions, setExtensions] = useState([]);
   const [chatModalOpen, setChatModalOpen] = useState(false);
@@ -19,6 +24,12 @@ function App() {
     spacing: 'generous',
     variant: 'minimal'
   });
+
+  // Wrapper to save page to localStorage when it changes
+  const setCurrentPage = (page) => {
+    setCurrentPageState(page);
+    localStorage.setItem('currentPage', page);
+  };
 
   // Fetch extensions and track visitor on mount
   useEffect(() => {

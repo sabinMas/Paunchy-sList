@@ -3,7 +3,7 @@ export default function Navigation({ currentPage, onNavigate, onOpenChat }) {
     <nav className="nav">
       <div className="container nav-content">
         <button className="logo" onClick={() => onNavigate('home')}>
-          Paunchy'sList
+          Paunchy's List
         </button>
         <ul className="nav-links">
           <li>
