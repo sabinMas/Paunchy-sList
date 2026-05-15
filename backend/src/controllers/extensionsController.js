@@ -2,6 +2,17 @@ import { allAsync, getAsync, runAsync } from '../config/database.js';
 
 // Get all extensions with optional filtering
 export const getExtensions = async (req, res) => {
+  // Set a timeout for this request
+  const timeout = setTimeout(() => {
+    if (!res.headersSent) {
+      console.error('getExtensions request timeout after 25 seconds');
+      res.status(504).json({
+        success: false,
+        error: 'Request timeout - database taking too long'
+      });
+    }
+  }, 25000); // 25 second timeout (Vercel function timeout is 30s)
+
   try {
     const { environment, devtype, category } = req.query;
 
@@ -28,12 +39,15 @@ export const getExtensions = async (req, res) => {
 
     const extensions = await allAsync(sql, params);
 
+    clearTimeout(timeout);
+
     res.json({
       success: true,
       data: extensions,
       count: extensions.length
     });
   } catch (error) {
+    clearTimeout(timeout);
     console.error('Error fetching extensions:', error);
     res.status(500).json({
       success: false,
@@ -103,6 +117,16 @@ export const getFilters = async (req, res) => {
 
 // Get statistics
 export const getStats = async (req, res) => {
+  const timeout = setTimeout(() => {
+    if (!res.headersSent) {
+      console.error('getStats request timeout');
+      res.status(504).json({
+        success: false,
+        error: 'Request timeout'
+      });
+    }
+  }, 25000);
+
   try {
     const stats = await getAsync(`
       SELECT
@@ -117,6 +141,8 @@ export const getStats = async (req, res) => {
       SELECT total_visits FROM visitors WHERE id = 1
     `);
 
+    clearTimeout(timeout);
+
     res.json({
       success: true,
       data: {
@@ -125,6 +151,7 @@ export const getStats = async (req, res) => {
       }
     });
   } catch (error) {
+    clearTimeout(timeout);
     console.error('Error fetching stats:', error);
     res.status(500).json({
       success: false,

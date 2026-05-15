@@ -26,105 +26,120 @@ export const initializeDatabase = () => {
   const database = getDb();
 
   return new Promise((resolve, reject) => {
-    database.serialize(() => {
-      let tablesCreated = 0;
-      let tablesTotal = 3;
+    // Check if tables exist first (faster than creating)
+    database.all(
+      "SELECT name FROM sqlite_master WHERE type='table' AND name IN ('extensions', 'submissions', 'visitors')",
+      [],
+      (err, tables) => {
+        if (err) {
+          console.error('Error checking tables:', err);
+          return reject(err);
+        }
 
-      const checkAllTablesCreated = () => {
-        tablesCreated++;
-        if (tablesCreated === tablesTotal) {
-          // All tables created, now check if we need to seed
-          database.get('SELECT COUNT(*) as count FROM extensions', (err, row) => {
-            if (err) {
-              console.error('Error checking extensions count:', err);
-              reject(err);
-            } else if (!row || row.count === 0) {
-              console.log('Extensions table empty, seeding...');
-              seedExtensions(database, resolve, reject);
-            } else {
-              console.log(`Database ready with ${row.count} extensions`);
-              // Initialize visitors if not exists
-              database.run(`
-                INSERT OR IGNORE INTO visitors (id, total_visits)
-                VALUES (1, 0)
-              `, (err) => {
-                if (err) {
-                  console.error('Error initializing visitors:', err);
-                }
-                resolve();
-              });
+        const existingTables = tables.map(t => t.name);
+        const needsSetup = existingTables.length < 3;
+
+        if (!needsSetup) {
+          // All tables exist, just ensure visitors row exists
+          database.run(
+            'INSERT OR IGNORE INTO visitors (id, total_visits) VALUES (1, 0)',
+            (err) => {
+              if (err) {
+                console.error('Error initializing visitors:', err);
+              }
+              console.log('✓ Database ready (tables exist)');
+              resolve();
             }
-          });
+          );
+          return;
         }
-      };
 
-      // Create extensions table
-      database.run(`
-        CREATE TABLE IF NOT EXISTS extensions (
-          id INTEGER PRIMARY KEY AUTOINCREMENT,
-          name TEXT NOT NULL,
-          description TEXT NOT NULL,
-          environment TEXT NOT NULL,
-          category TEXT NOT NULL,
-          devtype TEXT NOT NULL,
-          price REAL DEFAULT 0,
-          url TEXT NOT NULL UNIQUE,
-          icon TEXT,
-          created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-          updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
-        )
-      `, (err) => {
-        if (err) {
-          console.error('Error creating extensions table:', err);
-          reject(err);
-        } else {
-          checkAllTablesCreated();
-        }
-      });
+        // Create missing tables
+        database.serialize(() => {
+          let completed = 0;
+          const onComplete = () => {
+            completed++;
+            if (completed === 3) {
+              // Check if extensions table is empty
+              database.get(
+                'SELECT COUNT(*) as count FROM extensions',
+                (err, row) => {
+                  if (err) {
+                    console.error('Error checking extensions count:', err);
+                    return reject(err);
+                  }
+                  if (!row || row.count === 0) {
+                    console.log('Seeding extensions...');
+                    seedExtensions(database, resolve, reject);
+                  } else {
+                    console.log(`✓ Database ready with ${row.count} extensions`);
+                    resolve();
+                  }
+                }
+              );
+            }
+          };
 
-      // Create submissions table
-      database.run(`
-        CREATE TABLE IF NOT EXISTS submissions (
-          id TEXT PRIMARY KEY,
-          name TEXT NOT NULL,
-          description TEXT NOT NULL,
-          environment TEXT NOT NULL,
-          category TEXT NOT NULL,
-          devtype TEXT NOT NULL,
-          price REAL DEFAULT 0,
-          url TEXT NOT NULL,
-          icon TEXT,
-          email TEXT NOT NULL,
-          status TEXT DEFAULT 'pending',
-          review_notes TEXT,
-          created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-          reviewed_at DATETIME
-        )
-      `, (err) => {
-        if (err) {
-          console.error('Error creating submissions table:', err);
-          reject(err);
-        } else {
-          checkAllTablesCreated();
-        }
-      });
+          // Create extensions table
+          if (!existingTables.includes('extensions')) {
+            database.run(`
+              CREATE TABLE IF NOT EXISTS extensions (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL,
+                description TEXT NOT NULL,
+                environment TEXT NOT NULL,
+                category TEXT NOT NULL,
+                devtype TEXT NOT NULL,
+                price REAL DEFAULT 0,
+                url TEXT NOT NULL UNIQUE,
+                icon TEXT,
+                created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+              )
+            `, onComplete);
+          } else {
+            onComplete();
+          }
 
-      // Create visitors table
-      database.run(`
-        CREATE TABLE IF NOT EXISTS visitors (
-          id INTEGER PRIMARY KEY CHECK (id = 1),
-          total_visits INTEGER DEFAULT 0,
-          updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
-        )
-      `, (err) => {
-        if (err) {
-          console.error('Error creating visitors table:', err);
-          reject(err);
-        } else {
-          checkAllTablesCreated();
-        }
-      });
-    });
+          // Create submissions table
+          if (!existingTables.includes('submissions')) {
+            database.run(`
+              CREATE TABLE IF NOT EXISTS submissions (
+                id TEXT PRIMARY KEY,
+                name TEXT NOT NULL,
+                description TEXT NOT NULL,
+                environment TEXT NOT NULL,
+                category TEXT NOT NULL,
+                devtype TEXT NOT NULL,
+                price REAL DEFAULT 0,
+                url TEXT NOT NULL,
+                icon TEXT,
+                email TEXT NOT NULL,
+                status TEXT DEFAULT 'pending',
+                review_notes TEXT,
+                created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                reviewed_at DATETIME
+              )
+            `, onComplete);
+          } else {
+            onComplete();
+          }
+
+          // Create visitors table
+          if (!existingTables.includes('visitors')) {
+            database.run(`
+              CREATE TABLE IF NOT EXISTS visitors (
+                id INTEGER PRIMARY KEY CHECK (id = 1),
+                total_visits INTEGER DEFAULT 0,
+                updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+              )
+            `, onComplete);
+          } else {
+            onComplete();
+          }
+        });
+      }
+    );
   });
 };
 
@@ -133,6 +148,8 @@ const seedExtensions = (database, resolve, reject) => {
     const extensionsPath = path.join(__dirname, '../../data/extensions.json');
     const extensionsData = JSON.parse(readFileSync(extensionsPath, 'utf-8'));
 
+    console.log(`Seeding ${extensionsData.length} extensions...`);
+
     const stmt = database.prepare(`
       INSERT INTO extensions (name, description, environment, category, devtype, price, url, icon)
       VALUES (?, ?, ?, ?, ?, ?, ?, ?)
@@ -140,30 +157,38 @@ const seedExtensions = (database, resolve, reject) => {
 
     let completed = 0;
     const total = extensionsData.length;
+    let hasError = false;
+
+    const checkComplete = () => {
+      if (completed === total && !hasError) {
+        stmt.finalize(() => {
+          console.log(`✓ Seeded ${total} extensions`);
+          // Initialize visitors count after seeding
+          database.run(`
+            INSERT OR IGNORE INTO visitors (id, total_visits)
+            VALUES (1, 0)
+          `, (err) => {
+            if (err) {
+              console.error('Error initializing visitors:', err);
+            }
+            resolve();
+          });
+        });
+      }
+    };
 
     extensionsData.forEach((ext) => {
       stmt.run(
         [ext.name, ext.description, ext.environment, ext.category, ext.devtype, ext.price, ext.url, ext.icon],
         (err) => {
-          if (err) {
+          if (err && !hasError) {
             console.error(`Error inserting extension ${ext.name}:`, err);
+            hasError = true;
+            stmt.finalize();
             reject(err);
-          }
-          completed++;
-          if (completed === total) {
-            stmt.finalize(() => {
-              console.log(`✓ Seeded ${total} extensions`);
-              // Initialize visitors count after seeding
-              database.run(`
-                INSERT OR IGNORE INTO visitors (id, total_visits)
-                VALUES (1, 0)
-              `, (err) => {
-                if (err) {
-                  console.error('Error initializing visitors:', err);
-                }
-                resolve();
-              });
-            });
+          } else if (!hasError) {
+            completed++;
+            checkComplete();
           }
         }
       );
