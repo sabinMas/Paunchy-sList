@@ -31,12 +31,6 @@ export default function Navigation({ currentPage, onNavigate }) {
             </button>
           </li>
         </ul>
-        <div className="nav-actions">
-          <button className="btn btn-ghost">Sign In</button>
-          <button className="btn btn-primary" onClick={() => onNavigate('marketplace')}>
-            Get Started
-          </button>
-        </div>
       </div>
     </nav>
   );

@@ -1,6 +1,21 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+// Determine API URL based on environment
+const getAPIUrl = () => {
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+
+  // Production (Vercel): backend is at /_/backend
+  if (!import.meta.env.DEV) {
+    return '/_/backend/api';
+  }
+
+  // Development: local backend
+  return 'http://localhost:5000/api';
+};
+
+const API_URL = getAPIUrl();
 
 const client = axios.create({
   baseURL: API_URL,
