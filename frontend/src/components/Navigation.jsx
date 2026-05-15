@@ -1,4 +1,4 @@
-export default function Navigation({ currentPage, onNavigate }) {
+export default function Navigation({ currentPage, onNavigate, onOpenChat }) {
   return (
     <nav className="nav">
       <div className="container nav-content">
@@ -24,8 +24,9 @@ export default function Navigation({ currentPage, onNavigate }) {
           </li>
           <li>
             <button
-              className={`nav-link ${currentPage === 'chat' ? 'active' : ''}`}
-              onClick={() => onNavigate('chat')}
+              className="nav-link"
+              onClick={onOpenChat}
+              title="Open extension recommendation assistant"
             >
               Ask AI
             </button>

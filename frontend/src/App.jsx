@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import ChatModal from './components/ChatModal';
 import Home from './pages/Home';
 import Marketplace from './pages/Marketplace';
 import ProductDetail from './pages/ProductDetail';
-import Chat from './pages/Chat';
 import Submit from './pages/Submit';
 import { TweaksPanel, TweakSection, TweakColor, TweakRadio } from './components/TweaksPanel';
 import { extensionsAPI } from './utils/api';
@@ -13,6 +13,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [extensions, setExtensions] = useState([]);
+  const [chatModalOpen, setChatModalOpen] = useState(false);
   const [tweaks, setTweak] = useState({
     accentColor: '#0066ff',
     spacing: 'generous',
@@ -98,11 +99,6 @@ function App() {
         }} />;
       case 'product':
         return <ProductDetail product={selectedProduct} onNavigate={setCurrentPage} />;
-      case 'chat':
-        return <Chat extensions={extensions} onSelectProduct={(product) => {
-          setSelectedProduct(product);
-          setCurrentPage('product');
-        }} />;
       case 'submit':
         return <Submit onNavigate={setCurrentPage} />;
       default:
@@ -112,11 +108,16 @@ function App() {
 
   return (
     <>
-      <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
+      <Navigation
+        currentPage={currentPage}
+        onNavigate={setCurrentPage}
+        onOpenChat={() => setChatModalOpen(true)}
+      />
       <main>
         {renderPage()}
       </main>
       <Footer onNavigate={setCurrentPage} />
+      <ChatModal isOpen={chatModalOpen} onClose={() => setChatModalOpen(false)} />
       <TweaksPanel>
         <TweakSection title="Colors">
           <TweakColor
