@@ -93,17 +93,31 @@ export const getExtensionById = async (req, res) => {
 
 // Get available filters for UI
 export const getFilters = async (req, res) => {
+  const timeout = setTimeout(() => {
+    if (!res.headersSent) {
+      console.error('[getFilters] Request timeout after 15 seconds');
+      res.status(504).json({
+        success: false,
+        error: 'Request timeout'
+      });
+    }
+  }, 15000);
+
   try {
+    console.log('[getFilters] Request received');
     await waitForDb();
-    const environments = await allAsync(
-      'SELECT DISTINCT environment FROM extensions ORDER BY environment'
-    );
-    const devtypes = await allAsync(
-      'SELECT DISTINCT devtype FROM extensions ORDER BY devtype'
-    );
-    const categories = await allAsync(
-      'SELECT DISTINCT category FROM extensions ORDER BY category'
-    );
+    console.log('[getFilters] Database ready, fetching filters');
+
+    // Run all three queries in parallel for speed
+    const [environments, devtypes, categories] = await Promise.all([
+      allAsync('SELECT DISTINCT environment FROM extensions ORDER BY environment'),
+      allAsync('SELECT DISTINCT devtype FROM extensions ORDER BY devtype'),
+      allAsync('SELECT DISTINCT category FROM extensions ORDER BY category')
+    ]);
+
+    console.log('[getFilters] Found', environments.length, 'environments,', devtypes.length, 'devtypes,', categories.length, 'categories');
+
+    clearTimeout(timeout);
 
     res.json({
       success: true,
@@ -114,10 +128,12 @@ export const getFilters = async (req, res) => {
       }
     });
   } catch (error) {
-    console.error('Error fetching filters:', error);
+    clearTimeout(timeout);
+    console.error('[getFilters] Error:', error.message);
     res.status(500).json({
       success: false,
-      error: 'Failed to fetch filters'
+      error: 'Failed to fetch filters',
+      details: error.message
     });
   }
 };

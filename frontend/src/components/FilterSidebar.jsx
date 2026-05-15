@@ -8,16 +8,23 @@ export default function FilterSidebar({ filters, onFilterChange, onClearFilters 
     categories: []
   });
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchFilters = async () => {
       try {
+        console.log('[FilterSidebar] Fetching filters...');
         const response = await extensionsAPI.getFilters();
+        console.log('[FilterSidebar] Filters response:', response.data);
         if (response.data.success) {
           setFilterOptions(response.data.data);
+          setError(null);
+        } else {
+          setError('Failed to load filters');
         }
       } catch (error) {
-        console.error('Failed to fetch filters:', error);
+        console.error('[FilterSidebar] Failed to fetch filters:', error);
+        setError(`Failed to load filters: ${error.message}`);
       } finally {
         setLoading(false);
       }
@@ -31,6 +38,16 @@ export default function FilterSidebar({ filters, onFilterChange, onClearFilters 
       <aside className="filters-sidebar">
         <div style={{ textAlign: 'center', color: 'var(--text-secondary)' }}>
           Loading filters...
+        </div>
+      </aside>
+    );
+  }
+
+  if (error) {
+    return (
+      <aside className="filters-sidebar">
+        <div style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
+          {error}
         </div>
       </aside>
     );
