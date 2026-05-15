@@ -5,7 +5,14 @@ const environmentLabels = {
   jetbrains: 'JetBrains',
   unreal: 'Unreal Engine',
   browser: 'Browser',
-  ai: 'AI Agent'
+  ai: 'AI Agent',
+  sublime: 'Sublime Text',
+  zed: 'Zed',
+  cursor: 'Cursor',
+  godot: 'Godot',
+  neovim: 'Neovim',
+  docker: 'Docker',
+  postman: 'Postman'
 };
 
 const categoryLabels = {
@@ -15,7 +22,11 @@ const categoryLabels = {
   'agentic dev tools': 'Agentic Dev Tools',
   themes: 'Themes',
   debugging: 'Debugging',
-  languages: 'Languages'
+  languages: 'Languages',
+  api: 'API',
+  devops: 'DevOps',
+  security: 'Security',
+  performance: 'Performance'
 };
 
 export default function ProductDetail({ product, onNavigate }) {

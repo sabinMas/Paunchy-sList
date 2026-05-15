@@ -798,5 +798,645 @@
     "price": 0,
     "url": "https://github.com/vercel/ai",
     "icon": "🚀"
+  },
+  {
+    "name": "Package Control",
+    "description": "The Sublime Text package manager enabling easy installation and management of thousands of packages and themes.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/",
+    "icon": "📦"
+  },
+  {
+    "name": "LSP Client",
+    "description": "Language Server Protocol support for Sublime Text providing IntelliSense, linting, and code actions.",
+    "environment": "sublime",
+    "category": "languages",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/LSP",
+    "icon": "🔌"
+  },
+  {
+    "name": "GitGutter",
+    "description": "Shows git diff information in the gutter of the editor for line-by-line change tracking.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/GitGutter",
+    "icon": "📝"
+  },
+  {
+    "name": "SublimeLinter",
+    "description": "Code linting framework supporting multiple linters for identifying errors and code quality issues.",
+    "environment": "sublime",
+    "category": "testing",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/SublimeLinter",
+    "icon": "✅"
+  },
+  {
+    "name": "Emmet",
+    "description": "High-speed HTML/CSS coding expansion tool for fast markup creation and editing.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/Emmet",
+    "icon": "⚡"
+  },
+  {
+    "name": "Material Theme",
+    "description": "Beautiful Material Design-inspired theme and color scheme for Sublime Text.",
+    "environment": "sublime",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/Material%20Theme",
+    "icon": "🎨"
+  },
+  {
+    "name": "BracketHighlighter",
+    "description": "Highlights matching brackets and quotes for improved code readability and navigation.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/BracketHighlighter",
+    "icon": "🌈"
+  },
+  {
+    "name": "DocBlockr",
+    "description": "Simplifies writing code documentation by auto-generating comment blocks with proper formatting.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/DocBlockr",
+    "icon": "📚"
+  },
+  {
+    "name": "Color Highlight",
+    "description": "Highlights colors in code with background color matching the actual color value.",
+    "environment": "sublime",
+    "category": "themes",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/Color%20Highlight",
+    "icon": "🎭"
+  },
+  {
+    "name": "Terminus",
+    "description": "Powerful terminal emulator integrated directly into Sublime Text for command execution.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/Terminus",
+    "icon": "💻"
+  },
+  {
+    "name": "Pretty JSON",
+    "description": "Formats and validates JSON files with proper indentation and color syntax highlighting.",
+    "environment": "sublime",
+    "category": "debugging",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/Pretty%20JSON",
+    "icon": "📊"
+  },
+  {
+    "name": "Markdown Preview",
+    "description": "Real-time markdown preview in browser with syntax highlighting and live refresh.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/Markdown%20Preview",
+    "icon": "📄"
+  },
+  {
+    "name": "Anaconda",
+    "description": "Python IDE-like features including linting, debugging, completion, and unit testing in Sublime Text.",
+    "environment": "sublime",
+    "category": "languages",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/Anaconda",
+    "icon": "🐍"
+  },
+  {
+    "name": "SideBarEnhancements",
+    "description": "Extends file management capabilities in sidebar with advanced operations and file actions.",
+    "environment": "sublime",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://packagecontrol.io/packages/SideBarEnhancements",
+    "icon": "📁"
+  },
+  {
+    "name": "Zed Editor - GitHub Copilot",
+    "description": "Native GitHub Copilot integration in Zed with real-time AI code suggestions.",
+    "environment": "zed",
+    "category": "agentic dev tools",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/",
+    "icon": "🤖"
+  },
+  {
+    "name": "Zed Extensions Marketplace",
+    "description": "Ecosystem of extensions for Zed including themes, language servers, and UI customizations.",
+    "environment": "zed",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/zed-industries/extensions",
+    "icon": "⚙️"
+  },
+  {
+    "name": "Zed - Vim Mode",
+    "description": "Full Vim keybinding support in Zed for modal editing with comprehensive Vim commands.",
+    "environment": "zed",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/docs/configuring-zed",
+    "icon": "⌨️"
+  },
+  {
+    "name": "Zed - Git Integration",
+    "description": "Built-in git support with diff markers, status display, and inline blame annotations.",
+    "environment": "zed",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/",
+    "icon": "🔍"
+  },
+  {
+    "name": "Zed - LSP Support",
+    "description": "Language Server Protocol support enabling intelligent code completion and diagnostics.",
+    "environment": "zed",
+    "category": "languages",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/",
+    "icon": "🔌"
+  },
+  {
+    "name": "Zed - Multi-Cursor",
+    "description": "Advanced multi-cursor editing enabling simultaneous changes across multiple code locations.",
+    "environment": "zed",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/",
+    "icon": "✨"
+  },
+  {
+    "name": "Zed - Terminal Integration",
+    "description": "Integrated terminal panel for command execution without leaving the editor.",
+    "environment": "zed",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/",
+    "icon": "💻"
+  },
+  {
+    "name": "Zed - Markdown Preview",
+    "description": "Real-time markdown preview alongside editor for instant visual feedback.",
+    "environment": "zed",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://zed.dev/",
+    "icon": "📄"
+  },
+  {
+    "name": "Cursor - Cmd K",
+    "description": "Command palette for code-aware operations, refactoring, and AI-assisted edits.",
+    "environment": "cursor",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/",
+    "icon": "🎯"
+  },
+  {
+    "name": "Cursor - Codebase Chat",
+    "description": "AI chat that understands your entire codebase for context-aware answers and suggestions.",
+    "environment": "cursor",
+    "category": "agentic dev tools",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/",
+    "icon": "💬"
+  },
+  {
+    "name": "Cursor - MCP Integrations",
+    "description": "Model Context Protocol integrations with Slack, Figma, AWS, Databricks, and more.",
+    "environment": "cursor",
+    "category": "agentic dev tools",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/",
+    "icon": "🔗"
+  },
+  {
+    "name": "Cursor - Multi-File Edit",
+    "description": "Edit multiple files simultaneously with AI-assisted batch refactoring across codebase.",
+    "environment": "cursor",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/",
+    "icon": "📝"
+  },
+  {
+    "name": "Cursor - VS Code Extensions",
+    "description": "Full compatibility with VS Code extensions enabling use of existing extension ecosystem.",
+    "environment": "cursor",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/",
+    "icon": "🔧"
+  },
+  {
+    "name": "Cursor - Terminal Integration",
+    "description": "Integrated terminal with AI assistance for command suggestions and debugging.",
+    "environment": "cursor",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/",
+    "icon": "💻"
+  },
+  {
+    "name": "Cursor - Git Integration",
+    "description": "Git-aware AI suggestions and automatic commit message generation.",
+    "environment": "cursor",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://cursor.com/",
+    "icon": "📦"
+  },
+  {
+    "name": "Godot - Terrain3D",
+    "description": "GPU-accelerated terrain generation and sculpting system with LOD support.",
+    "environment": "godot",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://godotengine.org/asset-library/asset/1990",
+    "icon": "⛰️"
+  },
+  {
+    "name": "Godot - Beehave",
+    "description": "Behavior tree framework for AI systems enabling complex NPC behavior and decision-making.",
+    "environment": "godot",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://github.com/heiafallheiaf/Beehave",
+    "icon": "🤖"
+  },
+  {
+    "name": "Godot - Dialogic",
+    "description": "Comprehensive dialogue system framework with visual editor for conversations and branching narrative.",
+    "environment": "godot",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://github.com/coppolaemilio/dialogic",
+    "icon": "💬"
+  },
+  {
+    "name": "Godot - GodotSteam",
+    "description": "Steam API integration enabling Steam achievements, cloud saves, and multiplayer features.",
+    "environment": "godot",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://github.com/GodotSteam/GodotSteam",
+    "icon": "🎮"
+  },
+  {
+    "name": "Godot - AStar3D",
+    "description": "3D pathfinding system using A* algorithm for intelligent NPC movement and navigation.",
+    "environment": "godot",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://docs.godotengine.org/en/stable/classes/class_astar3d.html",
+    "icon": "🗺️"
+  },
+  {
+    "name": "Godot - VRM Importer",
+    "description": "Import VRM 3D humanoid character models for use in games and animations.",
+    "environment": "godot",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://github.com/V-Sekai/godot_vrm",
+    "icon": "🧑"
+  },
+  {
+    "name": "Godot - LDtk Importer",
+    "description": "Import LDtk level design files with full tile, entity, and layer support.",
+    "environment": "godot",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://github.com/Tricky-Trickster/LDtkImporter",
+    "icon": "🎨"
+  },
+  {
+    "name": "Godot - Volumetric Fog",
+    "description": "Advanced fog and volumetric effects for atmospheric environmental rendering.",
+    "environment": "godot",
+    "category": "themes",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://godotengine.org/asset-library/asset",
+    "icon": "☁️"
+  },
+  {
+    "name": "Neovim - nvim-cmp",
+    "description": "Completion engine providing autocompletion with LSP, snippet, and buffer sources.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/hrsh7th/nvim-cmp",
+    "icon": "✨"
+  },
+  {
+    "name": "Neovim - Telescope",
+    "description": "Fuzzy finder for files, buffers, lines, and more with previews and customizable actions.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/nvim-telescope/telescope.nvim",
+    "icon": "🔍"
+  },
+  {
+    "name": "Neovim - Treesitter",
+    "description": "Syntax parsing and highlighting using incremental parsing trees for accurate code highlighting.",
+    "environment": "neovim",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/nvim-treesitter/nvim-treesitter",
+    "icon": "🌳"
+  },
+  {
+    "name": "Neovim - Fugitive",
+    "description": "Git integration providing git blame, status, log, and diff viewing within Neovim.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/tpope/vim-fugitive",
+    "icon": "🔧"
+  },
+  {
+    "name": "Neovim - LSP Config",
+    "description": "Language Server Protocol configuration and management for IntelliSense and diagnostics.",
+    "environment": "neovim",
+    "category": "languages",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/neovim/nvim-lspconfig",
+    "icon": "🔌"
+  },
+  {
+    "name": "Neovim - Mason",
+    "description": "Package manager for Neovim LSPs, DAPs, and linters with easy installation and updates.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/williamboman/mason.nvim",
+    "icon": "📦"
+  },
+  {
+    "name": "Neovim - Lualine",
+    "description": "Fast and customizable statusline and tabline with component support and themes.",
+    "environment": "neovim",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/nvim-lualine/lualine.nvim",
+    "icon": "📊"
+  },
+  {
+    "name": "Neovim - NvimTree",
+    "description": "File explorer tree view for easy navigation and file operations.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/nvim-tree/nvim-tree.lua",
+    "icon": "📁"
+  },
+  {
+    "name": "Neovim - Packer",
+    "description": "Lua-based plugin manager for Neovim with profiling and dependency management.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/wbthomason/packer.nvim",
+    "icon": "⚙️"
+  },
+  {
+    "name": "Neovim - Copilot.lua",
+    "description": "GitHub Copilot integration for Neovim with autocomplete and command support.",
+    "environment": "neovim",
+    "category": "agentic dev tools",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/zbirenbaum/copilot.lua",
+    "icon": "🤖"
+  },
+  {
+    "name": "Neovim - Undotree",
+    "description": "Visualizes and navigates the undo history tree for non-linear undo/redo.",
+    "environment": "neovim",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://github.com/mbbill/undotree",
+    "icon": "↶"
+  },
+  {
+    "name": "Docker - Portainer",
+    "description": "Lightweight container management UI for Docker with visual interface for all operations.",
+    "environment": "docker",
+    "category": "devops",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://www.portainer.io/",
+    "icon": "🐳"
+  },
+  {
+    "name": "Docker - Docker Scout",
+    "description": "Vulnerability scanning and supply chain security tool for container images.",
+    "environment": "docker",
+    "category": "security",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://docker.com/scout",
+    "icon": "🛡️"
+  },
+  {
+    "name": "Docker - Watchtower",
+    "description": "Automated container image update tool that monitors and upgrades running containers.",
+    "environment": "docker",
+    "category": "devops",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://github.com/containrrr/watchtower",
+    "icon": "🔄"
+  },
+  {
+    "name": "Docker - LazyDocker",
+    "description": "Terminal UI for Docker with container, image, and network management.",
+    "environment": "docker",
+    "category": "devops",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://github.com/jesseduffield/lazydocker",
+    "icon": "💻"
+  },
+  {
+    "name": "Docker - Colima",
+    "description": "Container runtime for macOS and Linux providing Docker and Kubernetes support.",
+    "environment": "docker",
+    "category": "devops",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://github.com/abiosoft/colima",
+    "icon": "🚀"
+  },
+  {
+    "name": "Docker - Docker Compose",
+    "description": "Multi-container orchestration tool for defining and running complex applications.",
+    "environment": "docker",
+    "category": "devops",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://docs.docker.com/compose/",
+    "icon": "🎼"
+  },
+  {
+    "name": "Docker - Docker Slim",
+    "description": "Reduces container image size and improves security through intelligent analysis.",
+    "environment": "docker",
+    "category": "performance",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://github.com/slimtoolkit/slim",
+    "icon": "📦"
+  },
+  {
+    "name": "Docker - ctop",
+    "description": "Top-like interface for monitoring container metrics and resource usage.",
+    "environment": "docker",
+    "category": "devops",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://github.com/bcicen/ctop",
+    "icon": "📊"
+  },
+  {
+    "name": "Postman - Newman",
+    "description": "Command-line collection runner for executing Postman collections in CI/CD pipelines.",
+    "environment": "postman",
+    "category": "api",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://github.com/postmanlabs/newman",
+    "icon": "🚀"
+  },
+  {
+    "name": "Postman - Jira Sync",
+    "description": "Synchronize Postman collections with Jira issues for integrated API testing and tracking.",
+    "environment": "postman",
+    "category": "api",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://www.postman.com/product/integrations/",
+    "icon": "🔗"
+  },
+  {
+    "name": "Postman - Slack Integration",
+    "description": "Send API test results and notifications directly to Slack channels.",
+    "environment": "postman",
+    "category": "api",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://www.postman.com/product/integrations/",
+    "icon": "💬"
+  },
+  {
+    "name": "Postman - GitHub Actions",
+    "description": "CI/CD integration for running Postman collections as part of GitHub Actions workflows.",
+    "environment": "postman",
+    "category": "api",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://www.postman.com/product/integrations/",
+    "icon": "⚙️"
+  },
+  {
+    "name": "Postman - Mock Server",
+    "description": "Create mock APIs for testing client code against endpoints before backend development.",
+    "environment": "postman",
+    "category": "testing",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://learning.postman.com/docs/designing-and-developing-your-api/mocking-data/setting-up-mock/",
+    "icon": "🎭"
+  },
+  {
+    "name": "Postman - API Documentation",
+    "description": "Auto-generate and host API documentation from Postman collections with interactive examples.",
+    "environment": "postman",
+    "category": "api",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://learning.postman.com/docs/publishing-your-api/publishing-your-docs/",
+    "icon": "📚"
+  },
+  {
+    "name": "Postman - GraphQL Support",
+    "description": "Native GraphQL support with schema introspection and query building in Postman.",
+    "environment": "postman",
+    "category": "api",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://www.postman.com/product/api-client/",
+    "icon": "⚡"
+  },
+  {
+    "name": "Postman - Jenkins Plugin",
+    "description": "Jenkins integration for running Postman collections as part of automated build pipelines.",
+    "environment": "postman",
+    "category": "api",
+    "devtype": "api",
+    "price": 0,
+    "url": "https://github.com/postmanlabs/postman-app-support",
+    "icon": "🔧"
   }
 ]
