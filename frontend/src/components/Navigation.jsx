@@ -24,6 +24,14 @@ export default function Navigation({ currentPage, onNavigate }) {
           </li>
           <li>
             <button
+              className={`nav-link ${currentPage === 'chat' ? 'active' : ''}`}
+              onClick={() => onNavigate('chat')}
+            >
+              Ask AI
+            </button>
+          </li>
+          <li>
+            <button
               className={`nav-link ${currentPage === 'submit' ? 'active' : ''}`}
               onClick={() => onNavigate('submit')}
             >

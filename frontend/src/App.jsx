@@ -4,17 +4,36 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Marketplace from './pages/Marketplace';
 import ProductDetail from './pages/ProductDetail';
+import Chat from './pages/Chat';
 import Submit from './pages/Submit';
 import { TweaksPanel, TweakSection, TweakColor, TweakRadio } from './components/TweaksPanel';
+import { extensionsAPI } from './utils/api';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [extensions, setExtensions] = useState([]);
   const [tweaks, setTweak] = useState({
     accentColor: '#0066ff',
     spacing: 'generous',
     variant: 'minimal'
   });
+
+  // Fetch extensions on mount
+  useEffect(() => {
+    const fetchExtensions = async () => {
+      try {
+        const response = await extensionsAPI.getAll();
+        if (response.data.success) {
+          setExtensions(response.data.data);
+        }
+      } catch (error) {
+        console.error('Failed to fetch extensions:', error);
+      }
+    };
+
+    fetchExtensions();
+  }, []);
 
   // Apply tweaks to CSS variables
   useEffect(() => {
@@ -66,6 +85,11 @@ function App() {
         }} />;
       case 'product':
         return <ProductDetail product={selectedProduct} onNavigate={setCurrentPage} />;
+      case 'chat':
+        return <Chat extensions={extensions} onSelectProduct={(product) => {
+          setSelectedProduct(product);
+          setCurrentPage('product');
+        }} />;
       case 'submit':
         return <Submit onNavigate={setCurrentPage} />;
       default:
