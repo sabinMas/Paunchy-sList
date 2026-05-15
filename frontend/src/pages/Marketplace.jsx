@@ -106,25 +106,6 @@ export default function Marketplace({ onNavigate, onSelectProduct }) {
         </div>
       </div>
 
-      <div className="marketplace-controls">
-        <div className="container-wide">
-          <div className="extensions-count">
-            Showing <span>{extensions.length}</span> extensions
-          </div>
-          <select
-            className="sort-select"
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-          >
-            <option value="popular">Most Popular</option>
-            <option value="newest">Newest</option>
-            <option value="name">Name (A-Z)</option>
-            <option value="price-low">Price: Low to High</option>
-            <option value="price-high">Price: High to Low</option>
-          </select>
-        </div>
-      </div>
-
       <div className="marketplace-content">
         <div className="container-wide">
           <div className="marketplace-layout">
@@ -134,7 +115,24 @@ export default function Marketplace({ onNavigate, onSelectProduct }) {
               onClearFilters={handleClearFilters}
             />
 
-            <div className="extensions-container">
+            <main>
+              <div className="extensions-header">
+                <div className="extensions-count">
+                  Showing <span>{extensions.length}</span> extensions
+                </div>
+                <select
+                  className="sort-select"
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                >
+                  <option value="popular">Most Popular</option>
+                  <option value="newest">Newest</option>
+                  <option value="name">Name (A-Z)</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                </select>
+              </div>
+
               {loading ? (
                 <div style={{ textAlign: 'center', padding: '2rem' }}>
                   <div className="spinner"></div>
@@ -159,7 +157,7 @@ export default function Marketplace({ onNavigate, onSelectProduct }) {
                   ))}
                 </div>
               )}
-            </div>
+            </main>
           </div>
         </div>
       </div>
