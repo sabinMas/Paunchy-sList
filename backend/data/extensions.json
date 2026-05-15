@@ -1,19 +1,27 @@
 [
   {
-    "id": 1,
     "name": "GitHub Copilot",
-    "description": "AI-powered code completion that helps you write code faster with intelligent suggestions.",
+    "description": "AI-powered pair programmer providing real-time code suggestions powered by OpenAI.",
     "environment": "vscode",
     "category": "ai",
     "devtype": "fullstack",
-    "price": 10.00,
+    "price": 10,
     "url": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot",
     "icon": "🤖"
   },
   {
-    "id": 2,
+    "name": "GitLens",
+    "description": "Supercharges Git within VS Code with Git blame annotations and interactive rebasing.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
+    "icon": "🔍"
+  },
+  {
     "name": "Prettier",
-    "description": "Opinionated code formatter that enforces a consistent style across your entire codebase.",
+    "description": "An opinionated code formatter that enforces consistent code style across JavaScript, TypeScript, CSS, HTML, JSON, and Markdown.",
     "environment": "vscode",
     "category": "productivity",
     "devtype": "frontend",
@@ -22,20 +30,128 @@
     "icon": "✨"
   },
   {
-    "id": 3,
+    "name": "Live Server",
+    "description": "Launch a development local server with live reload feature for static & dynamic pages.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer",
+    "icon": "🚀"
+  },
+  {
+    "name": "Auto Close Tag",
+    "description": "Automatically adds HTML/XML closing tags when you type in the closing bracket of the opening tag.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag",
+    "icon": "📝"
+  },
+  {
+    "name": "Error Lens",
+    "description": "Highlights errors, warnings, and other language diagnostics prominently with inline messages.",
+    "environment": "vscode",
+    "category": "debugging",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens",
+    "icon": "⚠️"
+  },
+  {
+    "name": "Code Spell Checker",
+    "description": "Detects and corrects spelling errors in your codebase with misspelled words highlighted with squiggly underlines.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker",
+    "icon": "✅"
+  },
+  {
+    "name": "Live Share",
+    "description": "Enables real-time collaborative development allowing multiple developers to share code and edit simultaneously.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare",
+    "icon": "👥"
+  },
+  {
+    "name": "Git History",
+    "description": "Explore detailed Git repository history with visual commit logs, file history, and comparisons directly in VS Code.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory",
+    "icon": "📊"
+  },
+  {
+    "name": "Codeium",
+    "description": "Free AI code assistant providing context-aware code completion and chat across 70+ programming languages.",
+    "environment": "vscode",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=Codeium.codeium",
+    "icon": "⚡"
+  },
+  {
+    "name": "Tabnine",
+    "description": "Free AI assistant providing context-aware code completion suggestions for JavaScript, Python, TypeScript, and more.",
+    "environment": "vscode",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-visual-studio",
+    "icon": "🧠"
+  },
+  {
     "name": "ESLint",
-    "description": "Integrates ESLint into VS Code to find and fix problems in your JavaScript code.",
+    "description": "Integrates ESLint into VS Code to identify unused variables, incorrect patterns, and potential bugs.",
     "environment": "vscode",
     "category": "testing",
     "devtype": "frontend",
     "price": 0,
     "url": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint",
-    "icon": "✔️"
+    "icon": "🔧"
   },
   {
-    "id": 4,
+    "name": "Python",
+    "description": "Provides language support for Python including IntelliSense, debugging, linting, formatting, and unit testing.",
+    "environment": "vscode",
+    "category": "languages",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=ms-python.python",
+    "icon": "🐍"
+  },
+  {
+    "name": "Thunder Client",
+    "description": "Lightweight REST API client for testing APIs with collections, environment variables, and GraphQL support.",
+    "environment": "vscode",
+    "category": "debugging",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client",
+    "icon": "⚡"
+  },
+  {
+    "name": "REST Client",
+    "description": "Send HTTP requests from plain text files and view formatted responses inline with environment support.",
+    "environment": "vscode",
+    "category": "debugging",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=MadsKristensen.RestClient",
+    "icon": "📡"
+  },
+  {
     "name": "Docker",
-    "description": "Build, manage, and deploy containerized applications right from VS Code.",
+    "description": "Build, manage, and debug containerized applications directly from VS Code with Docker support.",
     "environment": "vscode",
     "category": "productivity",
     "devtype": "devops",
@@ -44,179 +160,653 @@
     "icon": "🐳"
   },
   {
-    "id": 5,
-    "name": "GitLens",
-    "description": "Supercharge Git within VS Code with blame annotations, code lens, and powerful comparison commands.",
+    "name": "Dev Containers",
+    "description": "Open any folder or repository inside a Docker container and use VS Code with full feature set.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers",
+    "icon": "📦"
+  },
+  {
+    "name": "Kubernetes",
+    "description": "Comprehensive Kubernetes tools for viewing clusters, deploying applications, and debugging pods.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "devops",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools",
+    "icon": "☸️"
+  },
+  {
+    "name": "Todo Tree",
+    "description": "Displays TODO, FIXME, and other comment tags in a searchable tree view for better organization.",
     "environment": "vscode",
     "category": "productivity",
     "devtype": "fullstack",
     "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
-    "icon": "🔀"
+    "url": "https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree",
+    "icon": "📋"
   },
   {
-    "id": 6,
-    "name": "IntelliJ IDEA Ultimate",
-    "description": "Professional IDE for JVM development with advanced refactoring and code analysis.",
-    "environment": "jetbrains",
-    "category": "productivity",
-    "devtype": "backend",
-    "price": 149.00,
-    "url": "https://www.jetbrains.com/idea/",
-    "icon": "💡"
-  },
-  {
-    "id": 7,
-    "name": "Tabnine AI",
-    "description": "AI assistant that learns your coding patterns to provide personalized completions.",
-    "environment": "jetbrains",
-    "category": "ai",
+    "name": "Peacock",
+    "description": "Subtly changes your workspace color to quickly identify which VS Code instance you're working on.",
+    "environment": "vscode",
+    "category": "themes",
     "devtype": "fullstack",
-    "price": 12.00,
-    "url": "https://plugins.jetbrains.com/plugin/12798-tabnine-ai",
-    "icon": "🧠"
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock",
+    "icon": "🦚"
   },
   {
-    "id": 8,
-    "name": "Rainbow Brackets",
-    "description": "Colorize matching brackets for better code readability in complex nested structures.",
+    "name": "Indent Rainbow",
+    "description": "Colors each indentation level differently for improved code structure visibility and readability.",
+    "environment": "vscode",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow",
+    "icon": "🌈"
+  },
+  {
+    "name": "Path Intellisense",
+    "description": "Autocompletes file paths and directory names intelligently as you type.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense",
+    "icon": "📂"
+  },
+  {
+    "name": "Better Comments",
+    "description": "Categorizes and styles code annotations (alerts, queries, highlights) for improved readability.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments",
+    "icon": "💬"
+  },
+  {
+    "name": "WakaTime",
+    "description": "Tracks time spent coding with metrics, insights, and programming activity analytics displayed in status bar.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime",
+    "icon": "⏱️"
+  },
+  {
+    "name": "CodeSnap",
+    "description": "Captures styled screenshots of code snippets for easy sharing and presentations.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap",
+    "icon": "📸"
+  },
+  {
+    "name": "Project Manager",
+    "description": "Organize and manage multiple projects with tagging and quick switching capabilities.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager",
+    "icon": "📁"
+  },
+  {
+    "name": "Bookmarks",
+    "description": "Marks important code locations with blue bookmark icons for quick navigation and code organization.",
+    "environment": "vscode",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://marketplace.visualstudio.com/items?itemName=alefragnani.bookmarks",
+    "icon": "🔖"
+  },
+  {
+    "name": "IdeaVim",
+    "description": "A Vim engine for JetBrains IDEs that brings Vim keybindings and functionality to your IDE.",
     "environment": "jetbrains",
     "category": "productivity",
-    "devtype": "backend",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/164-ideavim",
+    "icon": "⌨️"
+  },
+  {
+    "name": "Material Theme UI",
+    "description": "A comprehensive theme plugin with professional UI designs and customization options for JetBrains IDEs.",
+    "environment": "jetbrains",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 1.5,
+    "url": "https://plugins.jetbrains.com/plugin/8006-material-theme-ui",
+    "icon": "🎨"
+  },
+  {
+    "name": "Rainbow Brackets",
+    "description": "Enhances code readability by assigning different colors to brackets at varying levels.",
+    "environment": "jetbrains",
+    "category": "productivity",
+    "devtype": "fullstack",
     "price": 0,
     "url": "https://plugins.jetbrains.com/plugin/10080-rainbow-brackets",
     "icon": "🌈"
   },
   {
-    "id": 9,
-    "name": "Material Theme UI",
-    "description": "Beautiful Material Design theme with customizable color schemes for your IDE.",
+    "name": "Key Promoter X",
+    "description": "Helps you learn IDE keyboard shortcuts by displaying the corresponding shortcut whenever you use the mouse.",
     "environment": "jetbrains",
-    "category": "themes",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://plugins.jetbrains.com/plugin/8006-material-theme-ui",
-    "icon": "🎨"
-  },
-  {
-    "id": 10,
-    "name": "Database Tools",
-    "description": "Advanced database management and SQL development tools integrated into your IDE.",
-    "environment": "jetbrains",
-    "category": "productivity",
-    "devtype": "backend",
-    "price": 0,
-    "url": "https://plugins.jetbrains.com/plugin/1800-database-tools-and-sql",
-    "icon": "🗄️"
-  },
-  {
-    "id": 11,
-    "name": "Unreal Insights",
-    "description": "Performance profiling and analysis tool for Unreal Engine projects.",
-    "environment": "unreal",
-    "category": "testing",
-    "devtype": "gamedev",
-    "price": 0,
-    "url": "https://docs.unrealengine.com/5.0/en-US/unreal-insights-in-unreal-engine/",
-    "icon": "📊"
-  },
-  {
-    "id": 12,
-    "name": "Blutility",
-    "description": "Editor utility blueprints for automating repetitive tasks in Unreal Engine.",
-    "environment": "unreal",
-    "category": "productivity",
-    "devtype": "gamedev",
-    "price": 0,
-    "url": "https://www.unrealengine.com/marketplace/en-US/product/blutility",
-    "icon": "⚙️"
-  },
-  {
-    "id": 13,
-    "name": "React DevTools",
-    "description": "Inspect React component hierarchies, props, and state directly in your browser.",
-    "environment": "browser",
-    "category": "testing",
-    "devtype": "frontend",
-    "price": 0,
-    "url": "https://chrome.google.com/webstore/detail/react-developer-tools/",
-    "icon": "⚛️"
-  },
-  {
-    "id": 14,
-    "name": "Redux DevTools",
-    "description": "Time-travel debugging and state inspection for Redux applications.",
-    "environment": "browser",
-    "category": "testing",
-    "devtype": "frontend",
-    "price": 0,
-    "url": "https://chrome.google.com/webstore/detail/redux-devtools/",
-    "icon": "🔴"
-  },
-  {
-    "id": 15,
-    "name": "Wappalyzer",
-    "description": "Identify technologies used on websites including frameworks, analytics, and CMS.",
-    "environment": "browser",
     "category": "productivity",
     "devtype": "fullstack",
     "price": 0,
-    "url": "https://chrome.google.com/webstore/detail/wappalyzer/",
+    "url": "https://plugins.jetbrains.com/plugin/9792-key-promoter-x",
+    "icon": "⌨️"
+  },
+  {
+    "name": "GitToolBox",
+    "description": "A productivity and collaboration tool that expands built-in Git integration with inline blame annotations.",
+    "environment": "jetbrains",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/7499-gittoolbox",
+    "icon": "🔧"
+  },
+  {
+    "name": "JetBrains AI Assistant",
+    "description": "An official JetBrains intelligent coding assistant offering context-aware AI chat and code suggestions.",
+    "environment": "jetbrains",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/22282-jetbrains-ai-assistant",
+    "icon": "✨"
+  },
+  {
+    "name": "CodeGlance",
+    "description": "Adds a code minimap to the editor pane similar to Sublime Text for quick navigation of code.",
+    "environment": "jetbrains",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/7275-codeglance",
+    "icon": "🗺️"
+  },
+  {
+    "name": "SonarQube for IDE",
+    "description": "A sophisticated static analysis tool that detects coding issues and security vulnerabilities in real-time.",
+    "environment": "jetbrains",
+    "category": "testing",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/7973-sonarqube-for-ide",
     "icon": "🔍"
   },
   {
-    "id": 16,
-    "name": "ColorZilla",
-    "description": "Advanced eyedropper, color picker, gradient generator and color analyzer.",
-    "environment": "browser",
+    "name": "Lombok",
+    "description": "Adds first-class support for Project Lombok, reducing boilerplate code by auto-generating getters and setters.",
+    "environment": "jetbrains",
     "category": "productivity",
-    "devtype": "frontend",
+    "devtype": "backend",
     "price": 0,
-    "url": "https://chrome.google.com/webstore/detail/colorzilla/",
-    "icon": "🎯"
+    "url": "https://plugins.jetbrains.com/plugin/6317-lombok",
+    "icon": "🔌"
   },
   {
-    "id": 17,
-    "name": "JSON Viewer",
-    "description": "Beautiful JSON visualization with syntax highlighting and tree navigation.",
-    "environment": "browser",
-    "category": "productivity",
-    "devtype": "fullstack",
-    "price": 0,
-    "url": "https://chrome.google.com/webstore/detail/json-viewer/",
-    "icon": "📄"
-  },
-  {
-    "id": 18,
-    "name": "Live Server",
-    "description": "Launch a local development server with live reload feature for static and dynamic pages.",
-    "environment": "vscode",
-    "category": "productivity",
-    "devtype": "frontend",
-    "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer",
-    "icon": "🌐"
-  },
-  {
-    "id": 19,
-    "name": "Thunder Client",
-    "description": "Lightweight REST API client for testing APIs directly inside VS Code.",
-    "environment": "vscode",
+    "name": "CheckStyle-IDEA",
+    "description": "Provides real-time and on-demand scanning of Java files with CheckStyle to enforce coding standards.",
+    "environment": "jetbrains",
     "category": "testing",
     "devtype": "backend",
     "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client",
-    "icon": "⚡"
+    "url": "https://plugins.jetbrains.com/plugin/12065-checkstyle-idea-flint-distribution-",
+    "icon": "✅"
   },
   {
-    "id": 20,
-    "name": "Code Runner",
-    "description": "Run code snippets or entire files for multiple languages with a single click.",
-    "environment": "vscode",
+    "name": "Apidog Fast Request",
+    "description": "A free API debugging plugin that automatically detects endpoints and allows sending HTTP requests within IntelliJ IDEA.",
+    "environment": "jetbrains",
+    "category": "debugging",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/25925-apidog-fast-request--auto-detect-endpoints-http-rest-client",
+    "icon": "🚀"
+  },
+  {
+    "name": "String Manipulation",
+    "description": "Offers comprehensive string manipulation features including case switching, sorting, and filtering.",
+    "environment": "jetbrains",
     "category": "productivity",
     "devtype": "fullstack",
     "price": 0,
-    "url": "https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner",
-    "icon": "▶️"
+    "url": "https://plugins.jetbrains.com/plugin/2162-stringmanipulation",
+    "icon": "✂️"
+  },
+  {
+    "name": "Database Navigator",
+    "description": "A database development and management tool that extends IDE capabilities with practical database operations.",
+    "environment": "jetbrains",
+    "category": "debugging",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/1800-database-navigator",
+    "icon": "💾"
+  },
+  {
+    "name": "BashSupport Pro",
+    "description": "Advanced Bash, Zsh, and POSIX shell script support with auto-completion and visual debugging.",
+    "environment": "jetbrains",
+    "category": "languages",
+    "devtype": "devops",
+    "price": 20,
+    "url": "https://plugins.jetbrains.com/plugin/13841-bashsupport-pro",
+    "icon": "🐚"
+  },
+  {
+    "name": "Prettier for JetBrains",
+    "description": "Integrates Prettier code formatter into JetBrains IDEs for automatic code formatting.",
+    "environment": "jetbrains",
+    "category": "productivity",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://plugins.jetbrains.com/plugin/10456-prettier",
+    "icon": "💅"
+  },
+  {
+    "name": "Blueprint Assist",
+    "description": "Enhances Blueprint creation with automatic formatting and mouse-free node editing in Unreal Engine.",
+    "environment": "unreal",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 19.99,
+    "url": "https://www.unrealengine.com/marketplace/en-US/slug/blueprint-assist",
+    "icon": "🔧"
+  },
+  {
+    "name": "Quixel Bridge (Megascans)",
+    "description": "Free access to millions of photorealistic 3D scans and textures optimized for UE5.",
+    "environment": "unreal",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://www.unrealengine.com/en-US/bridge",
+    "icon": "📦"
+  },
+  {
+    "name": "Cargo by KitBash3D",
+    "description": "Free 3D asset manager providing access to 480+ models and materials with one-click import into UE5.",
+    "environment": "unreal",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://kitbash3d.com/pages/cargo",
+    "icon": "📁"
+  },
+  {
+    "name": "Oceanology",
+    "description": "Professional ocean simulation plugin with water effects, caustics, and realistic fluid dynamics.",
+    "environment": "unreal",
+    "category": "themes",
+    "devtype": "gamedev",
+    "price": 129.99,
+    "url": "https://www.unrealengine.com/marketplace/en-US/product/oceanology",
+    "icon": "🌊"
+  },
+  {
+    "name": "Ultra Dynamic Sky",
+    "description": "Comprehensive sky and weather system with dynamic day-night cycles and atmospheric effects.",
+    "environment": "unreal",
+    "category": "themes",
+    "devtype": "gamedev",
+    "price": 49.99,
+    "url": "https://www.unrealengine.com/marketplace/en-US/product/ultra-dynamic-sky/",
+    "icon": "☁️"
+  },
+  {
+    "name": "Dungeon Architect",
+    "description": "Procedural level generation plugin with node-based systems for designing dungeons and complex spaces.",
+    "environment": "unreal",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 99.99,
+    "url": "https://www.unrealengine.com/marketplace/en-US/product/dungeon-architect",
+    "icon": "🏰"
+  },
+  {
+    "name": "Substance 3D Plugin",
+    "description": "Adobe's material creation plugin enabling use of parametric Substance materials in UE5.",
+    "environment": "unreal",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://www.unrealengine.com/marketplace/en-US/product/substance-plugin",
+    "icon": "🎨"
+  },
+  {
+    "name": "Datasmith",
+    "description": "Workflow tool for importing CAD and design data from 20+ sources into UE5.",
+    "environment": "unreal",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://www.unrealengine.com/en-US/datasmith/plugins",
+    "icon": "📐"
+  },
+  {
+    "name": "Niagara Particle System",
+    "description": "Visual effects engine for creating real-time particle simulations and environmental effects.",
+    "environment": "unreal",
+    "category": "themes",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://docs.unrealengine.com/en-US/RenderingAndGraphics/Niagara/Overview/",
+    "icon": "✨"
+  },
+  {
+    "name": "Common UI Plugin",
+    "description": "Epic's built-in UI framework providing advanced multiplatform user interface components.",
+    "environment": "unreal",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/common-ui-plugin-for-advanced-user-interfaces-in-unreal-engine",
+    "icon": "🖥️"
+  },
+  {
+    "name": "Pixel Streaming Plugin",
+    "description": "Built-in plugin for streaming UE5 applications to browsers and mobile devices over WebRTC.",
+    "environment": "unreal",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/pixel-streaming-in-unreal-engine",
+    "icon": "📡"
+  },
+  {
+    "name": "Sequencer Cinematic Editor",
+    "description": "Non-linear editor for creating cinematic sequences with camera control and animation.",
+    "environment": "unreal",
+    "category": "productivity",
+    "devtype": "gamedev",
+    "price": 0,
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-sequencer-movie-tool-overview",
+    "icon": "🎬"
+  },
+  {
+    "name": "React Developer Tools",
+    "description": "DevTools extension for debugging and inspecting React components, props, and state in real-time.",
+    "environment": "browser",
+    "category": "debugging",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi",
+    "icon": "⚛️"
+  },
+  {
+    "name": "Redux DevTools",
+    "description": "Time-travel debugger for Redux apps with action history, state snapshots, and performance monitoring.",
+    "environment": "browser",
+    "category": "debugging",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd",
+    "icon": "🔴"
+  },
+  {
+    "name": "Vue.js DevTools",
+    "description": "Browser devtools extension for debugging and inspecting Vue.js applications.",
+    "environment": "browser",
+    "category": "debugging",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd",
+    "icon": "🟢"
+  },
+  {
+    "name": "CSS Peeper",
+    "description": "Inspect and extract CSS properties, colors, fonts, and gradients from any website design.",
+    "environment": "browser",
+    "category": "productivity",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/css-peeper/mbnbehikldjhnfehhnaidhjhoofhpehk",
+    "icon": "🎨"
+  },
+  {
+    "name": "Wappalyzer",
+    "description": "Identifies technologies used on websites including CMS, frameworks, and JavaScript libraries.",
+    "environment": "browser",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg",
+    "icon": "🔍"
+  },
+  {
+    "name": "Lighthouse",
+    "description": "Google's automated auditing tool for performance, accessibility, SEO, and best practices.",
+    "environment": "browser",
+    "category": "testing",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk",
+    "icon": "💡"
+  },
+  {
+    "name": "JSON Crack Formatter",
+    "description": "Visualize JSON data as interactive, zoomable graphs with automatic node diagram generation.",
+    "environment": "browser",
+    "category": "debugging",
+    "devtype": "backend",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/json-crack-formatter/ioanjonjikjnimckmaobngpeheholkko",
+    "icon": "📊"
+  },
+  {
+    "name": "Dark Reader",
+    "description": "Applies configurable dark theme to websites with brightness and contrast adjustments.",
+    "environment": "browser",
+    "category": "themes",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh",
+    "icon": "🌙"
+  },
+  {
+    "name": "WhatFont",
+    "description": "Easily identify fonts used on webpages with detailed info including family, size, and weight.",
+    "environment": "browser",
+    "category": "productivity",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm",
+    "icon": "🔤"
+  },
+  {
+    "name": "VisBug",
+    "description": "Point-and-click web design debugger with color picker, ruler, and CSS code export.",
+    "environment": "browser",
+    "category": "debugging",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc",
+    "icon": "🐛"
+  },
+  {
+    "name": "Requestly",
+    "description": "HTTP interceptor for modifying requests/responses, mocking APIs, and redirecting URLs.",
+    "environment": "browser",
+    "category": "testing",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/requestly-free-api-testin/mdnleldcmiljblolnjhpnblkcekpdkpa",
+    "icon": "🔄"
+  },
+  {
+    "name": "Octotree",
+    "description": "GitHub code tree sidebar for IDE-like navigation, bookmarks, and code review.",
+    "environment": "browser",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/octotree-github-code-tree/bkhaagjahfmjljalopjnoealnfndnagc",
+    "icon": "🐙"
+  },
+  {
+    "name": "ColorZilla",
+    "description": "Advanced color picker, eyedropper, CSS gradient generator, and color analyzer for designers.",
+    "environment": "browser",
+    "category": "productivity",
+    "devtype": "frontend",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp",
+    "icon": "🎭"
+  },
+  {
+    "name": "uBlock Origin Lite",
+    "description": "Efficient content blocker that removes ads and malicious scripts.",
+    "environment": "browser",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh",
+    "icon": "🛡️"
+  },
+  {
+    "name": "Fake Filler",
+    "description": "Auto-fills form inputs with randomly generated dummy data for rapid testing.",
+    "environment": "browser",
+    "category": "testing",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/fake-filler/bnjjngeaknajbdcgpfkgnonkmififhfo",
+    "icon": "📝"
+  },
+  {
+    "name": "Web Developer",
+    "description": "Toolbar with essential web development tools for inspecting HTML/CSS and debugging.",
+    "environment": "browser",
+    "category": "debugging",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm",
+    "icon": "⚙️"
+  },
+  {
+    "name": "WAVE Evaluation Tool",
+    "description": "Web accessibility evaluation tool that provides visual feedback for WCAG 2.2 compliance.",
+    "environment": "browser",
+    "category": "testing",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh",
+    "icon": "♿"
+  },
+  {
+    "name": "GitHub Copilot (AI)",
+    "description": "AI pair programmer providing real-time code suggestions powered by OpenAI.",
+    "environment": "ai",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 10,
+    "url": "https://github.com/features/copilot",
+    "icon": "🤖"
+  },
+  {
+    "name": "Cursor",
+    "description": "AI-powered IDE built on VS Code with advanced multi-line autocomplete and Cascade agent mode.",
+    "environment": "ai",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 20,
+    "url": "https://cursor.com",
+    "icon": "⚡"
+  },
+  {
+    "name": "Windsurf",
+    "description": "AI-native IDE with Cascade agentic AI that understands codebases and suggests multi-file edits.",
+    "environment": "ai",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 15,
+    "url": "https://windsurf.io",
+    "icon": "🌊"
+  },
+  {
+    "name": "Claude Code",
+    "description": "Anthropic's code editor with agentic search that maps repositories and coordinates multi-file edits.",
+    "environment": "ai",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 20,
+    "url": "https://claude.com",
+    "icon": "🧠"
+  },
+  {
+    "name": "Tabnine AI",
+    "description": "Privacy-focused AI code assistant with zero code retention and full GDPR compliance.",
+    "environment": "ai",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 9,
+    "url": "https://www.tabnine.com",
+    "icon": "🔒"
+  },
+  {
+    "name": "Codeium AI",
+    "description": "Completely free AI coding assistant with fast inline suggestions across 70+ programming languages.",
+    "environment": "ai",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 0,
+    "url": "https://codeium.com",
+    "icon": "✨"
+  },
+  {
+    "name": "Amazon Q Developer",
+    "description": "AWS's AI-powered coding assistant with strong awareness of AWS services and cloud patterns.",
+    "environment": "ai",
+    "category": "ai",
+    "devtype": "backend",
+    "price": 19,
+    "url": "https://aws.amazon.com/q/developer",
+    "icon": "☁️"
+  },
+  {
+    "name": "Sourcegraph Cody",
+    "description": "Enterprise-focused AI assistant with multi-repository code understanding and context filters.",
+    "environment": "ai",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 59,
+    "url": "https://sourcegraph.com/cody",
+    "icon": "🔍"
+  },
+  {
+    "name": "Gemini Code Assist",
+    "description": "Google's AI-powered code assistant for the development lifecycle with code completions and refactoring.",
+    "environment": "ai",
+    "category": "ai",
+    "devtype": "fullstack",
+    "price": 75,
+    "url": "https://codeassist.google",
+    "icon": "🌟"
+  },
+  {
+    "name": "Replit Ghostwriter",
+    "description": "AI coding assistant integrated into Replit with real-time completions across 50+ languages.",
+    "environment": "ai",
+    "category": "productivity",
+    "devtype": "fullstack",
+    "price": 20,
+    "url": "https://replit.com",
+    "icon": "👻"
   }
 ]
