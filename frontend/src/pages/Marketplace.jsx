@@ -80,9 +80,9 @@ export default function Marketplace({ onNavigate, onSelectProduct }) {
     <>
       <div className="marketplace-header">
         <div className="container">
-          <h1 className="marketplace-title">List</h1>
+          <h1 className="marketplace-title">Paunchy's List</h1>
           <p className="marketplace-description">
-            One List. Every Dev Tool
+            One list. Every Useful Dev Tool
           </p>
         </div>
       </div>
