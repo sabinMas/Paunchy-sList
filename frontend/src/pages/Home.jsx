@@ -26,13 +26,13 @@ export default function Home({ onNavigate }) {
     <>
       <section className="hero">
         <div className="container">
-          <h1 className="hero-title">One Marketplace.<br />Every Dev Tool.</h1>
+          <h1 className="hero-title">One List.<br />Every Dev Tool.</h1>
           <p className="hero-subtitle">
             Stop hunting across multiple platforms. Access extensions from VS Code, JetBrains, Unreal, browsers, and AI agents—all in one place.
           </p>
           <div className="hero-cta">
             <button className="btn btn-primary" onClick={() => onNavigate('marketplace')}>
-              Explore Marketplace
+              Explore List
             </button>
             <button className="btn btn-secondary" onClick={() => onNavigate('submit')}>
               Submit Your Extension

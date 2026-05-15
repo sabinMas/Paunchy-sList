@@ -8,7 +8,7 @@ export default function Footer({ onNavigate }) {
           <div className="footer-section">
             <h4>Paunchy'sList</h4>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', marginTop: 'var(--space-sm)' }}>
-              The unified marketplace for developer tools across all platforms.
+              One List. Every Dev Tool. Discover extensions across all platforms in one place.
             </p>
           </div>
           <div className="footer-section">
@@ -19,7 +19,7 @@ export default function Footer({ onNavigate }) {
                   className="footer-link"
                   onClick={() => onNavigate('marketplace')}
                 >
-                  Marketplace
+                  Explore List
                 </button>
               </li>
               <li>

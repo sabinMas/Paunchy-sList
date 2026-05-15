@@ -19,7 +19,7 @@ export default function Navigation({ currentPage, onNavigate }) {
               className={`nav-link ${currentPage === 'marketplace' ? 'active' : ''}`}
               onClick={() => onNavigate('marketplace')}
             >
-              Marketplace
+              Explore List
             </button>
           </li>
           <li>

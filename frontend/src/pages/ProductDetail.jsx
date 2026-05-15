@@ -58,7 +58,7 @@ export default function ProductDetail({ product, onNavigate }) {
                   className="btn btn-secondary"
                   onClick={() => onNavigate('marketplace')}
                 >
-                  ← Back to Marketplace
+                  ← Back to List
                 </button>
               </div>
               <div className="product-price-tag">
