@@ -15,48 +15,67 @@ export default function Marketplace({ onNavigate, onSelectProduct }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchExtensions = async () => {
-      try {
-        setLoading(true);
-        const params = {};
-        if (filters.environment.length > 0) params.environment = filters.environment[0];
-        if (filters.devtype.length > 0) params.devtype = filters.devtype[0];
-        if (filters.category.length > 0) params.category = filters.category[0];
+    const fetchExtensionsWithRetry = async (retries = 3) => {
+      for (let attempt = 0; attempt < retries; attempt++) {
+        try {
+          setLoading(true);
+          setError(null);
 
-        const response = await extensionsAPI.getAll(params);
-        if (response.data.success) {
-          let sorted = [...response.data.data];
+          const params = {};
+          if (filters.environment.length > 0) params.environment = filters.environment[0];
+          if (filters.devtype.length > 0) params.devtype = filters.devtype[0];
+          if (filters.category.length > 0) params.category = filters.category[0];
 
-          // Apply sorting
-          switch (sortBy) {
-            case 'newest':
-              sorted.reverse();
-              break;
-            case 'name':
-              sorted.sort((a, b) => a.name.localeCompare(b.name));
-              break;
-            case 'price-low':
-              sorted.sort((a, b) => a.price - b.price);
-              break;
-            case 'price-high':
-              sorted.sort((a, b) => b.price - a.price);
-              break;
-            default:
-              // 'popular' - keep original order
-              break;
+          console.log(`[Marketplace] Fetching extensions (attempt ${attempt + 1}/${retries})`);
+          const response = await extensionsAPI.getAll(params);
+
+          if (response.data.success) {
+            let sorted = [...response.data.data];
+
+            // Apply sorting
+            switch (sortBy) {
+              case 'newest':
+                sorted.reverse();
+                break;
+              case 'name':
+                sorted.sort((a, b) => a.name.localeCompare(b.name));
+                break;
+              case 'price-low':
+                sorted.sort((a, b) => a.price - b.price);
+                break;
+              case 'price-high':
+                sorted.sort((a, b) => b.price - a.price);
+                break;
+              default:
+                // 'popular' - keep original order
+                break;
+            }
+
+            setExtensions(sorted);
+            console.log(`[Marketplace] Extensions loaded successfully: ${sorted.length} items`);
+            setLoading(false);
+            return; // Success - exit retry loop
+          } else {
+            throw new Error('API returned success: false');
           }
+        } catch (err) {
+          console.error(`[Marketplace] Fetch attempt ${attempt + 1} failed:`, err.message);
 
-          setExtensions(sorted);
+          // If this was the last attempt, show error
+          if (attempt === retries - 1) {
+            setError('Failed to load extensions. Please refresh the page.');
+            setLoading(false);
+          } else {
+            // Wait before retrying (exponential backoff: 500ms, 1s, 2s)
+            const delay = 500 * Math.pow(2, attempt);
+            console.log(`[Marketplace] Retrying in ${delay}ms...`);
+            await new Promise(resolve => setTimeout(resolve, delay));
+          }
         }
-      } catch (err) {
-        console.error('Failed to fetch extensions:', err);
-        setError('Failed to load extensions');
-      } finally {
-        setLoading(false);
       }
     };
 
-    fetchExtensions();
+    fetchExtensionsWithRetry();
   }, [filters, sortBy]);
 
   const handleFilterChange = (filterType, value) => {

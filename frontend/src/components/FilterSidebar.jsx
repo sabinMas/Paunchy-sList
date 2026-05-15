@@ -11,26 +11,39 @@ export default function FilterSidebar({ filters, onFilterChange, onClearFilters 
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchFilters = async () => {
-      try {
-        console.log('[FilterSidebar] Fetching filters...');
-        const response = await extensionsAPI.getFilters();
-        console.log('[FilterSidebar] Filters response:', response.data);
-        if (response.data.success) {
-          setFilterOptions(response.data.data);
-          setError(null);
-        } else {
-          setError('Failed to load filters');
+    const fetchFiltersWithRetry = async (retries = 3) => {
+      for (let attempt = 0; attempt < retries; attempt++) {
+        try {
+          console.log(`[FilterSidebar] Fetching filters (attempt ${attempt + 1}/${retries})`);
+          const response = await extensionsAPI.getFilters();
+
+          if (response.data.success) {
+            console.log('[FilterSidebar] Filters loaded successfully:', response.data.data);
+            setFilterOptions(response.data.data);
+            setError(null);
+            setLoading(false);
+            return; // Success - exit retry loop
+          } else {
+            throw new Error('API returned success: false');
+          }
+        } catch (error) {
+          console.error(`[FilterSidebar] Fetch attempt ${attempt + 1} failed:`, error.message);
+
+          // If this was the last attempt, show error
+          if (attempt === retries - 1) {
+            setError('Failed to load filters. Please refresh the page.');
+            setLoading(false);
+          } else {
+            // Wait before retrying (exponential backoff: 500ms, 1s, 2s)
+            const delay = 500 * Math.pow(2, attempt);
+            console.log(`[FilterSidebar] Retrying in ${delay}ms...`);
+            await new Promise(resolve => setTimeout(resolve, delay));
+          }
         }
-      } catch (error) {
-        console.error('[FilterSidebar] Failed to fetch filters:', error);
-        setError(`Failed to load filters: ${error.message}`);
-      } finally {
-        setLoading(false);
       }
     };
 
-    fetchFilters();
+    fetchFiltersWithRetry();
   }, []);
 
   if (loading) {

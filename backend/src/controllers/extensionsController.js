@@ -6,13 +6,13 @@ export const getExtensions = async (req, res) => {
 
   const timeout = setTimeout(() => {
     if (!res.headersSent) {
-      console.error('[getExtensions] Request timeout after 20 seconds');
+      console.error('[getExtensions] Request timeout after 30 seconds');
       res.status(504).json({
         success: false,
         error: 'Request timeout - database query taking too long'
       });
     }
-  }, 20000);
+  }, 30000); // 30 second timeout (accounts for cold start initialization)
 
   try {
     await waitForDb();
@@ -95,13 +95,13 @@ export const getExtensionById = async (req, res) => {
 export const getFilters = async (req, res) => {
   const timeout = setTimeout(() => {
     if (!res.headersSent) {
-      console.error('[getFilters] Request timeout after 15 seconds');
+      console.error('[getFilters] Request timeout after 25 seconds');
       res.status(504).json({
         success: false,
         error: 'Request timeout'
       });
     }
-  }, 15000);
+  }, 25000); // 25 second timeout (parallel queries + database initialization)
 
   try {
     console.log('[getFilters] Request received');
