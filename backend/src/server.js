@@ -57,7 +57,7 @@ const startServer = async () => {
 
     // Start listening
     app.listen(PORT, () => {
-      console.log(`\n🚀 MortalKodebat API Server running on http://localhost:${PORT}`);
+      console.log(`\n🚀 Paunchy's List API Server running on http://localhost:${PORT}`);
       console.log(`📝 Frontend: ${process.env.FRONTEND_URL || 'http://localhost:5173'}`);
       console.log(`💾 Database: ./data/marketplace.db\n`);
     });

@@ -1,7 +1,7 @@
 {
-  "name": "moralkodebat-frontend",
+  "name": "pauchydlist-frontend",
   "version": "1.0.0",
-  "description": "MortalKodebat Marketplace Frontend",
+  "description": "Paunchy's List Marketplace Frontend",
   "type": "module",
   "scripts": {
     "dev": "vite",

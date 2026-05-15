@@ -32,8 +32,8 @@ export const sendSubmissionNotification = async (submission) => {
     return false;
   }
 
-  const adminEmail = process.env.ADMIN_EMAIL || 'admin@moralkodebat.dev';
-  const fromEmail = process.env.FROM_EMAIL || 'noreply@moralkodebat.dev';
+  const adminEmail = process.env.ADMIN_EMAIL || 'admin@paunchyslist.dev';
+  const fromEmail = process.env.FROM_EMAIL || 'noreply@paunchyslist.dev';
 
   const emailContent = `
     <h2>New Extension Submission</h2>
@@ -72,7 +72,7 @@ export const sendApprovalEmail = async (submission) => {
 
   const emailContent = `
     <h2>Extension Approved! 🎉</h2>
-    <p>Congratulations! Your extension "<strong>${submission.name}</strong>" has been approved and is now listed on the MortalKodebat Marketplace.</p>
+    <p>Congratulations! Your extension "<strong>${submission.name}</strong>" has been approved and is now listed on the Paunchy's List Marketplace.</p>
     <p><a href="${process.env.FRONTEND_URL || 'http://localhost:5173'}/marketplace">View on Marketplace</a></p>
   `;
 

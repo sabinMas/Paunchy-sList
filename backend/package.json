@@ -1,7 +1,7 @@
 {
-  "name": "moralkodebat-backend",
+  "name": "pauchydlist-backend",
   "version": "1.0.0",
-  "description": "MortalKodebat Marketplace API Backend",
+  "description": "Paunchy's List Marketplace API Backend",
   "main": "src/server.js",
   "type": "module",
   "scripts": {

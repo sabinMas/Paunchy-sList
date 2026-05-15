@@ -1,10 +1,10 @@
-# MortalKodebat Marketplace - Implementation Complete
+# Paunchy's List Marketplace - Implementation Complete
 
 ## Overview
 This is a fully functional developer tools marketplace that unifies extensions from VS Code, JetBrains, Unreal Engine, browsers, and AI agents into a single searchable catalog.
 
 ## Files
-- **MortalKodebat Marketplace.html** - Complete self-contained HTML file with embedded styles, React, and JavaScript
+- **Paunchy's List Marketplace.html** - Complete self-contained HTML file with embedded styles, React, and JavaScript
 - **tweaks-panel.jsx** - Reusable React components library for the customization panel
 
 ## Key Features Implemented
@@ -56,7 +56,7 @@ This is a fully functional developer tools marketplace that unifies extensions f
 ## How to Use
 
 ### Open the Marketplace
-1. Open `MortalKodebat Marketplace.html` in any web browser
+1. Open `Paunchy's List Marketplace.html` in any web browser
 2. Click "Edit Design" (if available in the design tool) to open the tweaks panel
 3. Adjust colors, spacing, and layout in real-time
 
