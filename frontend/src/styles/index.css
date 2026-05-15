@@ -540,14 +540,11 @@ a {
 
 /* Filters Sidebar */
 .filters-sidebar {
-  position: sticky;
-  top: 110px;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: var(--space-lg);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  z-index: 50;
 }
 
 .filter-section {
