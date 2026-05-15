@@ -10,8 +10,10 @@ pnpm-lock.yaml
 .env.*.local
 
 # Database
-backend/data/marketplace.db
-backend/data/*.db
+# Note: marketplace.db is committed to support Vercel serverless deployment
+# Use 'npm run seed' in backend to regenerate if needed
+# backend/data/marketplace.db
+# backend/data/*.db
 
 # Build outputs
 frontend/dist/
