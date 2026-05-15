@@ -1,6 +1,7 @@
 import sqlite3 from 'sqlite3';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { readFileSync } from 'fs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dbPath = path.join(__dirname, '../../data/marketplace.db');
@@ -26,6 +27,37 @@ export const initializeDatabase = () => {
 
   return new Promise((resolve, reject) => {
     database.serialize(() => {
+      let tablesCreated = 0;
+      let tablesTotal = 3;
+
+      const checkAllTablesCreated = () => {
+        tablesCreated++;
+        if (tablesCreated === tablesTotal) {
+          // All tables created, now check if we need to seed
+          database.get('SELECT COUNT(*) as count FROM extensions', (err, row) => {
+            if (err) {
+              console.error('Error checking extensions count:', err);
+              reject(err);
+            } else if (!row || row.count === 0) {
+              console.log('Extensions table empty, seeding...');
+              seedExtensions(database, resolve, reject);
+            } else {
+              console.log(`Database ready with ${row.count} extensions`);
+              // Initialize visitors if not exists
+              database.run(`
+                INSERT OR IGNORE INTO visitors (id, total_visits)
+                VALUES (1, 0)
+              `, (err) => {
+                if (err) {
+                  console.error('Error initializing visitors:', err);
+                }
+                resolve();
+              });
+            }
+          });
+        }
+      };
+
       // Create extensions table
       database.run(`
         CREATE TABLE IF NOT EXISTS extensions (
@@ -42,7 +74,12 @@ export const initializeDatabase = () => {
           updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
         )
       `, (err) => {
-        if (err) reject(err);
+        if (err) {
+          console.error('Error creating extensions table:', err);
+          reject(err);
+        } else {
+          checkAllTablesCreated();
+        }
       });
 
       // Create submissions table
@@ -64,7 +101,12 @@ export const initializeDatabase = () => {
           reviewed_at DATETIME
         )
       `, (err) => {
-        if (err) reject(err);
+        if (err) {
+          console.error('Error creating submissions table:', err);
+          reject(err);
+        } else {
+          checkAllTablesCreated();
+        }
       });
 
       // Create visitors table
@@ -75,25 +117,11 @@ export const initializeDatabase = () => {
           updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
         )
       `, (err) => {
-        if (err) reject(err);
-      });
-
-      // Initialize visitors count if not exists
-      database.run(`
-        INSERT OR IGNORE INTO visitors (id, total_visits)
-        VALUES (1, 0)
-      `, (err) => {
-        if (err) reject(err);
-      });
-
-      // Check if extensions table is empty and seed with sample data
-      database.get('SELECT COUNT(*) as count FROM extensions', (err, row) => {
         if (err) {
+          console.error('Error creating visitors table:', err);
           reject(err);
-        } else if (row.count === 0) {
-          seedExtensions(database, resolve, reject);
         } else {
-          resolve();
+          checkAllTablesCreated();
         }
       });
     });
@@ -101,33 +129,49 @@ export const initializeDatabase = () => {
 };
 
 const seedExtensions = (database, resolve, reject) => {
-  import('../../data/extensions.json', { assert: { type: 'json' } })
-    .then(({ default: extensionsData }) => {
-      const stmt = database.prepare(`
-        INSERT INTO extensions (name, description, environment, category, devtype, price, url, icon)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-      `);
+  try {
+    const extensionsPath = path.join(__dirname, '../../data/extensions.json');
+    const extensionsData = JSON.parse(readFileSync(extensionsPath, 'utf-8'));
 
-      let completed = 0;
-      const total = extensionsData.length;
+    const stmt = database.prepare(`
+      INSERT INTO extensions (name, description, environment, category, devtype, price, url, icon)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    `);
 
-      extensionsData.forEach((ext) => {
-        stmt.run(
-          [ext.name, ext.description, ext.environment, ext.category, ext.devtype, ext.price, ext.url, ext.icon],
-          (err) => {
-            if (err) reject(err);
-            completed++;
-            if (completed === total) {
-              stmt.finalize(() => {
-                console.log(`✓ Seeded ${total} extensions`);
+    let completed = 0;
+    const total = extensionsData.length;
+
+    extensionsData.forEach((ext) => {
+      stmt.run(
+        [ext.name, ext.description, ext.environment, ext.category, ext.devtype, ext.price, ext.url, ext.icon],
+        (err) => {
+          if (err) {
+            console.error(`Error inserting extension ${ext.name}:`, err);
+            reject(err);
+          }
+          completed++;
+          if (completed === total) {
+            stmt.finalize(() => {
+              console.log(`✓ Seeded ${total} extensions`);
+              // Initialize visitors count after seeding
+              database.run(`
+                INSERT OR IGNORE INTO visitors (id, total_visits)
+                VALUES (1, 0)
+              `, (err) => {
+                if (err) {
+                  console.error('Error initializing visitors:', err);
+                }
                 resolve();
               });
-            }
+            });
           }
-        );
-      });
-    })
-    .catch(reject);
+        }
+      );
+    });
+  } catch (error) {
+    console.error('Error reading extensions.json:', error);
+    reject(error);
+  }
 };
 
 export const runAsync = (sql, params = []) => {
