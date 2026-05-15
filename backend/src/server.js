@@ -93,31 +93,7 @@ app.get('/debug/status', (req, res) => {
   });
 });
 
-// Middleware to ensure database is initialized before API routes
-app.use('/api', async (req, res, next) => {
-  // If already initialized, proceed immediately
-  if (databaseInitialized) {
-    return next();
-  }
-
-  // If currently initializing, wait for it
-  if (databaseInitializing) {
-    try {
-      await initializationPromise;
-      return next();
-    } catch (error) {
-      return res.status(503).json({
-        success: false,
-        error: 'Database initialization failed'
-      });
-    }
-  }
-
-  // Otherwise, this shouldn't happen (should be initializing in background)
-  next();
-});
-
-// API Routes
+// API Routes (proceed immediately, database queries handle initialization)
 app.use('/api/extensions', extensionsRoutes);
 app.use('/api/submissions', submissionsRoutes);
 
