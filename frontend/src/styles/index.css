@@ -536,10 +536,13 @@ a {
   grid-template-columns: 280px 1fr;
   gap: var(--space-xl);
   align-items: start;
+  padding-top: var(--space-xl);
 }
 
 /* Filters Sidebar */
 .filters-sidebar {
+  position: sticky;
+  top: 0;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
