@@ -20,6 +20,8 @@ export default function ExtensionCard({ extension, onClick }) {
     <button
       className="extension-card"
       onClick={onClick}
+      data-category={extension.category}
+      data-environment={extension.environment}
       style={{ textAlign: 'left', cursor: 'pointer' }}
     >
       <div className="extension-header">
@@ -28,7 +30,7 @@ export default function ExtensionCard({ extension, onClick }) {
         </div>
         <div className="extension-info">
           <div className="extension-name">{extension.name}</div>
-          <div className="extension-environment">
+          <div className="extension-environment" data-environment={extension.environment}>
             {environmentLabels[extension.environment] || extension.environment}
           </div>
         </div>
@@ -38,7 +40,7 @@ export default function ExtensionCard({ extension, onClick }) {
       </p>
       <div className="extension-footer">
         <div className="extension-tags">
-          <span className="tag">
+          <span className="tag" data-category={extension.category}>
             {categoryLabels[extension.category] || extension.category}
           </span>
         </div>
