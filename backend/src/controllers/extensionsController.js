@@ -1,4 +1,4 @@
-import { allAsync, getAsync } from '../config/database.js';
+import { allAsync, getAsync, runAsync } from '../config/database.js';
 
 // Get all extensions with optional filtering
 export const getExtensions = async (req, res) => {
@@ -136,7 +136,7 @@ export const getStats = async (req, res) => {
 // Increment visitor count
 export const incrementVisitors = async (req, res) => {
   try {
-    await getAsync(`
+    await runAsync(`
       UPDATE visitors SET total_visits = total_visits + 1, updated_at = CURRENT_TIMESTAMP
       WHERE id = 1
     `);
