@@ -25,8 +25,12 @@ function App() {
     const fetchExtensions = async () => {
       try {
         const response = await extensionsAPI.getAll();
+        console.log('Extensions API Response:', response.data);
         if (response.data.success) {
+          console.log('Setting extensions:', response.data.data.length, 'extensions');
           setExtensions(response.data.data);
+        } else {
+          console.error('API returned success: false', response.data);
         }
       } catch (error) {
         console.error('Failed to fetch extensions:', error);
