@@ -159,3 +159,87 @@ export const incrementVisitors = async (req, res) => {
     });
   }
 };
+
+// Chat with Cerebras AI (secure backend proxy)
+export const chatWithCerebras = async (req, res) => {
+  try {
+    const apiKey = process.env.CEREBRAS_API_KEY;
+
+    if (!apiKey) {
+      return res.status(500).json({
+        success: false,
+        error: 'Cerebras API key not configured on server'
+      });
+    }
+
+    const { messages } = req.body;
+
+    if (!messages || !Array.isArray(messages)) {
+      return res.status(400).json({
+        success: false,
+        error: 'Messages array is required'
+      });
+    }
+
+    const systemPrompt = `You are an expert extension recommendation assistant for Paunchy's List, a comprehensive platform for discovering developer tools and extensions across VS Code, JetBrains, Unreal Engine, Browsers, and AI platforms.
+
+Your role is to:
+1. Understand the user's development workflow, languages, tools, and pain points
+2. Ask clarifying questions to understand their specific needs
+3. Recommend the most suitable extensions from Paunchy's List
+4. Explain why each extension is a good fit for their use case
+5. When recommending extensions, provide their names and what environments they're available in
+
+Available categories: productivity, testing, ai, themes, debugging, languages
+Available environments: VS Code, JetBrains, Unreal Engine, Browser, AI Agent
+
+Start by greeting the user and asking about their development background (languages, frameworks, tools they use). Then progressively understand their pain points and recommend extensions.
+
+Be conversational, friendly, and genuinely helpful. Ask follow-up questions to make targeted recommendations. When recommending, be specific about which extension solves which problem.`;
+
+    const response = await fetch('https://api.cerebras.ai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'llama-3.3-70b',
+        messages: [
+          {
+            role: 'system',
+            content: systemPrompt
+          },
+          ...messages
+        ],
+        max_tokens: 1024,
+        temperature: 0.7,
+      })
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error('Cerebras API error:', errorData);
+      return res.status(response.status).json({
+        success: false,
+        error: errorData.error?.message || 'Cerebras API error'
+      });
+    }
+
+    const data = await response.json();
+    const assistantMessage = data.choices[0].message.content;
+
+    res.json({
+      success: true,
+      data: {
+        message: assistantMessage
+      }
+    });
+  } catch (error) {
+    console.error('Error calling Cerebras API:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to process chat request'
+    });
+  }
+};

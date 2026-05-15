@@ -4,7 +4,8 @@ import {
   getExtensionById,
   getFilters,
   getStats,
-  incrementVisitors
+  incrementVisitors,
+  chatWithCerebras
 } from '../controllers/extensionsController.js';
 
 const router = express.Router();
@@ -17,6 +18,9 @@ router.get('/filters', getFilters);
 
 // Get marketplace statistics
 router.get('/stats', getStats);
+
+// Chat with Cerebras AI (secure backend proxy)
+router.post('/chat', chatWithCerebras);
 
 // Increment visitor count
 router.post('/visitors/track', incrementVisitors);

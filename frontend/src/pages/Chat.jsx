@@ -1,22 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { cerebrasAPI } from '../utils/cerebras';
 
-const SYSTEM_PROMPT = `You are an expert extension recommendation assistant for Paunchy's List, a comprehensive platform for discovering developer tools and extensions across VS Code, JetBrains, Unreal Engine, Browsers, and AI platforms.
-
-Your role is to:
-1. Understand the user's development workflow, languages, tools, and pain points
-2. Ask clarifying questions to understand their specific needs
-3. Recommend the most suitable extensions from Paunchy's List
-4. Explain why each extension is a good fit for their use case
-5. When recommending extensions, provide their names and what environments they're available in
-
-Available categories: productivity, testing, ai, themes, debugging, languages
-Available environments: VS Code, JetBrains, Unreal Engine, Browser, AI Agent
-
-Start by greeting the user and asking about their development background (languages, frameworks, tools they use). Then progressively understand their pain points and recommend extensions.
-
-Be conversational, friendly, and genuinely helpful. Ask follow-up questions to make targeted recommendations. When recommending, be specific about which extension solves which problem.`;
-
 export default function Chat({ onSelectProduct, extensions }) {
   const [messages, setMessages] = useState([
     {
@@ -60,7 +44,7 @@ export default function Chat({ onSelectProduct, extensions }) {
       const response = await cerebrasAPI.chat([
         ...conversationHistory,
         { role: 'user', content: input }
-      ], SYSTEM_PROMPT);
+      ]);
 
       const assistantMessage = {
         id: messages.length + 2,
@@ -74,7 +58,7 @@ export default function Chat({ onSelectProduct, extensions }) {
       const errorMessage = {
         id: messages.length + 2,
         role: 'assistant',
-        content: "Sorry, I encountered an error. Please make sure your Cerebras API key is configured properly. You can check the browser console for more details."
+        content: "Sorry, I encountered an error. This might be due to a server configuration issue. Please check back shortly, or contact support if the issue persists."
       };
       setMessages(prev => [...prev, errorMessage]);
     } finally {

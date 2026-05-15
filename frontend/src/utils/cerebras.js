@@ -1,47 +1,36 @@
-const CEREBRAS_API_URL = 'https://api.cerebras.ai/v1/chat/completions';
+import axios from 'axios';
+
+// Determine API URL based on environment
+const getAPIUrl = () => {
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+
+  // Production (Vercel): backend is at /_/backend
+  if (!import.meta.env.DEV) {
+    return '/_/backend/api';
+  }
+
+  // Development: local backend
+  return 'http://localhost:5000/api';
+};
+
+const API_URL = getAPIUrl();
 
 export const cerebrasAPI = {
-  chat: async (messages, systemPrompt) => {
-    const apiKey = import.meta.env.VITE_CEREBRAS_API_KEY;
-
-    if (!apiKey) {
-      throw new Error(
-        'Cerebras API key not configured. Please set VITE_CEREBRAS_API_KEY in your environment variables.'
-      );
-    }
-
+  chat: async (messages) => {
     try {
-      const response = await fetch(CEREBRAS_API_URL, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          model: 'llama-3.3-70b',
-          messages: [
-            {
-              role: 'system',
-              content: systemPrompt
-            },
-            ...messages
-          ],
-          max_tokens: 1024,
-          temperature: 0.7,
-        })
+      const response = await axios.post(`${API_URL}/extensions/chat`, {
+        messages
       });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(
-          `Cerebras API error: ${response.status} - ${errorData.error?.message || 'Unknown error'}`
-        );
+      if (response.data.success) {
+        return response.data.data.message;
+      } else {
+        throw new Error(response.data.error || 'Failed to get response');
       }
-
-      const data = await response.json();
-      return data.choices[0].message.content;
     } catch (error) {
-      console.error('Cerebras API call failed:', error);
+      console.error('Chat request failed:', error);
       throw error;
     }
   }

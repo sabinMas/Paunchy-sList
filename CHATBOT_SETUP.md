@@ -20,22 +20,29 @@ Paunchy's List now includes an intelligent AI chatbot powered by Cerebras that h
 
 ### 2. Configure Environment Variables
 
+The API key is configured **only on the backend** for security. It is never exposed to the client.
+
 #### Local Development
 
-1. Copy the example env file:
+1. In the `backend` directory, copy the example env file:
+   ```bash
+   cd backend
+   cp .env.example .env
+   ```
+
+2. Open `backend/.env` and add your Cerebras API key:
+   ```
+   CEREBRAS_API_KEY=your_api_key_here
+   ```
+
+3. Start your backend server:
+   ```bash
+   npm run dev
+   ```
+
+4. In another terminal, start the frontend:
    ```bash
    cd frontend
-   cp .env.example .env.local
-   ```
-
-2. Open `.env.local` and add your Cerebras API key:
-   ```
-   VITE_API_URL=http://localhost:5000/api
-   VITE_CEREBRAS_API_KEY=your_api_key_here
-   ```
-
-3. Start your development server:
-   ```bash
    npm run dev
    ```
 
@@ -44,9 +51,12 @@ Paunchy's List now includes an intelligent AI chatbot powered by Cerebras that h
 1. Go to your Vercel project settings
 2. Navigate to **Environment Variables**
 3. Add a new variable:
-   - **Name**: `VITE_CEREBRAS_API_KEY`
+   - **Name**: `CEREBRAS_API_KEY`
    - **Value**: Your Cerebras API key
+   - **Environments**: Production and Preview
 4. Redeploy your project
+
+The backend will now have secure access to your API key.
 
 ### 3. Testing the Chatbot
 
@@ -78,42 +88,76 @@ The chatbot uses a specialized system prompt that:
 5. Guide → Direct them to install from native marketplaces
 ```
 
+## Architecture
+
+### Secure Backend Proxy
+
+The chatbot uses a **secure backend proxy architecture**:
+
+1. **Frontend** → Sends chat message to `POST /api/extensions/chat`
+2. **Backend** → Receives request with user's message
+3. **Backend** → Uses `CEREBRAS_API_KEY` (from environment, never exposed)
+4. **Backend** → Calls Cerebras API securely with the API key
+5. **Backend** → Returns response to frontend
+6. **Frontend** → Displays response to user
+
+**Benefits**:
+- ✅ API key never leaves your backend
+- ✅ API key not visible in browser or network requests
+- ✅ You control rate limiting and access
+- ✅ Can add authentication layer if needed
+- ✅ Safe from API key theft
+
 ## API Details
 
 **Model**: llama-3.3-70b (Cerebras' fastest open-source model)
-**Endpoint**: `https://api.cerebras.ai/v1/chat/completions`
+**Backend Endpoint**: `POST /api/extensions/chat`
+**Cerebras Endpoint**: `https://api.cerebras.ai/v1/chat/completions` (backend only)
 **Max Tokens**: 1024 per response
 **Temperature**: 0.7 (balanced creativity and consistency)
 
 ## Troubleshooting
 
-### "API key not configured" Error
+### "Cerebras API key not configured on server" Error
 
-- Verify you've set `VITE_CEREBRAS_API_KEY` in your .env.local (dev) or Vercel (production)
-- Restart your dev server after adding the environment variable
+- Verify you've set `CEREBRAS_API_KEY` in `backend/.env` (dev) or Vercel environment variables (production)
+- Make sure you set it in the **backend** environment, not the frontend
+- Restart your backend server after adding the environment variable
 - For Vercel, redeploy after adding the environment variable
+- Check Vercel's deployment logs to confirm the variable is being read
+
+### Chat doesn't work, shows "Server configuration issue" Error
+
+- Check backend console logs for errors
+- Verify `CEREBRAS_API_KEY` is correctly set
+- Verify your API key is valid at [console.cerebras.ai](https://console.cerebras.ai)
+- Check that the backend endpoint `POST /api/extensions/chat` is accessible
+- Ensure backend server is running when testing locally
 
 ### Slow Responses
 
 - Cerebras is extremely fast, but network latency may vary
 - Check your internet connection
-- Verify your API key is valid at console.cerebras.ai
+- Check backend logs to see if the Cerebras API call is being made
+- Verify your Cerebras account has available credits
 
 ### Chatbot Giving Wrong Recommendations
 
 - The system prompt guides the AI but isn't perfect
-- Consider refining the system prompt in `frontend/src/pages/Chat.jsx`
+- Consider refining the system prompt in `backend/src/controllers/extensionsController.js` (look for `chatWithCerebras`)
 - You can customize categories and environment mappings based on your database
 
 ## Customization
 
 ### Changing the System Prompt
 
-Edit the `SYSTEM_PROMPT` constant in `frontend/src/pages/Chat.jsx` to:
+Edit the system prompt in `backend/src/controllers/extensionsController.js` in the `chatWithCerebras` function to:
 - Add domain-specific knowledge
 - Change recommendation style
 - Add requirements or constraints
 - Adjust the conversation flow
+
+The system prompt is embedded in the backend controller for security (not exposed to frontend).
 
 ### Styling the Chat Interface
 
@@ -125,7 +169,7 @@ Chat styles are in `frontend/src/styles/index.css`:
 
 ### API Model Selection
 
-Change the model in `frontend/src/utils/cerebras.js`:
+Change the model in `backend/src/controllers/extensionsController.js` in the `chatWithCerebras` function:
 ```javascript
 model: 'llama-3.3-70b', // Change to other Cerebras models if available
 ```
