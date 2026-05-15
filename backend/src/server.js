@@ -12,6 +12,11 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Track database initialization state
+let databaseInitialized = false;
+let databaseInitializing = false;
+let initializationPromise = null;
+
 // Middleware
 app.use(cors({
   origin: (origin, callback) => {
@@ -48,9 +53,56 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Health check
+// Fast health check (doesn't require database)
 app.get('/health', (req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+  res.json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime()
+  });
+});
+
+// Health check that verifies database is ready
+app.get('/health/db', async (req, res) => {
+  try {
+    const { getAsync } = await import('./config/database.js');
+    const result = await getAsync('SELECT 1');
+    res.json({
+      status: 'ok',
+      database: 'connected',
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    res.status(503).json({
+      status: 'error',
+      database: 'unavailable',
+      error: error.message
+    });
+  }
+});
+
+// Middleware to ensure database is initialized before API routes
+app.use('/api', async (req, res, next) => {
+  // If already initialized, proceed immediately
+  if (databaseInitialized) {
+    return next();
+  }
+
+  // If currently initializing, wait for it
+  if (databaseInitializing) {
+    try {
+      await initializationPromise;
+      return next();
+    } catch (error) {
+      return res.status(503).json({
+        success: false,
+        error: 'Database initialization failed'
+      });
+    }
+  }
+
+  // Otherwise, this shouldn't happen (should be initializing in background)
+  next();
 });
 
 // API Routes
@@ -77,19 +129,32 @@ app.use((req, res) => {
 // Initialize and start server
 const startServer = async () => {
   try {
-    // Initialize database
-    await initializeDatabase();
-    console.log('✓ Database initialized');
-
-    // Initialize email service
-    initializeEmail();
-
-    // Start listening
+    // Start listening immediately (don't wait for database)
     app.listen(PORT, () => {
       console.log(`\n🚀 Paunchy's List API Server running on http://localhost:${PORT}`);
       console.log(`📝 Frontend: ${process.env.FRONTEND_URL || 'http://localhost:5173'}`);
-      console.log(`💾 Database: ./data/marketplace.db\n`);
+      console.log(`💾 Database: ./data/marketplace.db`);
+      console.log(`📡 Initializing database in background...\n`);
     });
+
+    // Initialize database in background (non-blocking)
+    databaseInitializing = true;
+    initializationPromise = initializeDatabase();
+
+    initializationPromise
+      .then(() => {
+        console.log('✓ Database initialization complete');
+        databaseInitialized = true;
+        databaseInitializing = false;
+      })
+      .catch((error) => {
+        console.error('❌ Database initialization error:', error);
+        databaseInitializing = false;
+        // Don't exit - API endpoints will handle DB errors gracefully
+      });
+
+    // Initialize email service
+    initializeEmail();
   } catch (error) {
     console.error('Failed to start server:', error);
     process.exit(1);
